@@ -1,0 +1,169 @@
+\documentclass{amsart}
+\numberwithin{equation}{section}
+
+%%%%%%%packages
+\usepackage{amssymb}
+\usepackage{enumerate}
+%\usepackage{showkeys}
+\usepackage[bottom,first]{draftcopy}
+\usepackage{xspace}
+\usepackage{hyperref}
+
+%%%%%%%%%Pagination
+\hfuzz=15pt
+
+%%%%%%%%%Theorems
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary} 
+\newtheorem{sublem}[thm]{Sub-lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}{Congettura}\renewcommand{\theconj}{}
+\newtheorem{defin}[thm]{Definition}
+\newtheorem{cond}{Condition}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{es}[thm]{Exercize}
+\newtheorem{rem}[thm]{Comment}
+
+%%%%%%%%%%mathcal
+\newcommand\B{{\mathcal B}}
+\newcommand\Co{{\mathcal C}}
+\newcommand\D{{\mathcal D}}
+\newcommand\F{{\mathcal F}}
+\newcommand\Lp{{\mathcal L}}
+\newcommand\M{{\mathcal M}}
+\newcommand\Or{{\mathcal O}}
+\newcommand\Pa{{\mathcal P}}
+\newcommand\T{{\mathcal T}}
+
+%%%%%%%%%%%%mathbb
+\newcommand\A{{\mathbb A}}
+\newcommand\C{{\mathbb C}}
+\newcommand\E{{\mathbb E}}
+\newcommand\N{{\mathbb N}}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\To{{\mathbb T}}
+\newcommand\V{{\mathbb V}}
+\newcommand\Z{{\mathbb Z}}
+
+%%%%%%%%%%%greek
+\newcommand\ve{\varepsilon}
+\newcommand\vf{\varphi}
+
+%%%%%%%%%%%%%%%vaious
+\newcommand\Id{\text{\bf Id}}
+
+%%%%%   Figure-picture related definitions--beginning
+\newenvironment{myfigure}{\begin{figure}[tb]\
+\centering}{\end{figure}}
+
+%\definecolor{lgray}{gray}{0.9}
+%\definecolor{gray}{gray}{0.8}
+%\definecolor{dgray}{gray}{0.7}
+\setlength{\unitlength}{.8mm}
+%%%%%   Figure related definitions--end
+
+
+\pagestyle{myheadings}
+\markboth{\centerline{\sc Carlangelo Liverani}\hskip-12pt}
+{\centerline{\sc Mixing }\hskip-12pt}
+
+\begin{document}
+\title{\bfseries About mixing}
+\author{Carlangelo Liverani}
+\address{Dipartimento di Matematica\\
+Universit\`{a} di Roma (Tor Vergata)\\
+Via della Ricerca Scientifica, 00133 Roma, Italy\\
+{\tt liverani@mat.uniroma2.it}}
+\date{Rome, October 11, 2003}
+\maketitle
+
+
+\section{The setting}\label{sec:zero}
+
+Consider an expanding $C^2$ map of the circle. Then one can easily
+verify the Lasota-Yoke inequalities
+\[
+\begin{split}
+&|\Lp h|_{L^1}\leq |h|_{L^1}\\
+&|\Lp^nh|_{W_{1,1}}\leq \lambda^{-n}|h|_{W_{1,1}}+ D|h|_{L^1}
+\end{split}
+\]
+where $|DT|>\lambda>1$ and $D=\sup_x\frac{|D^2_xT|}{|D_xT|^2}$.
+From abstract functional analytic facts it follows that the essential
+spectrum of $\Lp$ is contained in the disk of radius $\lambda$. 
+\begin{lem}
+The map is $T$ mixing.
+\end{lem}
+\begin{proof}
+Let $\Pi_\theta$ be the 
+projector on the eigenspace associated to the eigenvalue
+$e^{i\theta}$. Consider $\Pi_\theta\Lp$, this 
+is a fine rank operator and must be a diagonal operator since it is
+norm bounded while Jordan blocks have norm that increases
+polynomially. Let $\{h_j\}$ be a basis of the rank and consider
+functionals $\ell_j$ such that $\ell_j(h_i)=\delta_{ij}$. Then $\Pi_\theta
+h=\sum_j \alpha_j h_j$, thus $\alpha_j=\ell_j(h)$, hence
+$\sum_jh_j\ell_j(h)=\Pi_\theta h=e^{-i\theta}\Pi_\theta\Lp
+h=e^{-i\theta}\sum_jh_j\ell_j(\Lp h)$. That is 
+$\ell_j(h)=e^{-i\theta}\ell_j(\Lp h)$. But the above means
+\[
+|\ell_j(h)|=|\ell_j(\Lp^n h)|\leq C\lambda^{-n}|h|_{W_{1,1}}+
+C D|h|_{L^1}
+\]
+which, taking the limit for $n$ to infinity, implies $|\ell_j(h)|\leq
+C D|h|_{L^1}$. Accordingly, $\ell_j$ belongs to the dual of $L^1$,
+that is can be identified with a function $\bar \ell_j\in L^\infty$
+via the formula $\ell_j(h)=\int\bar \ell_j(x)h(x) dx$ and $\bar
+\ell_j\circ T=e^{i\theta}\ell_j$ .  
+
+This means that $\Lp^n\bar \ell_j^*=e^{i\theta n}\Lp^n(\bar \ell_j^*\circ
+T^n)=e^{i\theta n}\bar \ell_j^*\Lp^n 1$. Or, better,
+\[
+\frac 1n \sum_{k=0}^{n-1}e^{-ik\theta}\Lp^k\bar \ell_j^*=\bar
+\ell_j^*\frac 1n \sum_{k=0}^{n-1} \Lp^k 1.
+\]
+By compactness the last averages have a subsequence converging to
+$\Pi_\theta\ell_j^*$ and $\Pi_1 1$, respectively. Hence 
+\[
+\Pi_\theta\ell_j^*=\ell_j^*\Pi_1 1.
+\]
+In addition, it is easy to verify that if the density 
+is zero at same point, then it must be zero on all its
+preimages. Since such preimages are dense, then the density would be
+zero which is absurd since it must have integral one. So the density
+is strictly positive and thus, since it is continuous, uniformly
+so. But his implies that $\bar\ell_j$ has a version in $W_{1,1}$.
+ 
+Now that means that all the
+sets $A_\alpha:=\{|\bar \ell_j|\leq \alpha\}$ of positive measure must
+contain an interval 
+$I$. But then $A_\alpha=T^n A_\alpha$ mod zero Lebesgue measure sets,
+but for $n$ large enough $T^nI=\To^1$, thus $A=\To^1$. This means that
+$|\bar \ell_j|$ must be constant. We
+can write $\bar \ell_j=Ce^{i\vf}$ for 
+some real function $\vf$ everywhere continuous but at a point $x_*$
+where it has a jump that is an integer multiple of $2\pi$ and the
+point $x_*$ can be chosen arbitrarily. Hence
+\[
+e^{i\vf\circ T}=\bar \ell_j\circ T=e^{i\theta}\bar
+\ell_j=e^{i(\vf+\theta)}.
+\]
+that is $\vf\circ T=\vf+\theta\mod 2\pi$. Finally, notice that the map $T$ has
+at least one fixed point $\bar x$, thus, choosing $x_*\neq \bar x$,
+$\theta=2\pi \Theta(\bar x)$ which means that $e^{i\theta}=1$.
+So non other eigenvalues can be present beside the eigenvalue
+one. Moreover, since $\ell_j=\ell_j\circ T$ implies $\ell_j$ constant,
+one must be a simple eigenvalue. This implies that, for all $h\in
+W_{1,1}$, $\int h=1$, and $\vf\in L^\infty$, holds
+\[
+\lim_{n\to\infty}\int_{\To^1}\vf\circ T^n
+h=\int \vf h_*+\Or(|\vf|_{L^\infty}\nu^{-n}|h|_{W_{1,1}}),
+\]
+where $h_*$ is the eigenvector associated to one and $\nu$ is the
+radius of the spectrum of $\Lp$ once  one is 
+removed. By a standard approximation argument it follows that the
+system is mixing.
+\end{proof}
+\end{document}

@@ -1,0 +1,16 @@
+ 
+Rigorous numerical investigation of the statistical properties of
+piecewise expanding maps--A feasibility study
+                            By
+                    Carlangelo Liverani
+
+                       ABSTRACT
+
+
+I explore the concrete applicability of recent theoretical results 
+to the rigorous computation of relevant statistical properties of a 
+simple class of dynamical systems: piecewise 
+expanding maps
+
+
+

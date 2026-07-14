@@ -1,0 +1,14 @@
+                     Decay of Correlations
+                             by
+                     Carlangelo Liverani
+
+ABSTRACT: 
+This paper offers a new unified approach for studying statistical 
+properties of hyperbolic dynamical systems.
+The approach is based on a technique that permits an investigation 
+of the convergence of a semigroup of operators by
+using an adapted Hilbert metric. An exponential rate of decay
+of correlations is proven in several classes of examples.
+
+PUBLISHED IN:
+Annals of Mathematics 142, pp. 239-301 (1995).

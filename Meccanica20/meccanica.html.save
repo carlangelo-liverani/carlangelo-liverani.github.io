@@ -1,0 +1,153 @@
+<html>
+<body bgcolor=#f0f8ff>
+<title> MECCANICA</title>
+<BR>
+<basefont size=3>
+<P>
+<center><H1> <font color="blue">
+FISICA MATEMATICA 1<br>
+</font> 
+</H1></center>
+<center><H2>
+(Corso di Fisica Matematica 1 in <a 
+href="http://www.mat.uniroma2.it/didattica/triennale.php">MATEMATICA</a>)
+</H2></center>
+<p>
+<center>
+Docente
+</center>
+<center><H2>Liverani Carlangelo
+</center><H2>
+<hr>
+<h1> Orario </h1>
+INIZIO CORSO: 5 Marzo, 2019<br>
+FINE CORSO: 7 Giugno, 2019<br>
+LEZIONI (8 crediti, 84 ore): <br>
+<font color=orange>Orario</font>
+<br>
+Marted&igrave  11-13 (Aula 11)<br>
+Mercoled&igrave 14-16 (Aula 11)<br>
+Gioved&igrave  11-13 (Aula 11)<br>
+Venerd&igrave  14-16 (Aula 11)<br>
+<br>  
+<br>
+<br>
+<p>
+RICEVIMENTO:<br>
+Mercoled&igrave 16-17 e su appuntamento.
+<br><p>
+<font color="red" size=+3> Avvisi:</font> 
+<br>
+<font size=+2>La lezione del 27 Marzo &egrave soppressa.</font>
+<br>
+<font size=+2>La lezione del 29 Marzo &egrave soppressa.</font>
+<br>
+<font size=+2>La lezione del 3 Maggio &egrave soppressa.</font>
+<br> 
+<font size=+2>Le lezioni del 5 e 6 Giugno sono soppresse.</font>
+<hr>
+<h1><font color="violet"> <a href="programma.html">Programma.</a> </font></h1>
+<p>
+<a href=lezioni.html><font size=+2> Lezioni</font></a> 
+<p>
+L'obiettivo formativo del corso &egrave di acquisire la capacit&agrave
+di modellizzare e compredere la realt&agrave attraverso modelli
+matematicamente rigorosi.
+<hr>
+<h1><font color="violet"> Regole: </font></h1>
+<font size=+1> Gli esami consistono di: due esoneri, uno scritto e un 
+esame orale. Chi superer&agrave ambedue gli esoneri potr&agrave avere la media 
+del voto degli esoneri come voto dello scritto a patto che sotenga l'esame nella sessione estiva. Chi, avendo superato 
+entrambi gli esoneri sceglier&agrave di fare comunque lo scritto 
+avr&agrave il voto dello scritto. Infatti l'esistenza degli esoneri 
+verr&agrave dimenticata al momento della consegna dello scritto. Chi 
+superer&agrave un solo esonero dovr&agrave fare lo scritto. Gli 
+esoneri sono validi solo per i due appelli della sessione estiva, gli 
+scritti superati sono validi solo per l'appello in cui sono stati 
+fatti. Durante gli scritti &egrave consentito l'uso della sola calcolatrice.<p> 
+<p>
+Le regole di cui sopra si riferiscono all'anno in corso, tutta la storia 
+pregressa &egrave automaticamente annullata dopo l'appello invernale 2020.
+</font>
+<hr>
+<font size=+3><b>Libri</b></font>
+<br>
+<font size=+2> Esistono molti libri di 
+Meccanica che sono adatti per il materiale trattato in questo 
+corso: Il libro di Enzo Olivieri ``Meccanica razionale", Aracne Editrice, 
+contiene il materiale di base del corso. Il libro di Giovanni Gallavotti 
+<a href="https://ipparco.roma1.infn.it/pagine/deposito/2007/elements.pdf">Elements of 
+Mechanics</a> &egrave ottimo, dispinibile gratuitamente in rete, 
+contiene molteplici approfondimenti e, in generale, molto pi&ugrave di 
+quello che verr&agrave discusso nel corso. Altri libri utili reperibili in rete 
+sono  <a href="http://people.disim.univaq.it/~serva/teaching/Esposito.pdf">
+Appunti dalle Lezioni di MECCANICA RAZIONALE</a> di Raffaele Esposito 
+e le <a href="http://www.mat.unimi.it/users/antonio/meccanica/meccanica.html"> 
+note qu&igrave reperibili<a> di Antonio Giorgilli.   Un'altra possibilit&agrave &egrave il libro di Meccanica
+di Dell'Antonio.
+<br>
+Infine due libri classici ma fortemente consigliati: 
+la meccanica di Landau-Lifsic (ottimo per quanto riguarda l'intuizione fisica degli argomenti trattati) e il 
+libro  di Arnold ``Metodi matematici della meccanica classica" 
+(pi&ugrave  matematico). 
+Inoltre verranno messe in rete alcune note su argomenti specifici.</font>
+<hr>
+<p>
+<font size=+3><b>Alcune Note ed Esercizi</b></font>
+<br>
+<font size=+2> Le seguenti note sono state scritte in fretta e sono 
+in forma instabile e continuamente aggiornate. Sono per l'uso esclusivo 
+degli studenti del corso. Le pubblico in 
+questa forma miserabile solo nella speranza che possano essere 
+di auito a chi segue il corso (integrando le note prese a lezione).
+<li><a href="colombo.pdf">
+<li><a href="gravity.pdf"> Sulla forza di Gravit&agrave</a>
+<li><a href="moticentrali.pdf"> Moti centrali</a>
+<li><a href="eq-diff.pdf"> Alcuni fatti e considerazioni sulle 
+equazioni differenziali</a>
+<li><a href="a-versus-n.pdf"> Aristotele contro Newton</a>
+<li><a href="oscillazioni.pdf">Quanto &egrave isocrono un pendolo?</a>
+<li><a href="average.pdf">Frastornati dalle vibrazioni</a>
+<li><a href="quasiperiodic.pdf"> Beh, non proprio periodico, quasi.
+<li><a href="frazioni.pdf"> Bisestile! Che accidenti ....</a>
+<li><a href="vincoli1.pdf">Cosa &egrave un vincolo ideale?</a>
+<li><a href="lagrange.pdf">Lagrangiane, azione e stanchezza</a>
+<li> <a href="http:canoniche.pdf"> Hamiltoniane e equazioni di Hamilton: 
+rudimenti</a>
+<li> <a href="http:pert1.pdf"> Piccole oscillazioni e teoria delle perturbazioni (elementare)</a>
+</font>
+-->
+<hr> <p>
+<font size=+3><font color=red><b>ESONERI ed ESAMI</b></font></font>
+<font size=+2>
+<li> Primo Esonero. Mercoled&igrave 24 Aprile, ore 14:00. Aula 11. 
+<!--
+<a href="Iesonero16.pdf">Testo</a>. 
+<a href="http://www.mat.uniroma2.it/~locatell/FM1/giudizi/aa1516/ris_es_I_2016.pdf">Risultati</a>.
+-->
+<li> Secondo Esonero. Venerd&igrave, 7 Giugno, ore 14:00. Aula 11.
+<!--
+<a href="IIesonero16.pdf">Testo</a>. <a href="risultati-eso2.html"> Risultati</a>
+-->
+<li> Primo Apello, Sessione Estiva. Scritto 17 Giugno 2019 ore 10:00, Aula L3. 
+<!--
+<a href="risultati-30-06-2015.pdf"> Risultati</a> 
+-->
+Orale 20 Giugno 2019, ore 14:00  Aula 16.
+<li> Secondo Appello, Sessione Estiva. Scritto 29 Luglio 2019 ore 10:00, 
+Aula L3. 
+<!--
+<a href="http://www.mat.uniroma2.it/~locatell/FM1/giudizi/aa1415/ris_luglio_2015.pdf">Risultati</a>. Orale 27 Luglio 2015 Aula 29A. 
+<a 
+href="http://www.mat.uniroma2.it/~locatell/FM1/giudizi/aa1314/ris_luglio_2014.pdf"> 
+Risultati</a>. 
+-->
+Orale 31 Luglio 2019 ore 10:00, Aula 16.
+<!--
+<li> Appello Sessione Autunnale. Scritto 21 Settembre 2015 ore 10:00, 
+Aula L3.<a href="esame-settembre-risultati.pdf"> Ammessi all'orare</a>. Orale 23 Settembre 2015, Aula 16.
+<li> Appello Sessione Invernale. Scritto 16 Gennaio 2017, ore 10:00, Aula 16.
+Orale 17 Gennaio 2017, ore 10:00, Aula 16.
+<li> Appello Straordinario. Scritto 27 Marzo 2017 ore 9:00, Aula Dal Passo. <a href="http://www.mat.uniroma2.it/~locatell/FM1/giudizi/aa1516/ris_app_straord.pdf"> Risultati dello scritto</a>.
+Orale 30 Marzo 2017 ore 11:00, Aula 29A. 
+-->

@@ -1,0 +1,9 @@
+Uniqueness of the SRB measure for piecewise expanding weakly
+coupled map lattices in any dimension
+
+G.Keller, C.Liverani
+
+ABSTRACT:
+We prove the existence of a unique SRB  measure for a wide range of
+multidimensional weakly coupled map lattices. These include piecewise
+expanding maps with diffusive coupling.

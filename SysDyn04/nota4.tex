@@ -1,0 +1,290 @@
+\documentclass{amsart}
+\numberwithin{equation}{section}
+
+%%%%%%%packages
+\usepackage{amssymb}
+\usepackage{enumerate}
+%\usepackage{showkeys}
+\usepackage[bottom,first]{draftcopy}
+\usepackage{xspace}
+\usepackage{hyperref}
+
+%%%%%%%%%Pagination
+\hfuzz=15pt
+
+%%%%%%%%%Theorems
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary} 
+\newtheorem{sublem}[thm]{Sub-lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}{Congettura}\renewcommand{\theconj}{}
+\newtheorem{defin}[thm]{Definition}
+\newtheorem{cond}{Condition}
+\newtheorem{exmp}[thm]{Example}
+\newtheorem{es}[thm]{Exercize}
+\newtheorem{rem}[thm]{Comment}
+
+%%%%%%%%%%mathcal
+\newcommand\B{{\mathcal B}}
+\newcommand\Co{{\mathcal C}}
+\newcommand\D{{\mathcal D}}
+\newcommand\F{{\mathcal F}}
+\newcommand\Lp{{\mathcal L}}
+\newcommand\M{{\mathcal M}}
+\newcommand\Or{{\mathcal O}}
+\newcommand\Pa{{\mathcal P}}
+\newcommand\T{{\mathcal T}}
+
+%%%%%%%%%%%%mathbb
+\newcommand\A{{\mathbb A}}
+\newcommand\C{{\mathbb C}}
+\newcommand\E{{\mathbb E}}
+\newcommand\N{{\mathbb N}}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\To{{\mathbb T}}
+\newcommand\V{{\mathbb V}}
+\newcommand\Z{{\mathbb Z}}
+
+%%%%%%%%%%%greek
+\newcommand\ve{\varepsilon}
+\newcommand\vf{\varphi}
+
+%%%%%%%%%%%%%%%vaious
+\newcommand\Id{\text{\bf Id}}
+
+%%%%%   Figure-picture related definitions--beginning
+\newenvironment{myfigure}{\begin{figure}[tb]\
+\centering}{\end{figure}}
+
+%\definecolor{lgray}{gray}{0.9}
+%\definecolor{gray}{gray}{0.8}
+%\definecolor{dgray}{gray}{0.7}
+\setlength{\unitlength}{.8mm}
+%%%%%   Figure related definitions--end
+
+
+\pagestyle{myheadings}
+\markboth{\centerline{\sc Carlangelo Liverani}\hskip-12pt}
+{\centerline{\sc Why Dymanics matters? }\hskip-12pt}
+
+\begin{document}
+\title{\bfseries A piece of functional analysis}
+\author{Carlangelo Liverani}
+\address{Dipartimento di Matematica\\
+Universit\`{a} di Roma (Tor Vergata)\\
+Via della Ricerca Scientifica, 00133 Roma, Italy\\
+{\tt liverani@mat.uniroma2.it}}
+\date{Rome, October 11, 2003}
+\maketitle
+
+
+\section{The setting}\label{sec:zero}
+
+Consider two Banach space $(\B,\|\cdot\|)$ and $(\B_0,|\cdot|)$ such
+that $\B\subset \B_0$ and
+\begin{enumerate}[i.\hskip.4cm]
+\item $|h|\leq \|h\|$ for all $h\in\B$,
+\item if $h\in\B$ and $|h|=0$, then $h=0$.
+\item The unit ball $\{h\in\B\;:\;\|h\|\leq 1\}$ is relatively compact in $\B_0$.
+\item There exists $C>0$ such that: for each $\ve>0$ there
+exists a finite rank operator $\A_\ve\in L(\B,\B)$ such that $\|\A_\ve\|\leq
+C$ and $|h-\A_\ve h|\leq \ve \|h\|$ for all $h\in\B$.\footnote{In fact,
+this last property is not needed. We require it since, on the one
+hand, it is true in all the 
+applications we will be interested in and, on the other hand,
+drastically simplifies the argument. Note also that, if one uses the
+Fredholm alternative for compact operators rather than finite rank
+ones (Theorem \ref{thm:fredholm}), then one can ask the $\A_\ve$ to be compact
+instead than finite rank making easier their construction in concrete cases.}
+\end{enumerate}
+
+In addition consider a bounded operator $\Lp:\B_0\to\B_0$,
+constants $A,B,C\in\R_+$, and $\lambda>1$, such that
+\begin{enumerate}[a.\hskip.4cm]
+\item   $|\Lp^n|\leq C$ for all $n\in\N$,
+\item  $\Lp(B)\subset B$ 
+\item  $\|\Lp^nh\|\leq A\lambda^{-n}\|h\|+B|h|$ for all
+$h\in\B$ and $n\in\N$. 
+\end{enumerate}
+In particular $\Lp$ can be seen as a bounded operator on $\B$.
+
+\begin{thm}\label{thm:main}
+The spectral radius of the operator $\Lp\in L(\B,\B)$ is bounded by
+$1$ while the essential spectral radius is bounded by $\lambda^{-1}$.
+\end{thm}
+
+The proof of the above theorem depends on an auxiliary fact which is of
+much interest in its own.
+
+\begin{thm}[Analytic Fredholm theorem--finite rank\footnote{The present proof is
+patterned after the proof of the Analytic Fredholm alternative for
+compact operators (in Hilbert spaces) given in \cite[Theorem
+VI.14]{RS}. There it is used the fact that compact operators in
+Hilbert spaces can always be approximated by finite rank ones. In fact
+the theorem holds also for compact operators in Banach spaces but the
+proof is a bit more involved.}]\label{thm:fredholm}
+Let $D$ be an open connected subset of $\C$. Let $F:\C\to L(\B,\B)$ be
+an analytic operator-valued function such that $F(z)$ is finite rank
+for each $z\in D$. Then, one of the following two alternatives holds true
+\begin{itemize}
+\item $(\Id-F(z))^{-1}$ exists for no $z\in D$
+\item $(\Id-F(z))^{-1}$ exists for all $z\in D\backslash S$ where $S$
+is a discrete subset of $D$ (i.e. $S$ has no limit points in $D$). In addition, if
+$z\in S$, then $1$ is an eigenvalue for 
+$F(z)$ and the associated eigenspace has finite multiplicity.
+\end{itemize}
+\end{thm}
+\begin{proof}
+First of all notice that, for each  $z_0\in D$ there exists
+$r>0$ such that $D_{r(z_0)}(z_0):=\{z\in\C\;:\;
+|z-z_0|<r(z_0)\}\subset D$, and
+\[
+\sup_{z\in D_{r(z_0)}(z_0)}\|F(z)-F(z_0)\|\leq \frac 12.
+\]
+Clearly if we can prove the theorem in each such disk we are
+done.\footnote{In fact, consider any connected compact set $K$
+contained in $D$. Let us suppose that
+for each $z_0\in K$ we have a disk $D_{r(z_0)}(z_0)$ in the theorem
+holds.
+Since the disks $D_{r(z_0)/2}(z_0)$ form a covering for $K$ we can
+extract a finite cover. If the first alternative holds in one such
+disk then, by connectness, it must hold on all $K$. Otherwise each
+$S\cap D_{r(z_0)/2}(z_0)$, and hence $K\cap S$, contains only finitely
+many points. The Theorem follows by the
+arbitrariness of $K$.}
+Note that
+\[
+\Id-F(z)=\left(\Id-F(z_0)(\Id-[F(z)-F(z_0)])^{-1}\right)(\Id-[F(z)-F(z_0)]).
+\]
+Thus the invertibility of $\Id-F(z)$ in $D_r(z_0)$ depends on the
+invertibility of $\Id-F(z_0)(\Id-[F(z)-F(z_0)])^{-1}$. Let us set
+$F_0(z):=F(z_0)(\Id-[F(z)-F(z_0)])^{-1}$.
+
+Let us start by looking at the equation
+\begin{equation}\label{eq:ker}
+(\Id-F_0(z))h=0.
+\end{equation}
+Clearly if a solution exists, then
+$h\in\text{Range}(F_0(z))=\text{Range}(F(z_0)):=\V_0$. Since $\V_0$ is
+finite dimensional  
+there exists a basis $\{h_i\}_{i=1}^N$ such that
+$h=\sum_i\alpha_i h_i$. On the other hand there exists an analytic
+matrix $G(z)$ such that\footnote{To see the analyticity notice that we
+can construct linear functionals $\{\ell_i\}$ on $\V_0$ such that
+$\ell_i(h_j)=\delta_{ij}$ and then extend them to all $\B$ by the
+Hahn-Banach theorem. Accordingly, $G(z)_{ij}:=\ell_j(F_0(z)h_i)$, which
+is obviously analytic.}
+\[
+F_0(z)h=\sum_{ij}G(z)_{ij}\alpha_j h_i.
+\]
+Thus \eqref{eq:ker} is equivalent to
+\[
+(\Id-G(z))\alpha=0,
+\]
+where $\alpha:=(\alpha_i)$.
+
+The above equation can be satisfied only if $\det(\Id-G(z))=0$ but the
+determinant is analytic hence it is either always zero or zero only at
+isolated points.\footnote{The attentive reader has certainly noticed that this
+is the turning point of the theorem: the discreteness of $S$ is
+reduced to the discreteness of the zeroes of an appropriate analytic
+function: a determinant. A moment thought will immediately explain the
+effort made by many mathematicians to extend the notion of determinant
+(that is to define an analytic function whose zeroes coincide with the
+spectrum of the operator) 
+beyond the realm of matrices (the so called Fredholm determinants).}
+
+Suppose the determinant different from zero, and consider the equation
+\[
+(\Id-F_0(z))h=g.
+\]
+Let us look for a solution of the type $h=\sum_i\alpha_i h_i
++g$. Substituting yields
+\[
+\alpha- G(z)\alpha=\beta
+\]
+where $\beta:=(\beta_i)$ with $F_0(z)g=:\sum_i\beta_i h_i$. Since the
+above equation admits a 
+solution, we have $\text{Range}(\Id-F_0(z))=\B$, Thus we have an
+everywhere defined inverse, hence bounded by the open mapping theorem.
+
+We are thus left with the analysis of the situation $z\in S$ in the
+second alternative. In such a case, there exists $h$ such that
+$(\Id-F(z))h=0$, thus one is an eigenvalue. On the other hand, if we
+apply the above facts to the function $\Phi(\zeta):=\zeta^{-1}F(z)$
+analytic in the domain $\{\zeta\neq 0\}$ we note that the first
+alternative cannot take place since for $|\zeta|$ large enough
+$\Id-\Phi(\zeta)$ is obviously invertible. Hence, the spectrum of
+$F(z)$ is discrete and can accumulate only at zero. This means that
+there is a small neighborhood around one in which $F(z)$ has no
+other eigenvalues, we can thus surround one with a small circle
+$\gamma$ and consider the projector
+\[
+\begin{split}
+P:=&\frac1{2\pi i}\int_\gamma (\zeta-F(z))^{-1}d\zeta=\frac1{2\pi
+i}\int_\gamma \left[(\zeta-F(z))^{-1}-\zeta^{-1}\right]d \zeta\\
+=&\frac1{2\pi i}\int_\gamma F(z)\zeta^{-1}(\zeta-F(z))^{-1}d\zeta.
+\end{split}
+\]
+By standard functional calculus it follows that $P$ is a projector and
+it clearly projects on the eigenspace of the eigenvector one. But
+the last formula shows that $P$ must project on a subspace of the rank
+of $F(z)$, hence it must be finite dimensional.
+\end{proof}
+
+We can now prove our main result.
+
+\begin{proof}[Proof of Theorem \ref{thm:main}]
+The first assertion is a trivial consequence of (c), (a) and (i). 
+
+The second part is much deeper.
+Let $\Lp_{n,\ve}:=\Lp^n\A_\ve$, clearly
+such an operator is finite rank, in addition
+\[
+\|\Lp^n h-\Lp_{n,\ve}h\|\leq
+A\lambda^{-n}\|(\Id-\A_\ve)h\|+B|(\Id-\A_\ve)h|
+\leq A(1+C)\lambda^{-n}\|h\|+B\ve\|h\|.
+\]
+By choosing $\ve=\lambda^{-n}$ we have that there exists $C_1>0$ such
+that
+\[
+\|\Lp^n -\Lp_{n,\ve}\|\leq C_1\lambda^{-n}.
+\]
+For each $z_0\in\C$ we can now write
+\[
+\Id-z\Lp=(\Id-z_0(\Lp-\Lp_{n,\ve})-(z-z_0)\Lp)-z_0\Lp_{n,\ve}.
+\]
+Since
+\[
+\|z_0(\Lp-\Lp_{n,\ve})+(z-z_0)\Lp\|\leq
+|z_0|C_1\lambda^{-n}+C|z-z_0|<\frac 12,
+\]
+provided that $|z_0|\leq \frac 1{4C_1}\lambda^{n}$ and $|z-z_0|\leq
+\frac 1{4C}$, given any $z_0$ in the disk $D_n:=\{|z|<\frac
+1{4C_1}\lambda^{n}-\frac 1{4C}\}$ we can consider the domain
+$D_n(z_0):=\{|z-z_0|<\frac 1{4C}\}$ and, in such a domain
+$B(z):=\Id-z_0(\Lp-\Lp_{n,\ve})-(z-z_0)\Lp$ is invertible. Hence
+\[
+\Id-z\Lp=
+\left(\Id-
+z_0\Lp_{n,\ve}B(z)^{-1}\right)B(z)=:
+(\Id-F(z))B(z).
+\]
+By applying Theorem \ref{thm:fredholm} to $F(z)$ we have that the
+operator is either never invertible or not invertible only in finitely
+many points in the disk $D_n'(z_0):=\{|z-z_0|<\frac 1{8C}\}$. Since we
+can cover $D_n:=\{|z|<\frac
+1{4C_1}\lambda^{n}-\frac 1{4C}\}$ with finitely many such disk and
+since the operator is invertible for $z_0$ small enough ( thus the
+first alternative cannot hold), the Theorem follows.
+\end{proof}
+
+
+\begin{thebibliography}{99}
+\footnotesize
+\bibitem{RS} M.Reed, B.Simon, {\em Methods of Modern Mathematical
+Physics. I-Functional Analysis}, Academic Press, New York (1980). 
+\end{thebibliography}
+\end{document}

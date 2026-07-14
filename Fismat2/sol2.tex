@@ -1,0 +1,79 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\Or{{\mathcal O}}
+\newcommand\ve{\varepsilon}
+%\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Soluzioni esonero 09-06-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si cerca una soluzione del tipo $u(x,t)=xe^{-t}+v(x,t)$. Allora
+\[
+\begin{split}
+&v_{xx}-v=v_t  \\
+&v(x,0)=1-x;\; v(1,t)=0;\;v_x(0,t)=0.
+\end{split}
+\]
+Si procede poi per separazione di variabili. Cio\`e
+\[
+v(x,t)=\sum_{n=0}^\infty c_n(t)\cos(n+\frac 12)\pi x
+\]
+che soddisfa le condizioni al contoro. Sostituendo si ha
+\[
+c_n'=-[1-(n+\frac 12)^2\pi^2]c_n;\quad c_n(0)=b_n
+\]
+dove
+\[
+b_n=2\int_0^1(1-x)\cos(n+\frac 12)\pi x=\frac{2}{(n+\frac 12)^2\pi^2}.
+\]
+Dunque
+\[
+c_n(t) =e^{-[1-(n+\frac 12)^2\pi^2]t}b_n.
+\]
+\item Si risolve per separazione di variabili nella forma
+\[
+u(x,t)=\sum_{n=1}^\infty c_n(t)\sin n\pi x.
+\]
+Sostituendo si ottiene il sistema
+\[
+\begin{split}
+&c_n''=-n^2\pi^2c_n+a_n\\
+&c_n(0)=c_n'(0)=0.
+\end{split}
+\]
+Dove 
+\[
+a_n=\frac 1\pi\int_0^1 x\sin n\pi x\;dx.
+\]
+Le cui soluzioni sono
+\[
+c_n(t)=\frac{a_n}{n^2\pi^2}(1-\cos n\pi t).
+\]
+\item Si ha
+\[
+\hat f(\xi)=\frac{\alpha}{\alpha^2+\xi^2}.
+\]
+Da cui
+\[
+\lim_{\alpha\to 0}\int_\R \frac{\alpha}{\alpha^2+\xi^2} g(\xi)d\xi =
+\lim_{\alpha\to 0}\int_\R\frac 1{1+z^2}g(\alpha z) dz=g(0).
+\]
+\item Poich\`e la velocit\`a di propagazione \`e limitata da 1, segue
+che $u$ \`e a supporto compatto per ogni $t$. Dunque \`e facile
+verificare che l'energia totale
+\[
+E(t)=\int_\R u_t^2+u_x^2
+\]
+\`e ben definita e costante (basta derivare rispetto al tempo e usare
+il fatto che $u$ risolve l'equazione). Inoltre $e(0)=E(0)$, dunque
+$e(t)\leq E(t)=E(0)=e(0)$. 
+\end{enumerate}
+\end{document}

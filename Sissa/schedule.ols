@@ -1,0 +1,92 @@
+<html>
+<head>
+<title>Orario Lezioni</title>
+</head>
+<body>
+<h1> Sissa-Prodyn Winter School (11/2/2002--1/3/2002) </h1>
+<h2> Tentative schedule</h2>
+<table border>
+<tr>
+<td><font color=red>First week</font> </td>
+<td> Monday</td><td>Tuesday</td><td>Wednesday</td>
+<td>Thursday</td><td>Friday</td>
+</tr>
+<tr>
+<td> 11.00--12.30</td><td><a href="cresson.html">Cresson</a> </td><td> 
+</td><td> </td>
+<td> </td><td>Berti  </td>
+</tr>
+<tr>
+<td> 14.00--15.30</td><td>Liverani   </td><td>Liverani  </td>
+<td>Liverani</td> 
+<td>Liverani  </td><td>Liverani   </td>
+</tr>
+<td> 16.00--17.30</td><td>Bessi   </td><td>Bessi  </td><td> Bessi </td>
+<td>Bessi  </td><td>Bessi</td>
+</tr>
+</table>
+
+<br><br>
+
+<table border>
+<tr>
+<td><font color=red>Second week</font> </td>
+<td> Monday</td><td>Tuesday</td><td>Wednesday</td>
+<td>Thursday</td><td>Friday</td>
+</tr>
+<tr>
+<td> 11.00--12.30</td><td>Seminar </td><td> </td><td></td>
+<td> </td><td> Seminar </td>
+</tr>
+<tr>
+<td> 14.00--15.30</td><td>Liverani   </td><td>Luzzatto</td>
+<td>Luzzatto</td> 
+<td>Luzzatto </td><td>Luzzatto</td>
+</tr>
+<tr>
+<td> 16.00--17.30</td><td>Bessi   </td><td>Viana  </td><td> Viana </td>
+<td>Viana</td><td>Viana</td>
+</tr>
+<tr>
+<td>18.00--19.00</td><td> </td><td> Seminar</td><td> </td><td>
+		Seminar</td><td> </td> 
+</tr>
+</table>
+
+
+<br><br>
+
+<table border>
+<tr>
+<td><font color=red>Third week</font> </td>
+<td> Monday</td><td>Tuesday</td><td>Wednesday</td>
+<td>Thursday</td><td>Friday</td>
+</tr>
+<tr>
+<td> 11.00--12.30</td><td>Seminar </td><td> </td><td> </td>
+<td> </td><td>Seminar  </td>
+</tr>
+<tr>
+<td> 14.00--15.30</td><td>Luzzatto  </td><td>Viana</td>
+<td>Viana</td> 
+<td>Luzzatto </td><td>Luzzatto</td>
+</tr>
+<td> 16.00--17.30</td><td>Bessi   </td><td>Bessi  </td><td> Luzzatto </td>
+<td>Liverani</td><td>Liverani</td>
+</tr>
+</table>
+<br>
+<hr>
+<h3> Seminar's  speakers (with tentative titles)</h3>
+D.Banbusi (Milano) "Hamiltonian systems with infinitely many degree of
+			freedom"<br>
+G.Benettin (Padova) <br>
+M.Berti (Sissa)     <br>
+C.Chierchia (Roma)<br>
+J.Cresson (Paris)  <br>
+P.Collett (Paris) "Extended systems" <br>
+H.Eliasson (Paris) "Quasi-periodic Schrodinger"<br>
+A.Giorgilli (Milano) "On Fermi-Pasta-Ulam" <br>
+<p>
+</body>
+</html>

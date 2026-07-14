@@ -1,0 +1,15 @@
+ Generalization of the Hilbert metric to the space of positive definite
+ matrices
+                         by
+
+       Carlangelo Liverani and  Maciej P. Wojtkowski
+
+ABSTRACT
+
+We introduce a generalization of the Hilbert projective metric 
+to the space of positive definite matrices which we view as part of the 
+Lagrangian Grassmannian.
+
+PUBLISHED ON
+
+Pacific Journal of Mathematics, 166, N.2, pp. 339-355, (1994).

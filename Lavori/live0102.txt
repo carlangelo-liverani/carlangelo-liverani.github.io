@@ -1,0 +1,10 @@
+         COMPUTING THE RATE OF DECAY OF CORRELATIONS 
+            IN EXPANDING AND HYPERBOLIC SYSTEMS
+                          by
+
+                  CARLANGELO LIVERANI
+
+
+I discuss a general approach allowing to accurately investigative the
+statistical properties of expanding and hyperbolic dynamical systems.
+

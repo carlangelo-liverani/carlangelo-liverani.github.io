@@ -1,0 +1,30 @@
+<html>
+<head><title>BG</title></head>
+<body bgcolor="lightgray">
+
+<title> Dynamical Systems and Ergodic Theory (Ph.D. 2025-2026) </title>
+<br>
+<hr>
+<p>
+<h2>
+PROGRAM (Tentative)<br>
+</h2>
+<li> Review of the theory of differential equations: global existence and uniqueness of solutions for C^1 and bounded vector fields. 
+Floquet theory. Poincar&egrave√sections. Theorem on smooth dependence on initial data and parameters.
+<li> Study of the qualitative behavior of solutions of a differential equation on the plane.
+<li> Flow box theorem. Stability and Lyapunov functions. Grobman--Hartman theorem. 
+Stable and unstable manifolds: Hadamard--Perron theorem.
+<li> Concept of genericity for families of vector fields depending on parameters. Generic bifurcations: saddle--node, Hopf.
+<li> $\omega$-limit sets and Poincar&egrave--Bendixson theorem.
+<li> Differential equations on the (two-dimensional) torus and reduction to the study of circle diffeomorphisms. Rotation number. KAM theorem.
+<li> Measurable dynamical systems (definitions and basic examples). Krylov--Bogoliubov theorem. 
+Elements of ergodic theory (theorems of Birkhoff, Von Neumann, Poincar&egrave, ergodicity, mixing, ...).
+<li> Quantitative statistical properties of dynamical systems: expanding maps and Anosov systems.
+<ol>
+<br>
+Nel caso ci fosse interesse per un diverso argomento relato ai sistemi dinamici, basta chiedere, 
+sar&ograve ben lieto di fare cambiamenti al programma.
+<p> <a href="/~liverani/SysDyn25/sd.html"> BACK TO PREVIOUS PAGE
+</a> 
+</body >
+</html>

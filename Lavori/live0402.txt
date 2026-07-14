@@ -1,0 +1,12 @@
+Fredholm determinants and Anosov maps
+
+ABSTRACT:
+I show that the Ruelle dynamical zeta function, associated to an
+Anosov diffeomorphism, is the Fredholm
+determinant of the corresponding Ruelle-Perron-Frobenius transfer
+operator acting on appropriate
+Banach spaces. As a consequence it follows, for example,
+that the zeroes of the dynamical zeta
+function describe the eigenvalues of the operator and that, for
+$\Co^\infty$ Anosov diffeomorphisms, the zeta function is entire.
+

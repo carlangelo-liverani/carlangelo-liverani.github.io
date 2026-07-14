@@ -1,0 +1,57 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\ve{\varepsilon}
+\newcommand\Co{{\mathcal C}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 2:30 ore di tempo. Ogni esercizio
+vale dieci punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Appello 28-01-2004}
+\vskip1cm
+\begin{enumerate}
+\item Sia $Q:=\{(x,y)\in\R^2\;:\; x^2+y^2\leq 1\}$ e sia $u:\bar Q\to\R$ una
+soluzione, non identicamente nulla, di
+\[
+\begin{split}
+&\Delta u=-\lambda u\\
+&u|_{\partial Q}=0.
+\end{split}
+\]
+Si dimostri che deve essere $\lambda >0$. Si cerchi di determinare il
+$\lambda$ minimo possibile.
+\item Si risolva l'equazione
+\[
+\begin{split}
+&(1-y^2)u_y+u_x=u\\
+&u(x,0)=x.
+\end{split}
+\]
+\item Si determini la soluzione dell'equazione
+\[
+\begin{split}
+&u_{tt}=u_{xx}\quad\quad 0<x<1\quad t>0\\
+&u(x,0)=x\quad u_t(x,0)=0 \quad 0\leq x\leq 1\\
+&u_x(0,t)=u(1,t)=0
+\end{split}
+\]
+Si discuta la regolarit\`a della soluzione trovata.
+\item Si determini la soluzione del problema
+\[
+\begin{split}
+&u_{xx}+xe^{-t}=u_t\quad x\in[0,1],\;t>0\\
+&u(x,0)=\sin 2\pi x\quad x\in[0,1]\\
+&u(t,0)=u(t,1)=0\quad t>0.
+\end{split}
+\]
+\end{enumerate}
+\end{document}

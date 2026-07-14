@@ -1,0 +1,14 @@
+            CENTRAL LIMIT THEOREM FOR DETERMINISTIC SYSTEMS
+                                 by
+                          Carlangelo Liverani
+
+ABSTRACT:
+The paper contains general condtions under which the Central Limit Theorem holds.
+Such condition are applicable to deterministic systems such as expanding maps or
+hyperbolic dynamics.
+
+PUBLISHED IN:
+International Conference on Dynamical Systems, Montevideo 1995,
+a tribute to Ricardo Mane, Pitman Research Notes in Mathemaics
+Series, 362, editors F.Ledrappier, J.Levovicz e S.Newhouse,
+Addison Wesley Longman Ltd, pp. 56--75, (1996).

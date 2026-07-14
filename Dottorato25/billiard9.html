@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Elastic Disc Simulation (HD)</title>
+  <style>
+    canvas {
+      border: 1px solid black;
+      background: #f9f9f9;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 300px;
+    }
+    #fpsCounter {
+      font-family: monospace;
+      margin-top: 5px;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.0/jszip.min.js"></script>
+</head>
+<body>
+  <canvas id="canvas" width="700" height="700"></canvas>
+  <div class="controls">
+    <label>Number of Balls: <input type="number" id="numBalls" min="1" max="100000" value="2"></label>
+    <label>Ball Radius: <input type="number" id="radius" min="1" max="50" value="10"></label>
+    <label>Max Initial Velocity: <input type="number" id="velocity" min="0" max="10" step="0.1" value="2"></label>
+    <label>Initial Condition:
+      <select id="initCondition">
+        <option value="random">Random</option>
+        <option value="oneMoving">One Moving</option>
+        <option value="leftSide">Left Side</option>
+        <option value="splitColors">Split Colors (Blue Left / Red Right)</option>
+      </select>
+    </label>
+    <button onclick="initialize()">Start Simulation</button>
+    <button onclick="reverseVelocities()">Reverse Velocities</button>
+    <button onclick="toggleSimulation()" id="toggleBtn">Stop Simulation</button>
+    <hr>
+    <button onclick="startFrameRecording()">Start Frame Recording</button>
+    <button onclick="stopFrameRecording()">Stop Frame Recording</button>
+    <button onclick="downloadFramesZip()">Download Frames (ZIP)</button>
+    <div id="fpsCounter">FPS: --</div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
+    let discs = [];
+    let radius;
+    let width = canvas.width;
+    let height = canvas.height;
+    let running = true;
+
+    let recordedFrames = [];
+    let isRecordingFrames = false;
+
+    let lastTime = performance.now();
+    let framesThisSecond = 0;
+    let fps = 0;
+
+    function rand(min, max) {
+      return Math.random() * (max - min) + min;
+    }
+
+    function initialize() {
+      const numBalls = parseInt(document.getElementById('numBalls').value);
+      radius = parseInt(document.getElementById('radius').value);
+      const maxV = parseFloat(document.getElementById('velocity').value);
+      const initCondition = document.getElementById('initCondition').value;
+
+      discs = [];
+
+      if (initCondition === 'splitColors') {
+        const redCount = Math.floor(numBalls / 2);
+        const blueCount = numBalls - redCount;
+        let attempts = 0;
+
+        // Blue discs on the left
+        while (discs.length < blueCount && attempts < 100000) {
+          let x = rand(radius, width / 2 - radius);
+          let y = rand(radius, height - radius);
+          let overlap = discs.some(d => (d.x - x) ** 2 + (d.y - y) ** 2 < (2 * radius) ** 2);
+          if (!overlap) {
+            discs.push({ x, y, vx: rand(-maxV, maxV), vy: rand(-maxV, maxV), color: 'blue' });
+          }
+          attempts++;
+        }
+
+        attempts = 0;
+
+        // Red discs on the right
+        while (discs.length < blueCount + redCount && attempts < 100000) {
+          let x = rand(width / 2 + radius, width - radius);
+          let y = rand(radius, height - radius);
+          let overlap = discs.some(d => (d.x - x) ** 2 + (d.y - y) ** 2 < (2 * radius) ** 2);
+          if (!overlap) {
+            discs.push({ x, y, vx: rand(-maxV, maxV), vy: rand(-maxV, maxV), color: 'red' });
+          }
+          attempts++;
+        }
+
+      } else {
+        let attempts = 0;
+        while (discs.length < numBalls && attempts < 100000) {
+          let x, y;
+
+          if (initCondition === 'leftSide') {
+            x = rand(radius, width / 2 - radius);
+          } else {
+            x = rand(radius, width - radius);
+          }
+
+          y = rand(radius, height - radius);
+          let overlap = discs.some(d => (d.x - x) ** 2 + (d.y - y) ** 2 < (2 * radius) ** 2);
+          if (!overlap) {
+            discs.push({ x, y, vx: 0, vy: 0, color: '' });
+          }
+          attempts++;
+        }
+
+        const redCount = Math.floor(discs.length * 0.2);
+        for (let i = 0; i < discs.length; i++) {
+          discs[i].color = i < redCount ? 'red' : 'blue';
+        }
+
+        if (initCondition === 'random' || initCondition === 'leftSide') {
+          discs.forEach(d => {
+            d.vx = rand(-maxV, maxV);
+            d.vy = rand(-maxV, maxV);
+          });
+        } else if (initCondition === 'oneMoving' && discs.length > 0) {
+          discs[0].vx = maxV;
+          discs[0].vy = maxV;
+        }
+      }
+
+      running = true;
+      document.getElementById('toggleBtn').innerText = 'Stop Simulation';
+    }
+
+    function reverseVelocities() {
+      discs.forEach(d => {
+        d.vx *= -1;
+        d.vy *= -1;
+      });
+    }
+
+    function toggleSimulation() {
+      running = !running;
+      document.getElementById('toggleBtn').innerText = running ? 'Stop Simulation' : 'Start Simulation';
+    }
+
+    function update() {
+      if (!running) return;
+      for (let i = 0; i < discs.length; i++) {
+        let d = discs[i];
+        d.x += d.vx;
+        d.y += d.vy;
+
+        if (d.x - radius < 0 || d.x + radius > width) d.vx *= -1;
+        if (d.y - radius < 0 || d.y + radius > height) d.vy *= -1;
+
+        d.x = Math.max(radius, Math.min(width - radius, d.x));
+        d.y = Math.max(radius, Math.min(height - radius, d.y));
+
+        for (let j = i + 1; j < discs.length; j++) {
+          let d2 = discs[j];
+          let dx = d2.x - d.x;
+          let dy = d2.y - d.y;
+          let dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 2 * radius) {
+            let nx = dx / dist;
+            let ny = dy / dist;
+            let p = 2 * ((d.vx * nx + d.vy * ny) - (d2.vx * nx + d2.vy * ny)) / 2;
+            d.vx -= p * nx;
+            d.vy -= p * ny;
+            d2.vx += p * nx;
+            d2.vy += p * ny;
+
+            let overlap = 2 * radius - dist;
+            d.x -= nx * overlap / 2;
+            d.y -= ny * overlap / 2;
+            d2.x += nx * overlap / 2;
+            d2.y += ny * overlap / 2;
+          }
+        }
+      }
+    }
+
+    function draw() {
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, width, height);
+
+      discs.forEach(d => {
+        ctx.fillStyle = d.color;
+        ctx.beginPath();
+        ctx.arc(d.x, d.y, radius, 0, Math.PI * 2);
+        ctx.fill();
+      });
+    }
+
+    function loop(now = performance.now()) {
+      update();
+      draw();
+
+      if (isRecordingFrames) {
+        canvas.toBlob(blob => {
+          recordedFrames.push(blob);
+        }, 'image/png');
+      }
+
+      framesThisSecond++;
+      if (now - lastTime >= 1000) {
+        fps = framesThisSecond;
+        framesThisSecond = 0;
+        lastTime = now;
+        document.getElementById('fpsCounter').innerText = `FPS: ${fps}`;
+      }
+
+      requestAnimationFrame(loop);
+    }
+
+    function startFrameRecording() {
+      recordedFrames = [];
+      isRecordingFrames = true;
+      console.log("Recording started");
+    }
+
+    function stopFrameRecording() {
+      isRecordingFrames = false;
+      console.log("Recording stopped");
+    }
+
+    function downloadFramesZip() {
+      if (recordedFrames.length === 0) {
+        alert("No frames recorded.");
+        return;
+      }
+
+      const zip = new JSZip();
+      recordedFrames.forEach((blob, i) => {
+        zip.file(`frame_${String(i).padStart(4, '0')}.png`, blob);
+      });
+
+      zip.generateAsync({ type: 'blob' }).then(content => {
+        const a = document.createElement('a');
+        a.href = URL.createObjectURL(content);
+        a.download = 'frames.zip';
+        a.click();
+      });
+    }
+
+    initialize();
+    loop();
+  </script>
+<p>
+<hr>
+</font>
+<A href="dottorato.html"> BACK TO PREVIOUS PAGE
+</a>
+</body>
+</html>

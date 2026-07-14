@@ -1,0 +1,10 @@
+                  Oliver Butterley and Carlangelo Liverani
+
+
+Smooth Invariant Cone Fields: Errata Corrige to ``Smooth Anosov Flows: Correlation Spectra and Stability"
+
+
+ABSTRACT: The Lemma 7.2 of the paper ``Smooth Anosov Flows: Correlation 
+Spectra and Stability'' was incorrect. Here we fix the error. As part of 
+the solution we show that it is possible to construct smooth invariant 
+cone fields for  Anosov flows.

@@ -1,0 +1,10 @@
+                 Invariant measures and their properties.
+                   A functional analytic point of view
+
+                            ABSTRACT
+
+In this series of lectures I try to illustrate systematically what I call 
+the ``functional analytic approach'' to the study of the statistical
+properties of Dynamical Systems. The ideas are presented via a series
+of examples of increasing complexity, hoping to give in this way a
+feeling of the breadth of the method.

@@ -1,0 +1,304 @@
+\documentclass{amsart}
+
+%%%%%%%packages
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{showkeys}
+%\usepackage{draftcopy}
+\usepackage{xspace}
+\usepackage{hyperref}
+
+\numberwithin{equation}{section} 
+
+%%%%%%%%%Pagination
+\hfuzz=15pt
+
+%%%%%%%%%Theorems
+\newtheorem{thm}{Teorema}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollario} 
+\newtheorem{sublem}[thm]{Sub-lemma}
+\newtheorem{prop}[thm]{Proposizione}
+\newtheorem{conj}{Congettura}\renewcommand{\theconj}{}
+\newtheorem{defin}[thm]{Definitione}
+\newtheorem{cond}{Conditione}
+\newtheorem{exmp}[thm]{Esempio}
+\newtheorem{es}[thm]{Esercizio}
+\newtheorem{rem}[thm]{Commento}
+
+%%%%%%%%%%mathcal
+\newcommand\cB{{\mathcal B}}
+\newcommand\cC{{\mathcal C}}
+\newcommand\cD{{\mathcal D}}
+\newcommand\cF{{\mathcal F}}
+\newcommand\cL{{\mathcal L}}
+\newcommand\cM{{\mathcal M}}
+\newcommand\cP{{\mathcal P}}
+\newcommand\cT{{\mathcal T}}
+
+%%%%%%%%%%%%mathbb
+\newcommand\bA{{\mathbb A}}
+\newcommand\bC{{\mathbb C}}
+\newcommand\bE{{\mathbb E}}
+\newcommand\bN{{\mathbb N}}
+\newcommand\bR{{\mathbb R}}
+\newcommand\bQ{{\mathbb Q}}
+\newcommand\bT{{\mathbb T}}
+\newcommand\bZ{{\mathbb Z}}
+
+%%%%%%%%%%%greek
+\newcommand\ve{\varepsilon}
+\newcommand\vf{\varphi}
+
+
+
+%%%%%   Figure-picture related definitions--beginning
+\newenvironment{myfigure}{\begin{figure}[tb]\
+\centering}{\end{figure}}
+
+%\definecolor{lgray}{gray}{0.9}
+%\definecolor{gray}{gray}{0.8}
+%\definecolor{dgray}{gray}{0.7}
+\setlength{\unitlength}{.8mm}
+%%%%%   Figure related definitions--end
+
+
+\pagestyle{myheadings}
+\markboth{\centerline{\sc Carlangelo Liverani}\hskip-12pt}
+{\centerline{$\pi$ }\hskip-12pt}
+
+\begin{document}
+\title{{\huge Trigonometria}}
+\author{Carlangelo Liverani}
+\address{Dipartimento di Matematica\\
+Universit\`{a} di Roma (Tor Vergata)\\
+Via della Ricerca Scientifica, 00133 Roma, Italy\\
+{\tt liverani@mat.uniroma2.it}}
+\date{\today}
+\maketitle
+
+
+\section{Un problema}\label{sec:zero}
+Considerate la seguente equazione\footnote{Si noti che la quantit\`a incognita non \`e un numero, bens\'\i\ una funzione. Questo tipo di problemi si colloca nell'ambito della teoria delle equazioni differenziali ordinarie, cosa che per\`o non utilizzeremo nella presente discussione.}
+
+\begin{equation}\label{eq:main}
+\begin{split}
+&f''(x)=-f(x)\\
+&f(0)=1\,;\;f'(0)=0.
+\end{split}
+\end{equation}
+
+Subito sorgono alcune domande:
+\begin{enumerate}
+\item Esistono funzioni che soddisfano \eqref{eq:main}?
+\item Ne esiste pi\'u di una?
+\item Se esistono, come sono fatte?
+\end{enumerate}
+
+Prima di tutto notiamo che se una funzione soddisfa \eqref{eq:main} allora deve essere due volte derivabile, altrimenti l'equazione non avrebbe senso, ma allora la prima delle \eqref{eq:main} dice che la derivata seconda \`e due volte derivabile, dunque la funzione deve essere derivabile un numero arbitrario di volte.
+
+\section{Unicit\`a}
+Il primo risultato \`e il seguente:
+\begin{lem}\label{lem:unique}
+La sola funzione che soddisfa le condizioni
+\begin{equation}\label{eq:unique}
+\begin{split}
+&\vf''(x)=-\vf(x)\\
+&\vf(0)=0\,;\;\vf'(0)=0.
+\end{split}
+\end{equation}
+\`e la funzione $\vf\equiv 0$.
+\end{lem}
+\begin{proof}
+Che la funzione nulla soddisfi le equazioni \`e ovvio, che sia l'unica dipende dal fatto che
+\begin{equation}\label{eq:harm}
+\frac{d}{dx}\left[\vf(x)^2+\vf'(x)^2\right]=2\vf(x)\vf'(x)+2\vf'(x)\vf''(x)=0,
+\end{equation}
+dove, nell'ultima uguaglianza, abbiamo usato la prima delle \eqref{eq:unique}.
+Dunque la funzione $g(x)=\vf(x)^2+\vf'(x)^2$ deve essere costante.\footnote{Infatti se una funzione $g$ ha la proriet\`a $g'\equiv 0$, allora da Lagrange segue $g(x)=g(0)+g'(z)x$ dove $z\in(0,x)$ ma la derivata \`e sempre nulla, dunque $g(x)=g(0)$ per ogni $x$.} Ma $g(0)=0$, dunque $g$ \`e identicamente nulla. Ma allora anche $\vf$ \`e identicamente nulla.
+\end{proof}
+Da questo segue immediatamente l'inicit\`a della soluzione di \eqref{eq:main}. Infatti, se $f$ e $g$ sono due funzioni che soddisfano \eqref{eq:main} allora $\vf=f-g$ soddisfa \eqref{eq:unique} e quindi, per il Lemma \ref{lem:unique}, \`e nulla, dunque $f=g$.
+
+\section{Alcune propriet\`a}
+Data una soluzione di \eqref{eq:main} se definiamo la funzione $g(x)=f(x)^2+f'(x)^2$ allora lo stesso conto fatto in \eqref{eq:harm} mostra che $g$ \`e costante. Ma $g(0)=1$, dunque
+\begin{equation}\label{eq:bound}
+f(x)^2+f'(x)^2=1 \quad\forall x\in\bR.
+\end{equation}
+Inoltre abbiamo visto che la funzione, se esiste, \`e derivabile un numero arbitrario di volte, allora si pu\`o facilmente verificare, per induzione che, per ogni $n\in\bN$,\footnote{Con $f^{(k)}$ si intende la $k$-pesima derivata di $f$.}
+\[
+f^{(2n)}(0)=(-1)^n \;\;;\;f^{(2n+1)}(0)=0.
+\]
+Dunque, per ogni $n\in\bN$, la formula di Taylor implica
+\[
+f(x)=\sum_{k=0}^n\frac{f^{(2k)}(0)}{(2k)!}x^{2k}+\frac{f^{(2n+2)}(z)}{(2n+2)!}x^{2n+2}=
+\sum_{k=0}^n\frac{(-1)^k}{(2k)!}x^{2k}+\frac{f^{(2n+2)}(z)}{(2n+2)!}x^{2n+2}
+\]
+per qualche $z\in (0,x)$.
+Dunque, ricordando \eqref{eq:bound},
+\begin{equation}\label{eq:bound2}
+\left|f(x)-\sum_{k=0}^n\frac{(-1)^k}{(2k)!}x^{2k}\right|\leq \frac{x^{2n+2}}{(2n+2)!}.
+\end{equation}
+Ponendo $n=2$ si ottiene $f(1)>0$ e $f(2)<0$, dunque deve esistere almeno un punto in cui la $f$ si annulla. Sia $x_0\in [1,2]$ il punto pi\`u piccolo per cui $f(x_0)=0$.\footnote{Tale punto esiste perch\`e, detto $Z:=\{z\in [1,2]\;:\; f(z)=0\}$ deve esistere $x_0=\inf Z$. Ma allora esiste una successione $\{z_j\}\subset Z$ tale che $\lim_{j\to\infty} z_j=x_0$ (ovviamente potrebbe essere che  alcuni, eventualmente tutti, gli $z_j$ siano uguali) e quindi $f(x_0)=\lim_{j\to\infty}f(z_j)=0$, per la continuit\`a della $f$ che segue dalla sua derivabilit\`a.}
+
+A questo punto definiamo $f_1(x)=f'(x+x_0)$. Chiaramente $f_1''=-f_1$ e inoltre $f_1(0)=f'(x_0)=-1$,\footnote{Questo segue da \eqref{eq:bound} e dal fatto che $f(x)\geq 0$ per ogni $x\in [0,x_0]$, per la definizione di $x_0$, dunque $f''(x)=-f(x)\leq 0$ e $f'(0)=0$.} $f_1'(0)=f''(x_0)=0$. Questo significa che $-f_1$ soddisfa le condizioni \eqref{eq:main} e dunque, per l'unicit\`a delle funzioni che soddisfano tali condizioni (se esistono), $-f(x)=f_1(x)=f'(x+x_0)$. Dunque 
+\[
+f(x)=-f'(x+x_0)=f''(x+2x_0)=-f(x+2x_0)
+\]
+e quindi $f(x)=f(x+4x_0)$ per ogni $x\in \bR$, in altre parole $f$, se esiste, deve essere periodica di periodo $4x_0$.
+
+\begin{es} Per ogni $\alpha\in\bR$ si consideri la funzione $u(x)=f(x+\alpha)-f(x)f(\alpha)+f'(x)f'(\alpha)$ e si mostri che $u\equiv 0$.
+\end{es}
+
+\section{Esistenza}
+La stima \eqref{eq:bound2} sembra indicare che un buon candidato per la soluzione di \eqref{eq:main} \`e la funzione
+\begin{equation}\label{eq:formula}
+f(x)=\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}.
+\end{equation}
+Il criterio del rapporto mostra che la serie di cui sopra \`e assolutamente convergente per ogni $x\in \bR$ e quindi definisce una funzione, inoltre chiaramente $f(0)=1$. Per verificare che sia una soluzione di \eqref{eq:main} occorre calcolare la derivata di $f$. Se derivassimo formalmente la serie termine a termine otterremmo la funzione
+\begin{equation}\label{eq:formula_der}
+\phi(x)=\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)!}x^{2n-1},
+\end{equation}
+che anche \`e ben definita, ma \`e la derivata?
+
+\begin{lem}\label{lem:der}
+Per ogni $x\in \bR$ si ha $f'(x)=\phi(x)$.
+\end{lem}
+\begin{proof}
+Per dimostrare il Lemma occorre calcolare il rapporto incrementale, ovvero bisogna mostra che
+\[
+\begin{split}
+\lim_{h\to 0} h^{-1}&\left[\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}(x+h)^{2n}-\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}-h\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)!}x^{2n-1}\right]\\
+&=\lim_{h\to 0} h^{-1}\left[f(x+h)-f(x)-h\phi(x)\right]=0.
+\end{split}
+\]
+Ora la formula di Taylor al secondo ordine implica
+\[
+\frac{1}{(2n)!}(x+h)^{2n}-\frac{1}{(2n)!}x^{2n}-\frac{h}{(2n-1)!}x^{2n-1}=\frac{h^2}{(2n-2)!}z^{2n-2}
+\]
+per qualche $z\in (x,x+h)$. Dunque, ponendo $M=\max\{|x|,|x+h|\}$, si ha
+\[
+\left|\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}(x+h)^{2n}-\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}-h\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)!}x^{2n-1}\right|\leq \sum_{n=1}^\infty\frac{|h|^2M^{2n-2}}{(2n-2)!}
+\]
+Ancora il criterio del rapporto implica che la serie $\sum_{n=1}^\infty\frac{M^{2n-2}}{(2n-2)!}$ \`e convergente e dunque esiste una costante $C>0$, indipendente da $|h|<1$ tale che 
+\[
+\left|\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}(x+h)^{2n}-\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}-h\sum_{n=1}^\infty\frac{(-1)^n}{(2n-1)!}x^{2n-1}\right|\leq C h^2.
+\]
+da cui il Lemma segue immediatamente. 
+\end{proof}
+Ma allora $f'(0)=\phi(0)=0$, inoltre lo stesso tipo di ragionamento appena fatto permette di verificare che
+\[
+f''(x)=\sum_{n=1}^\infty\frac{(-1)^n}{(2n-2)!}x^{2n-2}=-\sum_{n=0}^\infty\frac{(-1)^n}{(2n)!}x^{2n}
+=-f(x).
+\]
+Dunque la funzione cercata esiste ed \`e data dalla formula \eqref{eq:formula}.
+
+\section{{\Large $\pi$} e il suo valore}
+Abbiamo perci\`o risposto alle nostre domande iniziali ma che ha a che fare tutto ci\`o con la trigonometria? Prima di tutto notate che \eqref{eq:bound} implica che, per ogni $x\in\bR$, $(f(x),f'(x))\in\bR^2$ appartiene al cerchio unitario (visto che la sua distanza dall'origine \`e uno).
+Ora visto che le funzioni sono periodiche di periodo $4x_0$, ne segue che il punto $(f(x),f'(x))$ per $x\in [0, 4x_0]$ descrive tutta la circonferenza. Ma allora possiamo adottare il punto di vista di Archimede e decidere che la lunghezza della circonferenza \`e data dal limite di poligonali con sempre pi\'u lati. Consideriamo per esempio un poligono con $n$ lati i cui vertici si trovano sulla circonferenza e sono dati dai punti $\{(f(4x_0i n^{-1}),f'(4x_0i n^{-1}))\}_{i=0}^{n-1}$. Tale poligono (inscritto nella circonferenza) ha $n$ lati di lunghezza
+\[
+\begin{split}
+\ell_{i,n}&=\sqrt{(f(4x_0(i+1) n^{-1})-f(4x_0i n^{-1}))^2+(f'(4x_0(i+1) n^{-1})-f'(4x_0i n^{-1}))^2}\\
+&=\sqrt{(f'(4x_0i n^{-1})^2n^{-1}+r_i)^2+(f''(4x_0i n^{-1}) n^{-1}+w_i)^2}
+\end{split}
+\]
+dove, avendo usato nuovamente Taylor al secondo ordine, $r_i=\frac 12 f''(z_i)n^{-2}$, $z_i\in (4x_0i n^{-1},4x_0(i+1) n^{-1})$ e $w_i=\frac 12 f'''(\zeta_i)n^{-2}$, $\zeta_i\in (4x_0i n^{-1},4x_0(i+1) n^{-1})$. Dunque esiste $C>0$ tale che
+\[
+\left|(f'(4x_0i n^{-1})^24x_0n^{-1}+r_i)^2+(-f(4x_0i n^{-1}) 4x_0n^{-1}+w_i)^2-16x_0^2n^{-2}\right|\leq Cn^{-3}.
+\]
+Per cui,
+\[
+|\ell_{i,n}-4x_0n^{-1}|\leq 4x_0n^{-1}\sqrt{1+Cn^{-1}}-4x_0n^{-1}\leq \frac {4x_0C}{2n^2}.
+\]
+Ora il perimetro del poligono \`e dato da $p_n=\sum_{i=0}^{n-1}\ell_{i,n}$ e quindi
+\[
+|p_n-4x_0|\leq \frac {2x_0C}{n}.
+\]
+Da ci\`o segue che $4x_0=\lim_{n\to\infty}p_n$, cio\`e (secondo la definizione di Archimede) la lunghezza della circonferenza del cerchio unitario che \`e comunemente chiamata $2\pi$. In altre parole $x_0=\frac {\pi}2$.
+
+\`E dunque ormai chiaro che la funzione che stiamo studiano \`e una cosa che gi\`a conosciamo (anche se solo a livello intuitivo e non rigoroso\footnote{Per rendere rigorosa la definizione geometrica del coseno occorre, quanto meno, definire rigorosamente la lunghezza di una curva cosa che abbiamo fatto sopra solo in un caso particolare. Per di pi\`u si noti che non abbiamo dimostrato che se approssimiamo la circonferenza con un poligono differente otteniamo lo stesso risultato.}): il coseno. Infatti la funzione in questione ha tutte le propriet\`a che considerazioni geometriche intuitive attribuiscono al coseno. Pi\`u precisamente
+\[
+\begin{split}
+&\cos x=f(x)\\
+&\sin x=-f'(x).
+\end{split}
+\]
+
+La sola cosa che ancora non \`e molto soddisfacente \`e: ma quanto vale $\pi$. Dalle considerazioni precedenti risulta solo che $\pi\in (2,4)$, non molto preciso.\footnote{Abbiamo gia fatto di meglio in una lezione precedente ma ora vogliamo argomentare in maniera indipendete.}
+
+Una prima possibili\`a \`e quella di usare \eqref{eq:bound2} per stimare $x_0$. Infatti \eqref{eq:bound2} dice che $\cos x=p_n(x)+r_n(x)$ dove $p_n$ \`e un polinomio di grado $2n$ e $|r_n|\leq \frac{x^{2n+2}}{(2n+2)!}$. 
+
+Ora poich\`e $|\sin x-x+\frac {x^3}{3!}|\leq \frac{|x|^5}{5!}$ e $x-\frac{x^3}{3!}$ sono un polinomio di terzo grado con massimo al punto $\sqrt 2$, e valore minimo, nell'intervallo $[1,2]$, $\frac 56$ ne segue che, per tutti gli $x\in [1,2]$,
+\[
+\sin x\geq \frac 56-\frac {32}{5!}=\frac {17}{30}\geq \frac 12.
+\]
+
+Finalmente, se fosse noto un $x_*\in[1,2]$ tale che $p_n(x_*)=\ve$ allora, sempre per Taylor,
+ponendo $x_0-x_*=h$,
+\[
+0=\cos(x_0)=\cos(x_*)-\sin(z)h=\ve+r_n(x_*)-\sin(z)h
+\]
+con $z\in [1,2]$ da cui
+\[
+|h|=\left|\frac{\ve+r_n(x_*)}{\sin z}\right|\leq 2\ve+\frac{2^{2n+3}}{(2n+2)!}.
+\]
+Da cui segue che se possiamo trovare un valore per cui $p_n$ \`e molto piccolo (per $n$ abbastanza grande) allora possiamo conoscere $x_0$ con un errore arbitrariamente piccolo.
+
+Per esempio, se scegliamo $n=5$ allora $\frac{2^{2n+3}}{(2n+2)!}\leq 2\times 10^{-5}$ quindi se troviamo un $x_*\in[1,2]$ tale che $|p_5(x)|\leq 5\times 10^{-6}$ allora $|\pi-2x_*|=2|x_0-x_*|\leq 6 \times 10^{-5}$. Ovvero avremmo determinato $\pi$ con quattro cifre decimali esatte.
+
+Il punto $x_*$ potrebbe essere trovato con venti passi del metodo di bisezione ma questo sarebbe abbastanza laborioso. Vedremo tra poco un metodo molto pi\`u efficiente: l'algoritmo di Newton.
+
+\section{Altre funzioni trigonometriche}
+
+Dalla funzione coseno si ottengono altre funzioni trigonometriche, ad esempio
+\[
+\tan x=\frac{\sin x}{\cos x}.
+\]
+Tale funzione \`e ben definita per $x\in (-\pi/2, \pi/2)$. Poich\`e
+\[
+\frac d{dx}\tan x=1+\tan x^2\geq 1
+\]
+la funzione \`e strettamente monotona crescente e quindi invertibile. Possiamo dunque definire l'arcotangente $\arctan :\bR\to  (-\pi/2, \pi/2)$ come la funzione inversa della tangente.
+Allora, dalla formula per la derivata della funzione inversa segue
+\[
+\frac d{dx}\arctan x=\frac 1{1+x^2}.
+\]
+Se $|x|<1$ possiamo anche scrivere
+\begin{equation}\label{eq:arc}
+\frac d{dx}\arctan x=\frac 1{1+x^2}=\sum_{n=0}^\infty (-1)^nx^{2n}.
+\end{equation}
+Dalla formula precedente si pu\`o facilmente ricavare la serie di Taylor per l'arcotangente.
+\begin{lem}\label{lem:serie}
+Dato $C>0$, se la serie $\vf(x)=\sum_{n=0}^\infty a_n x^n$ \`e convergente per $|x|\leq C$ allora la funzione $\vf$ \`e derivabile un numero arbitrario di volte in zero e $\vf^{(n)}(0)=n! a_n$.
+\end{lem}
+\begin{proof}
+Cominciamo col notare che per la condizione sufficiente della convergenza di una serie deve essere $\lim_{n\to\infty}a_nC^n=0$. Dunque se $|x|\leq C/2$ si ha (di nuovo per Taylor al secondo ordine)
+\[
+\begin{split}
+&\left| \vf(x+h)-\vf(x)-h\sum_{n=1}^\infty a_n nx^{n-1}\right|\leq h^2\sum_{n=1}^\infty\left|a_n n(n-1)C^{n-2}2^{-n+2}\right|\\
+&\leq h^2C^2\sum_{n=2}^\infty n^22^{-n}.
+\end{split}
+\]
+L'ultima serie \`e convergente (come si pu\`o verificare usando il criterio del rapporto) e non dipende da $x$. Da questo segue che
+\[
+\vf'(x)=\lim_{h\to 0}\frac{\vf(x+h)-\vf(x)}{h}=\sum_{n=1}^\infty na_n x^{n-1}=\sum_{n=0}^\infty (n+1)a_{n+1} x^n.
+\]
+Poich\`e la derivata si scrive nuovamente come una serie convergente dello stesso tipo possiamo nuovamente applicare lo stesso ragionamento e ottenere il risultato voluto per induzione.
+\end{proof}
+\begin{es} \label{es:arc}Si usi la formula \eqref{eq:arc} il Lemma \ref{lem:serie} e la formula di Taylor, per ottenere la rappresentazione, per $x\in (-1,1]$,
+\[
+\arctan x=\sum_{n=0}^\infty (-1)^n\frac{x^{2n+1}}{2n+1}.
+\]
+\end{es}
+La formula di cui sopra \`e interessante e pu\`o essere usata per calcolare $\pi$. Per esempio, $\tan \pi/4=1$, quindi
+\[
+\frac \pi 4=\sum_{n=0}^\infty \frac{(-1)^n}{2n+1}
+\]
+che da il fatto che $\pi/4$ \`e la somma degli inversi dei numeri dispari a segni alterni. Tale formula \`e piuttosto sorprendente ma non molto utile per calcolare $\pi$.\footnote{Se si considera la dimostrazione della convergenza delle serie a segni alterni i vedr\`a che per calcolare $\pi$ con 4 cifre decimali esatte con tale formula occorre sommare circa $10^4$ termini.}
+
+D'altro canto $\tan \frac \pi 6=\frac 1{\sqrt 3}$, quindi
+\[
+\frac \pi 6=\frac 1{\sqrt 3}\sum_{n=0}^\infty \frac{(-1)^n}{3^n(2n+1)}.
+\]
+Questa serie converge molto pi\`u rapidamente e per ottenere quattro cifre esatte basta calcolare i primi otto termini (a patto di conoscere $\sqrt 3$ con una precisione di cinque cifre cosa facilmente ottenibile con l'algoritmo di Newton che vedremo tra breve).
+\end{document}
+

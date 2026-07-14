@@ -1,0 +1,18 @@
+     REVERSIBILITY IN INFINITE HAMILTONIAN SYSTEMS WITH CONSERVATIVE NOISE
+                                   by
+         Jozsef Fritz, Carlangelo Liverani and  Stefano Olla
+         
+ABSTRACT:
+ The set of stationary measures of an infinite
+ Hamiltonian system with noise is investigated. The model consists of
+ particles moving in $\RR^3$ with bounded velocities and subject to a
+ noise that does not
+ violate the classical laws of conservation,  see  [OVY]. Following
+ [LO] we assume that the noise has also a finite radius of interaction,
+ and prove that translation invariant stationary states of finite
+ specific entropy are reversible with respect to the stochastic
+ component of the evolution. Therefore the results of { [LO]} imply
+ that such invariant measures are superpositions of Gibbs states.                                 
+
+PUBLISHED IN:
+Communication in Mathematical Physics, 189, 2, pp. 481--496, (1997).

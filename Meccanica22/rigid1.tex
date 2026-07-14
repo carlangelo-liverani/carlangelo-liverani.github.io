@@ -1,0 +1,492 @@
+\documentclass{amsart}
+
+\numberwithin{equation}{section}
+
+%%%%%%%packages
+\usepackage{amssymb}
+\usepackage{enumerate, xspace}
+%\usepackage{showkeys}
+\usepackage{marvosym} %monetary symbols, \EUR or \EURcr, \EyesDollar
+\usepackage[sans]{dsfont}        %allows \mathds{E 1}, without sans is less heavy
+\usepackage[bottom,first]{draftcopy}
+\usepackage{changebar}
+\usepackage[colorlinks]{hyperref}
+
+%%%%%%%%%Pagination
+\hfuzz=15pt
+
+%%%%%%%%%Theorems
+\newtheorem{thmm}{Theorem}
+\newtheorem{thm}{Teorema}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{sublem}[thm]{Sub-lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}{Conjecture}\renewcommand{\theconj}{}
+\newtheorem{defin}{Definition}
+\newtheorem{cond}{Condition}
+\newtheorem{hyp}{Hypotheses}
+\newtheorem{exmp}{Example}
+\newtheorem{ex}{Esercizio}
+\newtheorem{pro}{Problema}
+\newtheorem{rem}[thm]{Remark}
+
+%%%%%%%%%%mathcal
+\newcommand\cB{{\mathcal B}}
+\newcommand\cC{{\mathcal C}}
+\newcommand\cD{{\mathcal D}}
+\newcommand\cE{{\mathcal E}}
+\newcommand\cF{{\mathcal F}}
+\newcommand\cG{{\mathcal G}}
+\newcommand\cH{{\mathcal H}}
+\newcommand\cI{{\mathcal I}}
+\newcommand\cL{{\mathcal L}}
+\newcommand\cO{{\mathcal O}}
+\newcommand\cM{{\mathcal M}}
+\newcommand\cT{{\mathcal T}}
+
+%%%%%%%%%%%%mathbb
+\newcommand\bA{{\mathbb A}}
+\newcommand\bB{{\mathbb B}}
+\newcommand\bC{{\mathbb C}}
+\newcommand\bD{{\mathbb D}}
+\newcommand\bE{{\mathbb E}}
+\newcommand\bN{{\mathbb N}}
+\newcommand\bP{{\mathbb P}}
+\newcommand\bQ{{\mathbb Q}}
+\newcommand\bR{{\mathbb R}}
+\newcommand\bT{{\mathbb T}}
+\newcommand\bV{{\mathbb V}}
+\newcommand\bZ{{\mathbb Z}}
+
+%%%%%%%%%%%greek
+\newcommand\ve{\varepsilon}
+\newcommand\eps{\epsilon}
+\newcommand\vf{\varphi}
+
+
+%%Bold math
+\newcommand{\ii}{\text{\it\bfseries i}}
+\newcommand{\jj}{\text{\it\bfseries j}}
+\newcommand{\kk}{ \text{\it\bfseries k}}
+\newcommand{\xx}{\text{\it\bfseries x}}
+
+%%%%%%%%%%%%%%%various
+\newcommand\Id{{\mathds{1}}}
+\newcommand{\marginnote}[1]
+           {\mbox{}\marginpar{\raggedright\hspace{0pt}{$\blacktriangleright$ #1}}}
+\newcommand\nn{\nonumber}
+\newcommand{\bigtimes}{{\sf X}}
+\newcommand{\spa}{\operatorname{span}}
+\newcommand{\lie}{\frak s\frak o}
+\newcommand{\homega}{\hat\omega}
+\begin{document}
+
+\title{Corpi rigidi}
+\author{Carlangelo Liverani}
+\address{Carlangelo Liverani\\
+Dipartimento di Matematica\\
+II Universit\`{a} di Roma (Tor Vergata)\\
+Via della Ricerca Scientifica, 00133 Roma, Italy.}
+\email{{\tt liverani@mat.uniroma2.it}}
+\date{\today.}
+%{\bf File: {\jobname}.tex.}}% eliminate in final version
+%\begin{abstract}
+%\end{abstract}
+%\keywords{...}
+%\subjclass{...}
+\maketitle
+
+
+
+
+%%%PAPER
+\section{Tre punti nel piano}
+Si considerino $3$ punti non collineari in $\bR^2$ che soddisfano i vincoli
+\begin{equation}\label{eq:vincoli0}
+\|x_i-x_j\|=r_{i,j}>0
+\end{equation}
+per ogni $i>j\in \{1,\dots, 3\}$. Sia  $\ell=\|x_1-x_2\|$ e $v=(x_1- x_2)\ell^{-1}$ e $n\in\bR^2$ il vettore unitario perpendicolare a $v$ e tale che $\langle v,Jn\rangle=1$ dove $J=\begin{pmatrix}0&1\\-1&0\end{pmatrix}$.\footnote{ Questo fissa semplicemente l'orientamento della base $\{v,n\}$. In particolare $n=-Jv$.}
+Possiamo quindi scrivere $x_3-x_1=av+bn$, dunque i vincoli \eqref{eq:vincoli} si possono scrivere come
+\[
+\begin{split}
+&r_{1,2}=\ell\\
+&r_{1,3}^2=a^2+b^2\\
+&r_{2,3}^2=\|x_3-x_1+x_1-x_2\|^2=(a+\ell)^2+b^2=a^2+2a\ell+\ell^2+b^2.
+\end{split}
+\]
+Dunque $a=(r_{2,3}^2-r_{1,3}^2-r_{1,2}^2)(2r_{1,2})^{-1}$ e $b^2=r_{1,3}^2-a^2$. La seconda equazione ha soluzione solo se $r_{2,3}< r_{1,2}+r_{1,3}$, che \`e null'altro che la disuguaglianza triangolare. Si noti che l'equazione ha due soluzioni simmetriche rispetto alla linea passante per $x_1, x_2$.
+
+La posizione dei tre punti \`e quindi univocamente determinata da $x_1$, $v$ e il segno di $b$. Poich\`e $\|v\|=1$, esso \`e univocamente determinato da un angolo $\theta\in\bT^1$: $v=(\cos\theta,\sin\theta)$. Possiamo quindi identificare tutte le possibili posizioni dei tre punti con $\bR^2\times \bT^1\times \{-1,+1\}$.
+\begin{pro} Si  mostri che non esiste alcuna curva continua che unisce $(x,\theta,+)$ a $(x',\theta',-)$.\footnote{ Un moto continuo non pu\`o cambiare l'orientamento.}
+\end{pro}
+Ne segue che se vogliamo  studiare il moto dei tre punti il segno di $b$ non pu\`o cambiare e quindi lo spazio delle configurazioni \`e $\bR^2\times \bT^1$.
+\section{Quattro punti nello spazio}
+Si considerino $4$ punti non complanari in $\bR^3$ che soddisfano i vincoli
+\begin{equation}\label{eq:vincoli0}
+\|x_i-x_j\|=r_{i,j}>0
+\end{equation}
+per ogni $i>j\in \{1,\dots, 4\}$. Sia $v=(x_1- x_2) r_{1,2}^{-1}$, $\tilde w=(x_1- x_3) r_{1,3}^{-1}$ e $n\in\bR^2$ il vettore unitario perpendicolare a $\spa\{v,w\}$ e tale che\footnote{ Nuovamente questo determina l'orientamento.}
+\begin{equation}\label{eq:orient}
+\operatorname{sign}\left\{\det\begin{pmatrix} v&\tilde w &n\end{pmatrix}\right\}=1
+\end{equation}
+Possiamo ora introdurre la base ortonormale $\{v,w,n\}$ e sappiamo dalla sezione precedente che $x_2=x_1+r_{1,2} v$ e $x_3=x_1+av+bw$ dove $a$ e $|b|$ sono univocamente determinati. Possiamo quindi scrivere $x_4=x_1+\alpha v+\beta w+\gamma n$ da cui segue
+\begin{equation}\label{eq:4-3}
+\begin{split}
+r_{1,4}^2&=\alpha^2+\beta^2+\gamma^2\\
+r_{2,4}^2&=(r_{1,2}+\alpha)^2+\beta^2+\gamma^2\\
+r_{2,3}^2&=(a+\alpha)^2+(b+\beta)^2+\gamma^2
+\end{split}
+\end{equation}
+\begin{pro}
+Si mostri che le \eqref{eq:4-3} hanno soluzione se e solo se tutte le possibili disuguaglianze triangolari sono soddisfatte. Inoltre, se hanno soluzione allora $\alpha,\beta$ e $|\gamma|$ sono univocamente determinante.
+\end{pro}
+Ne segue che la posizione dei quattro punti \`e univocamente determinata dati $x_1,v,w$ e il segno di $b$ e $\gamma$. Tuttavia se consideriamo la configurazione data da $x_1, v, -w$ e $-b$, $-\gamma$ notiamo che la condizione \eqref{eq:orient} implica che il terzo vettore normale ora \`e $-n$ e quindi otteniamo esattamente la stessa posizione per $x_2, x_3, x_4$. Questo significa che possiamo restringerci al caso $b>0$, dopo di che le posizioni di $x_1,x_2,x_3$ sono unicamente fissate mentre $x_4$ ha solo due possibili posizioni simmetriche rispetto al piano che contiene $x_1,x_2,x_3$.
+Come definire le coordinate?  Una pu\`o essere $x_1$, le altre sono determinate da $v,w,n$ ovvero da una base di $\bR^3$, possiamo quindi identificarla col cambio di coordiante che porta la base standard $\{e_1,e_2,e_3\}$ in $v,w,n$. Prima di continuare occorre fare una digressione sulle propriet\`a di tali cambi di variabili.
+\section{Il gruppo ortogonale}
+Sia $GL(n,\bR)$ il gruppo delle matrici $n$ per $n$. Una matrice invertibile definisce un  cambio di base: sia $A\in GL(n,\bR)$, $\det(A)\neq 0$ e $w_i=Ae_i$ allora se $v=\sum_{i=1}^n a_i w_i$ si ha $v_l=\sum_{i=1}^n a_i A_{li}$, cio\`e $v=\sum_{i=1}^n A_{li} a_ie_l$.
+\begin{pro} Si mostri che $GL(n,\bR)$ \`e uno spazio vettoriale normato.\footnote{ Infatti si possono definire varie norme, la mia preferita \`e $\|A\|=\sup_{\|v\|=1}\|Av\|$.}
+\end{pro}
+In particolare, abbiamo una distanza definita in $GL(n,\bR)$ che definisce una topologia. Da ora in poi la assumeremo data.
+\begin{pro} Si mostri che il determinante \`e una funzione continua da $GL(n,\bR)$ in $\bR$.
+\end{pro}
+Se chiediamo che la nuova base, associata al cambio di variabile, sia ortonormale abbiamo $\delta_{ij}=\langle w_i,w_j\rangle=\langle e_i, A^TAe_j\rangle$ ovvero $A^TA=\Id$.  In altre parole $A^T=A^{-1}$  e quindi anche $AA^T=\Id$. Si noti inoltre che se $A^TA=\Id$ allora $\det(A)^2=1$ e quindi $\det(A)=\pm1$.
+\begin{pro} Si mostri che $O(n,\bR)=\{A\in GL(n,\bR)\;:\; A^TA=\Id\}$ forma un gruppo (il gruppo ortogonale) e lo stesso accade per $SO(n,\bR)=\{A\in O(n,\bR)\;:\;\det(A)=1\}$ (il gruppo ortogonale speciale).
+\end{pro}
+
+\begin{pro} Si mostri che date due basi ortonormali di $\bR^n$ $\{v_i\}$ e $\{w_i\}$ esiste una sola matrice $A\in O(n,\bR)$ tale che $w_i=Av_i$.
+\end{pro}
+Se $\Gamma:[0,1]\to O(n,\bR)$ \`e una curva continua allora $\det(\Gamma(t))$ \`e una funzione continua e quindi non pu\`o passare da $+1$  a$-1$. Se ne evince che $O(n,\bR)$ \`e disconnesso.\footnote{ Infatti, come vedremo, consiste di due componenti connesse, una essendo $SO(n,\bR)$.}
+
+Ma come \`e fatto $SO(n,\bR)$? Se identifichiamo $GL(n,\bR)$ con $\bR^{n^2}$ allora $SO(n,\bR)$ \`e un sottoinsieme di $\bR^{n^2}$.
+\begin{pro} Si mostri che la topologia indotta da $\bR^{n^2}$ \`e la stessa indotta dalla norma di cui sopra.
+\end{pro}
+D'altra parte $\bR^{n^2}$ ha una struttura differenziabile, possiamo quindi parlare di curve differenziabili nello spazio delle matrici. \`E possibile che una curva differenziabile appartenga interamente a $SO(n,\bR)$? Vediamo: supponiamo $\Gamma:(0,1)\to SO(n,\bR)$ differenziabile, e $\Gamma(t)^T\Gamma(t)=\Id$ per ogni $t\in (0,1)$. Differenziando si ha
+\[
+\Gamma'(t)^T\Gamma(t)+\Gamma(t)^T\Gamma'(t)=0.
+\]
+Ponendo $\Gamma'(t)=\Gamma(t)B(t)$ si ha $B(t)^T=-B(t)$, ovvero $B$ deve essere una matrice antisimmetrica. Sia $\lie(n,\bR)=\{A\in GL(n,\bR)\;:\; A^T=-A\}$, si noti che \`e uno spazio vettoriale di dimensione $\frac{n(n-1)}2$.
+
+Allora, data qualunque curva continua $B:(0,1)\to \lie(n,\bR)$ e $A\in SO(n,\bR)$ l'equazione
+\[
+\begin{split}
+&\Gamma'(t)=\Gamma(t)B(t)\\
+&\Gamma(0)=A
+\end{split}
+\]
+ha una unica soluzione che appartiene a $SO(n,\bR)$. Questo suggerisce l'idea che $O(n,\bR)$ sia un manifold $\frac{n(n-1)}2$ dimensionale . Vediamo di dimostrarlo.
+\begin{lem} $O(n,\bR)$ \`e compatto.
+\end{lem}
+\begin{proof}
+Sia $A\in O(n,\bR)$, allora, per ogni $v\in\bR^n$ si ha
+\[
+\|v\|^2=\langle v, A^TAv\rangle=\langle Av, Av\rangle
+\]
+ovvero
+\[
+\|A\|=\sup_{\|v\|=1}\|Av\|=1.
+\]
+Dunque $ O(n,\bR)$ \`e limitato, per concludere basta dimostrare che \`e chiuso. Supponiamo che $\{A_n\}\subset O(n,\bR)$ e $\lim_{n\to\infty}A_n=A$, allora
+\[
+A^TA=\lim_{n\to\infty} A_n^TA_n=\Id,
+\]
+dunque $A\in O(n,\bR)$.
+\end{proof}
+
+Dato $\bar A\in O(n,\bR)$ consideriamo l'equazione
+\begin{equation}\label{eq:SO}
+F(A):=A^TA-\Id=0
+\end{equation}
+in un intorno di $\bar A$. Si noti che possiamo scrivere $A=\bar Ae^{B}$, infatti $\bar A$ \`e invertibile e il problema si riduce a risolvere l'equazione $e^B=\bar A^{-1}A$ dove $\bar A^{-1} A$ \`e vicino a $\Id$.
+\begin{lem}\label{lem:exp} Sia $D\in  GL(n,\bR)$, $\|D\|<1/4$, allora l'equazione $e^B=\Id+D$ ha una e una sola soluzione in $\cB=\{b\in GL(n,\bR)\;:\; \|B\|\leq \frac 12\}$. Inoltre se $[D,D^T]=0$ allora $[B^T,B]=0$.
+\end{lem}
+\begin{proof} 
+Si definisca la funzione $\Phi(B)=\Id+B+D-e^B$. Il problema \`e equivalente a risolvere 
+$\Phi(B)=B$. Ora se $\|B\|\leq 1/2$ si ha
+\[
+\|\Phi(B)\|\leq \frac 14+\sum_{k=2}^\infty\frac{\|B\|^k}{k!}=e^{\|B\|}-\|B\|-\frac 34\leq e^{\frac 12}-\frac 54\leq \frac 12.
+\]
+Dunque si ha $\Phi(\cB)\subset \cB$.
+Inoltre, per ogni $B_1,B_2\in\cB$ si ha
+\[
+\begin{split}
+\|\Phi(B_1)-\Phi(B_2)\|&\leq \left\|\sum_{k=2}^\infty\frac{ B_1^k-B_2^k}{k!}\right\|
+\leq \left\|\sum_{k=2}^\infty\frac{ \sum_{j=0}^{k-1}B_1^{k-j-1}(B_1-B_2)B_2^j}{k!}\right\|\\
+&\leq \sum_{k=2}^\infty\frac{k2^{-k+1}}{k!}\|B_1-B_2\|\leq (e^{\frac 12}-1)\|B_1-B_2\|\leq 0.7\|B_1-B_2\|.
+\end{split}
+\]
+Quindi $\Phi$ \`e una contrazione, $B_n=\Phi^n(0)$ \`e una successione di Chauchy e il limite soddisfa
+\[
+B=\lim_{n\to\infty} B_n=\lim_{n\to\infty} \Phi(B_{n-1})=\Phi(B).
+\]
+D'altra canto se abbiamo due soluzioni $\{X_i\}_{i=1}^2\subset\cB$, ovvero $\Phi(X_i)=X_i$, allora
+\[
+\|X_1-X_2\|=\|\Phi(X_2)-\Phi(X_i)\|\leq .7 \|X_1-X_2\|,
+\]
+quindi $X_1=X_2$, dunque la soluzione \`e unica.
+
+Ora assumiamo che $[D,D^T]=0$, e dimostriamo per induzione che $[B^T,B]=0$. Supponiamo che $[D, B_n]=[D^T, B_n]=[B_n,B_n^T]=0$ allora\footnote{ Si noti che se $[A,C]=0$ allora $[A^2,C]=A^2C-CA^2=A[A,C]+[A,C]A=0$. Quindi $[A^n,C]=0$ per ogni $n\in\bN$. Quindi $[e^A,C]=0$.}
+\[
+\begin{split}
+&[D,B_{n-1}]=[D,\Phi(B_n)]=[D, \Id+B_n+D-e^{B_n}]=-[D,e^{B_n}]=0\\
+&[B_{n+1}^T,B_{n+1}]=[\Id+B_n^T+D^T-e^{B_n^T},\Id+B_n+D-e^{B_n}]=0
+\end{split}
+\]
+and the other relations are checked similarly.
+\end{proof}
+Possiamo ora applicare il Lemma \ref{lem:exp} all'equazione \eqref{eq:SO}. Per ogni $A\in O(n,\bR)$ tale che $\|A-\bar A\|\leq \frac 1{4\|\bar A^{-1}\|}$ possiamo definire $D=\bar A^{-1}A-\Id$. Poich\`e 
+\[
+\|D\|=\|\bar A^{-1}(A -\bar A)\|\leq \frac 14
+\]
+possiamo scrivere $A=\bar A e^B$. Per di pi\`u, poich\`e $\bar A, A\in O(n,\bR)$ si ha $\bar A^{-1}=\bar A^T$ and $A^{-1}=A^T$, dunque
+\[
+[D^T,D]=[A^T\bar A, \bar A^{-1}A]=A^{-1}\bar A\bar A^{-1}A-\bar A^{-1}AA^{-1}\bar A=0.
+\]
+Dunque Lemma \ref{lem:exp} implica che $[B^T,B]=0$, da cui segue\footnote{ Si ricordi che se $A$ e $B$ commutano, allora $e^Ae^B=e^{A+B}$.}
+\[
+\Id=e^{B^T}\bar A^T\bar Ae^B=e^{B^T}e^{B}=e^{B^T+B}.
+\]
+Dall'unici\`a del Lemma \ref{lem:exp} segue $B^T=-B$, ovvero $B\in\lie(n,\bR)$. 
+D'altro canto $\lie(n,\bR)$ \`e naturalmente identificato con $\bR^{\frac{n(n-1)}2}$, il numero di entrate indipendenti in una matrice antisimmentrica $n$ per $n$. Questo significa per ogni $A\in O(n,\bR)$ esiste un intorno $U_A$ e una mappa $\phi_A: U_A\to \lie(n,\bR)$ definita da $\phi_A^{-1}(B)=Ae^B$ tale che $(U_A, \phi_A)$ \`e una carta.
+\begin{pro}
+Si mostri che se $(U_{A_1},\phi_{A_1})$ e  $(U_{A_2},\phi_{A_2})$ sono due carte tali che $U_{A_1}\cap U_{A_2}\neq \emptyset$, allora, dove \`e definito, 
+$\phi_{A_1}\circ \phi_{A_2}^{-1}\in\cC^\infty$.
+\end{pro} 
+Questo significa che $\{(U_A,\phi_A)\}_{A\in O(n,\bR)}$ forma un atlante. Sfortunatamente non \`e finito. Tuttavia $\{U_A\}_{A\in O(n,\bR)}$ \`e un ricoprimento aperto di $O(n,\bR)$. Ma essendo  $O(n,\bR)$ compatto si pu\`o estrarre un sottoricoprimento finito $\{U_{A_i}\}_{i=1}^N$. Ne segue che $\{(U_A,\phi_A)\}_{i=1}^N$ \`e un atlante e $O(n,\bR)$ \`e un manifold $\frac{n(n-1)}2$ dimensionale.
+
+Ora capiamo la struttura locale di $O(n,\bR)$, cosa possiamo dire di quella globale? Siccome $\det: O(n,\bR)\bR$ \`e una funzione continua che ha valori solo $\pm 1$, ne segue che deve avere almeno due componenti disconnesse. D'altro canto se $A\in O(n,\bR)$ con $\det(A)=-1$ allora possiamo definire $G: O(n,\bR)\to O(n,\bR)$ come $G(B)=AB$. Chiaramente $\det(G(B))=-\det(B)$ inoltre \`e facile verificare che $G$ \`e biettiva. Ne segue che $O(n,\bR)=SO(n,\bR)\cup G(SO(n,\bR))$.
+\begin{lem} $SO(n,\bR)$ \`e connesso.
+\end{lem}
+\begin{proof}
+Prima di tutto occorre capire meglio la struttura degli elementi di $SO(n,\bR)$, ovvero il loro spettro. A questo scopo, come \`e conveniente fare nella teoria spettrale, consideriamo l'azione degli elementi di  $SO(n,\bR)$ su $\bC^n$ invece che $\bR^n$.  Sia $A\in SO(n,\bR)$, $\lambda\in \bC$ un suo autovalore  e $v$ un autovettore corrispondente di norma uno, allora\footnote{ Si ricordi che il prodotto scalare in $\bC^n$ \`e definito come $\langle v,w\rangle=\sum_{i=1}^n \overline v_iw_i$.}
+\[
+|\lambda|^2=\langle Av,Av\rangle=\langle v, A^TAv\rangle=\langle v,v\rangle=1.
+\]
+Dunque deve essere $\lambda=e^{i\theta}$ per qualche $\theta\in\bR$. Sia $V$ l'autospazio associato a $e^{i\theta}$ e $v$ un autovettore, allora se $w\perp v$ si ha
+\[
+\langle Aw, v\rangle=e^{-i\theta}\langle Aw, Av\rangle=e^{-i\theta}\langle w, v\rangle=0.
+\]
+Perci\`o $V_1=\{w\in V\;:\; \langle w,v\rangle=0\}$ \`e uno spazio invariante per $A$, quindi deve contenere un autovettore. Ne segue che la molteciplicit\`a algebrica e geometrica devono coincidere e gli autovettori sono ortogonali tra di loro. Se l'autovalore \`e complesso allora esiste un autospazio bidimensionale invariante e possiamo costruire una matrice antisimmetrica che agisce non trivialmente solo su tale spazio. Ne segue che esiste $b\in \lie(n,\bR)$ tale che $Ae^b$ \`e l'identi\`a su tale spazio ed agisce come $A$ nel perpendicolare. Si noti che $A$ e $Ae^b$ sono connessi dalla curva $Ae^{tb}$, $t\in[0,1]$. In questo modo \`e facile vedere che esiste una curva che connette $A$ con una matrice $C$ che ha autovalori $1$ su tutti gli autospazi su cui $A$ ha un autovalore complesso. Ne segue che $C$ pu\`o avere solo un numero pari di autovalori $-1$. Dati due tali autovalori sia $V$ lo spazio generato dagli autovettori. Si veda che esiste una matrice $c\in \lie(n,\bR)$ tale che $Ce^c$ \`e l'identit\`a quando ristretta a $V$. In conclusione abbiamo una curva che unisce $A$ ad $\Id$ e quindi $SO(n,\bR)$ \`e connesso.
+\end{proof}
+\begin{pro}
+Si mostri che $\lie(n,\bR)$ \`e un'algebra dove il prodotto \`e dato dal commutatore $[A,B]=AB-BA$. Si chiama Algebra di Lie.
+\end{pro}
+Si noti che se $a\in \lie(n,\bR)$ e $\lambda\in\bR$ \`e un autovalore, con corrispondente autovettore $v$, allora
+\[
+\lambda\|v\|^2=\langle av, v\rangle=\langle v,a^T v\rangle=-\langle v,a v\rangle=-\lambda\|v\|^2
+\]
+dunque $\lambda=0$. Mentre se $\lambda\in \bC$ e $v\in\bC^n$ \`e il corrispondente autovettore, allora $av=\lambda v$ implica $a\overline v=\overline \lambda \overline v$, dunque anche $\overline \lambda$ \`e un autovettore. D'altro canto
+\[
+\overline\lambda\|v\|^2=\langle av, v\rangle=\langle v,a^T v\rangle=-\langle v,a v\rangle=-\lambda\|v\|^2
+\]
+ovvero $\lambda=i \theta$ per qualche $ \theta\in\bR$. Inoltre, se $V$ \`e uno spazio invariante per $a\in \lie(n,\bR)$ allora, se $w$ \`e perpendicolare a $V$ si ha, per ogni $v\in V$
+\[
+0=\langle w,a v\rangle=-\langle a w, v\rangle
+\]
+Ovvero anche $V^\perp$ \`e uno spazio invariante. Questo significa che esistono $n$ autovettori e che sono ortogonali.
+
+Bene questa \`e una bella teoria che ci poterebbe a parlare di algebre e gruppi di Lie ma veramente ci siamo lasciati distrarre: noi siamo interessati a $n=3$. !
+\section{L'algebra $\lie(3,\bR)$ e il gruppo $SO(3,\bR)$}
+Nel caso $n=3$ la dimensione di $\lie(3,\bR)$ \`e $3$. Questa  \`e  una curiosa coincidenza che permette di identificare $\lie(3,\bR)$ con $\bR^3$ in una maniera che facilita molti conti. Vediamo come. Se $a\in \lie(3,\bR)$ non ha autovalori complessi, allora tutti gli autovalori sono nulli e quindi $a=0$. Dunque devono esistere autovalori complessi, che per\`o vengono in coppie. Ne segue che gli autovalori di $a\in \lie(3,\bR)$, $a\neq 0$ devono essere $\{0, i\theta, -i\theta\}$.  Per ogni $\omega\in\bR^3$, scriviamo
+\[
+a(\omega)=\begin{pmatrix} 0&-\omega_3&\omega_2\\
+\omega_3&0&-\omega_1\\
+-\omega_2&\omega_1&0\end{pmatrix}
+\]
+Allora $a(\omega)\omega=0$.
+\begin{pro} Si verifichi che $\omega\to a(\omega)$ \`e un isomorfismo tra $\bR^3$ e $ \lie(3,\bR)$.
+\end{pro}
+\begin{pro} Si verifichi che $e^{a(\omega)}$ corrisponde ad una rotazione di un angolo $\|\omega\|$ attorno all'asse $\omega$.
+\end{pro}
+I fisici amano quello che chiamano il {\em prodotto vettoriale} che \`e definito come
+\[
+v\times w= (v_2 w_3-v_3w_2, w_1v_3-v_1w_3,v_1w_2-v_2w_1)
+\] 
+la cui definizione si pu\`o ricordare con la formula mnemonica
+\[
+v\times w=\det\begin{pmatrix}\hat i &\hat j &\hat k\\
+v_1& v_2 &v_3\\
+w_1& w_2&w_2\end{pmatrix}
+\]
+\begin{pro} Si verifichi che, per ogni $v\in\bR^3$, $a(\omega)v=\omega\times v=-a(v)\omega$.
+\end{pro}
+\begin{pro} Si verifichi che $[a(\omega_1),a(\omega_1)]=a(\omega_1\times\omega_2)$.
+\end{pro}
+\begin{pro} Si verifichi che $B(v)w$ \`e perpendicolare a $v$ e $w$.
+\end{pro}
+Ne segue che, dati $v,w\in\bR^3$ se $n$ \`e un vettore unitario perpendicolare a $v,w$, allora
+\[
+\|a(v)w\|=|\langle n, a(v)w\rangle| =\left|\det\begin{pmatrix}\hat n\\
+v\\
+w\end{pmatrix}\right|
+\]
+Dunque $\|a(v)w\|$ \`e uguale al volume del parallelepipedo determinato da $v,w,\hat n$, che \`e uguale all'area del  parallelogramma determinato dai vettori $v,w$.
+Quindi, detto $\alpha$ l'angolo tra $v$ e $w$ si ha
+\[
+\|a(v)w\|=\|v\|\|w\| |\sin\alpha|.
+\]
+Ne segue che
+\[
+\|a(v)\|=\|v\|.
+\]
+La conclusione di questo argomento \`e che dato un elemento $a\in\lie(3,\bR)$ e un vettore $v$ tale che $av=0$ e $\|a\|=\|v\|$ allora $a\in\{ a(\pm v)\}$. 
+
+Sia ora $U\in O(3,n)$ e si consideri il cambio di coordinate indotto a $U$. Allora 
+\[
+Ua(v)w=Ua(v)U^TUw
+\] 
+significa che nelle nuove coordinate l'azione di $a(v)$ \`e sostituita dall'azione di $Ua(v)U^T$. Ma $[Ua(v)U^T]Uv=Ua(v)v=0$ mentre 
+\[
+\|Ua(v)U^T\|=\sum_{\|w\|=1}\|Ua(v)U^Tw\|=\sum_{\|U^Tw\|=1}\|a(v)U^Tw\|=\|a(v)\|=\|v\|.
+\]
+Dunque $Ua(v)U^T\in\{ a(\pm Uv)\}$. Per decidere il segno supponiamo che $v,w,n$ sia una base ortogonale tale che $\langle n, a(v)w\rangle>0$. Allora se $Ua(v)U^T=a(\sigma Uv)$, con $\sigma\in\{-1,1\}$,
+\[
+\langle n, a(v)w\rangle=\langle U n, Ua(v)U^T Uw\rangle=\langle U n, a(\sigma Uv) Uw\rangle.
+\]
+Questo significa che l'orientamento della base $\{v,w,n\}$ deve essere lo stesso di quello della base $\{Uv,Uw,\sigma Un\}$ ovvero $\sigma=\det U$.
+\begin{rem} Questo \`e quello che intendono i fisici quando dicono che il vettore $v$ \`e {\em assiale}: non \`e affatto un vettore, \`e una matrice antisimmetrica e sotto riflessione non cambia segno. Infatti abbiamo appena visto che si trasforma come $Ua(v)U^T =a([\det U] Uv)$ che coincide col modo in cui si trasformano i vettori solo se $U\in SO(3,\bR)$.
+\end{rem}
+
+Risulta conveniente considerare la mappa $E:\bR\times S^2\to SO(3,\bR)$, $S^2=\{\omega\in\bR^3\;;\;\|\omega\|=1\}$, definita da
+\[
+E((\theta\homega))=e^{a(\theta\homega)}.
+\]
+Definiamo inoltre la relazione di equivalenza\footnote{ Si verifichi che si tratta proprio di una relazione di equivalenza.} $(\theta,\homega)\sim(\theta',\homega')$ se $\theta\homega=(\theta'+2k\pi)\homega'$ per qualche $k\in\bZ$ e definiamo $\Omega=\bR\times S^2/\sim$. Il nostro scopo \`e mostrare che $E$ si pu\`o quozientare su $\Omega$.
+
+Per cominciare capiamo un poco meglio come sono fatte le classi di equivalenza: $a\in \Omega$  e $x=(\theta,\homega)\in a$ allora $\{(\theta+2\pi k, \homega)\}_{k\in\bZ}\subset a$. Se $\theta=2\pi k$ allora $(0,\homega)\in a$ e quindi $(0, \homega')\in a$ per ogni $\homega'\in S^2$ dunque $a=\{(2\pi k, \homega)\}_{k\in\bZ, \homega\in S^2}$. Se invece $\theta\not \in \{(2\pi k, \homega)\}_{k\in\bZ}$ allora deve essere $a=\{(\sigma\theta+2\pi k, \sigma \homega)\}_{k\in\bZ, \sigma^2=1}$
+\begin{lem} La mappa $E$ induce una mappa $\cE:\Omega\to SO(3,\bR)$. Inoltre $\cE$ \`e biunivoca.
+\end{lem}
+\begin{proof}
+Sia $A\in SO(3,\bR)$. Sappiamo che esiste  $\hat \omega\in\bR^3$, $\|\hat \omega\|=1$, tale che $A\hat\omega=\hat\omega$, inoltre avr\`a due autovalori $e^{i\theta}, e^{-i\theta}$. Allora sia $U\in SO(3,\bR)$ tale che $U\homega=e_3$.  Allora $UAU^Te_3=UA\homega=U\homega=e_3$ e ha anche lei due autovalori $e^{i\theta}, e^{-i\theta}$. D'altro canto
+\begin{equation}\label{eq:expot}
+e^{a(\theta e_3)}=\operatorname{Exp}\begin{pmatrix} 0&-\theta&0\\
+\theta&0&0\\
+0&0&0\end{pmatrix}
+=\begin{pmatrix} \cos\theta&-\sin\theta&0\\
+\sin\theta&\cos \theta&0\\
+0&0&1\end{pmatrix}=:R(\theta)
+\end{equation}
+
+\begin{pro} Si verifichi che i soli elementi di $SO(3,\bR)$ che lasciano invariato $e_3$ e hanno autovalori $e^{i\theta}, e^{-i\theta}$, sono $R(\theta+k\pi)$, $k\in\bZ$.
+\end{pro}
+Dunque $UAU^T\in\left\{e^{a(\theta e_3)}, e^{a((\theta+\pi) e_3)}\right\}$ e
+\[
+ A=U^Te^{a(\theta e_3)}U=e^{U^Ta(\theta e_3)U}=e^{a(\theta U^Te_3)}= e^{a(\theta\homega)}
+\]
+oppure $A=e^{a((\theta+\pi)\homega)}$.
+Dunque  $A$ appartiene all'immagine di $E$ che quindi \`e suriettiva. 
+
+D'altro canto, abbiamo visto che $E(\theta\homega)$ ha autovalori $1,e^{\pm \theta}$, dunque se $E(\theta\homega)=E(\theta'\homega')$ allora deve essere $\{e^{\pm\theta}\}=\{e^{\pm\theta'}\}$. Se $\theta\in \{2\pi k\}_{k\in\bZ}=:2\pi \bZ$, allora $\theta'\in 2\pi \bZ$ e $E(\theta\homega)=\Id=E(\theta'\homega')$ se e solo $(\theta',\homega')\in [(0, \homega)]$.\footnote{ Uso $[x]$ per indicare la casse di equivalenza cui appartiene $x$.} Se $\theta\not \in 2\pi \bZ$ allora, cambiando variabili come sopra, si ha che deve essere $E(\theta e_3)=E(\theta' U\homega')$, dunque $U\homega'=\sigma e_3$, $\sigma^2=1$. Ne segue che $E(\theta\homega)=E(\theta'\homega')$ se e solo se $\theta' \sigma e_3=(\theta+2k \pi)e_3$ per qualche $k\in\bZ$, ovvero, ricambiando variabili, $(\theta,\homega)\sim(\theta',\homega')$. In conclusione, le classi di equivalenza coincidono con le preimagini di $E(A)$ per $A\in SO(3,\bR)$, e quindi $E$ induce naturalmente la mappa $\cE(a)=E(x)$ per $x\in a$ e tale mappa \`e biunivoca.
+\end{proof}
+Il lemma precedente ci dice che in un qualche senso $\Omega$ e $SO(3,\bR)$ sono uguali. Tuttavia una applicazione biunivoca pu\`o essere veramente orribile. Noi vorremmo una corrispondenza che preserva cose naturali come, ad esempio, la vicinanza. Ovvero vorremmo, come minimo, un omeomorfismo. Dobbiamo quindi discutere un attimo di topologia.
+
+\begin{lem} $\Omega$ \`e uno spazio metrico completo.\footnote{ Uno spazio metrico \`e una coppia $(X,d)$ dove $X$ \`e un insieme e $d$ una distanza. Ovviamente questo implica che si tratta di uno spazio topologico: gli aperti sono generati dagli insiemi $\{x\in X\;:\; d(x,\bar x)<\ve\}$, $\bar x\in X$ e $\ve>0$. Ne segue che dati due spazi topologici $(X,d_X)$ e $(Y,d_Y)$ e una funzione $f:X\to Y$, $f$ \`e continua  se e solo se, per ogni $x$, $\lim_{z\to x} f(z)=f(x)$, ovvero $\lim_{d_X(z,x)\to 0} d_Y(f(z),f(x))=0$. Completo significa che ogni successione di Cauchy ha limite.} 
+\end{lem}
+\begin{proof}
+Poich\`e $\bR\times S^2\subset \bR^4$ \`e naturalmente uno spazio metrico completo con la metrica di $\bR^4$, chiamiamola $d$. Per ogni $a,b\in\Omega$ definiamo
+\[
+\tilde d(a,b)=\inf_{x\in a, y\in b}d(x,y).
+\]
+Verifichiamo che $\tilde d$ \`e una metrica.\footnote{ Il fatto che sia una pseudometrica \`e completamente generale (sebbene con una definizione della distanza un poco pi\`u generale), il fatto che $d(a,b)=0$ implichi $a=b$ dipende invece da qualche propriet\`a specifica della relazione di equivalenza.} 
+
+Se $d(a,b)=0$ allora esistono successioni $\{x_n\}\subset a$ e $\{y_n\}\subset b$ tali che 
+\[
+\lim_{n\to \infty}d(x_n,y_n)=0.
+\]
+Visto che, per ogni $k\in\bZ$, $d(x+(2\pi k,0), y+(2\pi k,0))=d(x,y)$, possiamo assumere che $x_n=(\theta_n,\homega_n)$ con $\theta_n\in [-\pi,\pi]$. Ne segue che esistono $\theta, \homega$ tali che $x_n\in\{(\theta,\homega),(-\theta,-\homega)\}$ per $n$ abbastanza grande. Possiamo quindi prendere una sottosuccesione in cui $x_{n_j}=x_*$, costante. Ne segue che, per $j$ grande abbastanza, $y_n= x_*$ e quindi $x_*\in a\cap b$, che implica $a=b$. 
+
+La propriet\`a $\tilde d(a,b)=\tilde d(b,a)$ \`e ovvia. Rimane da verificare la disuguaglianza triangolare: se $(\theta,\homega)\in a$ 
+\[
+\begin{split}
+\inf_{(\theta',\homega')\in b} d((\theta,\homega), (\theta',\homega'))&=\inf_{(\theta',\homega')\in b} d((-\theta,-\homega), (\theta',\homega'))\\
+&=\inf_{(\theta',\homega')\in b}d((\theta+2\pi k,\homega), (\theta'+2\pi k,\homega')).
+\end{split}
+\]
+Quindi
+\[
+\tilde d(a,b)=\inf_{y\in b}d((\theta,\homega), y)
+\]
+per ogni $(\theta,\homega)\in a$.
+Siano $a,b,c\in \Omega$ allora per ogni  $x\in a$ e $y\in b$
+\[
+\tilde d(a,c)= \inf_{z\in c} d(x,z)\leq\inf_{z\in c}  d(x,y)+d(y,z) =d(x,y)+\tilde d(b,c),
+\]
+che da la disuguaglianza triangolare  prendendo l'inf su $x,y$.
+\end{proof}
+
+\begin{pro} Si mostri che $\Omega$ \`e compatto.
+\end{pro}
+\begin{lem} La mappa $\cE:\Omega\to SO(3,\bR)$ \`e un omeomorfismo.
+\end{lem}
+\begin{proof}
+Si noti che la mappa $\widetilde E:\bR^3\to SO(3,\bR)$ definita da $\widetilde E(v)=e^{a(v)}$ \`e continua (in fatti differenziabile). Anche la mappa $g:\Omega\to\bR^3$ definita da $g(\theta,\homega)=\theta\homega$ \`e continua, quindi $E=\widetilde E\circ g$ \`e anche continua, ne segue che $\cE$ \`e continua. D'altro canto $\cE$ \`e una mappa tra spazi compatti quindi l'immagine di un chiuso \`e chiuso, se ne evince che anche l'inversa \`e continua.
+\end{proof}
+Lo spazio $\Omega$ non \`e particolarmente familiare, vale quindi la pena di notare che \`e isomorfo ad uno spazio topologico pi\`u familiare ai matematici.\footnote{ Due spazi si dicono isomorfi se esiste un omeomorfismo tra di loro.}
+\begin{lem}
+Si mostri che $SO(3,\bR)$ \`e isomorfo allo spazio proiettivo $P_3$.\footnote{ Si ricordi che $P_n$ \`e definito come $(\bR^{n+1}\setminus\{0\})/\sim$ dove $x\sim y$ se esiste $\lambda\in\bR$ tale che $y=\lambda x$.} 
+\end{lem} 
+\begin{proof}
+Definiamo la mappa $F:\bR\times S^2\to P_3$ come
+\[
+F((\theta, \homega))=[(\cos\theta/2,  \homega\sin\theta/2)]_p 
+\]
+dove $[z]_p$ \`e la classe di equivalenza di $z\in\bR^4$. Si noti che 
+\[
+\begin{split}
+F((\theta+2\pi, \homega))&=[(\cos(\theta/2+\pi),  \homega\sin(\theta/2+\pi))]_p\\
+&=[-(\cos(\theta/2),  \homega\sin(\theta/2))]_p=F((\theta, \homega)),
+\end{split}
+\]
+Ne segue che $F((\theta+2\pi k, \homega))=F((\theta, \homega))$ per ogni $k\in\bZ$.
+
+Se $F(\theta,\homega)=[(1,0)]_p$ allora deve essere $\sin \theta/2=0$ ovvero $\theta\in 2\pi \bZ$. D'altro canto se $\theta\in 2\pi k$ allora $F(\theta,\homega)=(\cos k\pi, 0)=((-1)^k,0)\in [(1,0)]_p$, ovvero $F^{-1}([(1,0)]_p)=[(0,\homega)]$.  Se invece $\theta\not \in 2\pi\bZ$, ne se segue che $F((\theta',\homega'))=[(\theta,\homega)]_p$ se e solo se $(\cot\theta'/2,  \homega')=\lambda (\cot\theta/2,  \homega)$. Dunque $\lambda  \homega=\homega'$, quindi $\lambda\in \{\pm1\}$. Visto che ci possiamo restringere al caso $\theta, \theta'\in [-\pi,\pi)\setminus \{0\}$ e che su questo dominio $\cot$ \`e invertibile, questo mostra che se $\lambda=1$ allora $\theta'=\theta$  e se $\lambda=-1$ allora $\theta'=-\theta$, ma in tal caso $\theta'\homega'=\theta\homega$ e dunque in ogni caso $(\theta',\homega')\sim (\theta,\homega)$. Questo mostra che $F$ \`e costante sulle classi di equivalenza di $\Omega$ e induce una biezione  $\widetilde F:\Omega\to P_3$. Poich\`e $F$ \`e continua anche $\widetilde F$ lo \`e. Ne segue che $\widetilde F$ \`e un omeomorfismo.
+Ma allora $F\circ \cE^{-1}$ \`e l'omeomorfismo cercato.
+\end{proof}
+\begin{pro} Se vi volete divertire mostrate che infatti $F\circ \cE^{-1}$ \`e un diffeomorfismo, ovvero  $SO(3,\bR)$ e $P_3$ sono diffeomorfi.
+\end{pro}
+Dopo questi esercizi siamo pronti a tornare allo studio del moto di punti vincolati e a considerare il caso generale di $N$ punti vincolati.
+\section{Corpi rigidi in $\bR^3$}
+La discussione precedente implica che dati $4$ punti il segno di $\gamma$ non pu\`o cambiare durante il moto. Quindi, data una configurazione iniziale dei quattro punti tutte le configurazioni che possono essere raggiunte con un moto rigido sono descritte da $x_1\in\bR^2$ e $A\in SO(3,\bR)$.\footnote{ Qui stiamo usando il fatto che $SO(3,\bR)$ \`e connesso che che $O(3,\bR)$ \`e l'unione di due ``copie" di $SO(3,\bR)$.}
+Si considerino ora $N\in\bN$ punti, $N\geq 4$, in $\bR^3$ che soddisfano i vincoli
+\begin{equation}\label{eq:vincoli}
+\|x_i-x_j\|=r_{i,j}>0
+\end{equation}
+per ogni $i>j\in \{1,\dots, N\}$. Se tutti i punti appartengono ad un piano $P$ allora spostando la coordinata $x_k$ di una quantit\`a $h\in\bR^3$ perpendicolare a $P$ si ha
+\[
+|\,\|x_k+h-x_j\|-\|x_k-x_j\|\,|\leq C\|h\|^2.
+\]
+Ci\`o significa che si pu\`o deformare il corpo cambiando di pochissimo le distanze tra i punti. In altre parole il corpo non \`e molto rigido (si pensi ad una lamina o un filo).
+Assumiamo quindi che lo span di $x_j-x_1$ sia tutto $\bR^3$. Dato qualunque insieme $\{x_{i_1}, x_{i_2}, x_{i_3}\}$ dove $x_{i_2}-x_{i_1}$ e $x_{i_3}-x_{i_1}$ sono linearmente indipendenti l'analisi precedente ci dice che la loro posizione \`e determinata da $x_{i_1}$ pi\`u una matrice $A\in SO(3,\bR)$ e la posizione di qualunque altro punto $x_k$ che soddisfa i vincoli \`e univocamente determinata (a parte una riflessione globale rispetto al piano contenente i punti $\{x_{i_1}, x_{i_2}, x_{i_3}\}$).
+
+Ne segue che indipendentemente dal numero di punti un corpo rigido \`e caratterizzato da un insieme di vettori $\{v_i\}_{i=1}^n$, $v_1=0$, tali che $\|v_i-v_j\|=r_{i,j}$ e tutte le possibili posizioni dei suoi punti sono $x_i=x_1+Av_i$ per qualche $x_1\in\bR^3$ e $A\in SO(3,\bR)$.
+
+Se ora i punti hanno massa $m_i$, allora \`e conveniente scegliere il punto di riferimento come il centro di massa $z=\frac{\sum_{i=1}^N m_ix_i}{\sum_{i=1}^N m_i}$. Quindi, i punti del corpo in una posizione generica sono descritti da $x_i=z+Av_i$, dove  $v_i$ sono le coordinate dei punti quando il centro di massa \`e nell'origine e il corpo \`e in una posizione di riferimento scelta a piacere (possibilmente in maniera conveniente). Ne segue che, dette $x_i(t)=z(t)+A(t)v_i$ le traiettorie dei punti,
+\[
+\dot x_i(t)=\dot z(t)+A(t)a(\omega(t))v_i=\dot z(t)+A(t)\omega(t)\times v_i.
+\]
+Quindi
+\[
+\begin{split}
+T&=\frac 12\sum_{i=1}^Nm_i\|\dot x_i(t)\|^2=\frac 12\sum_{i=1}^Nm_i\|\dot z\|^2+\langle \omega(t)\times v_i, \omega(t)\times v_i\rangle\\
+&=\frac 12\sum_{i=1}^Nm_i\|\dot z\|^2+\langle a(v_i) \omega(t), a(v_i)\omega(t)\rangle=\frac 12\sum_{i=1}^Nm_i\|\dot z\|^2+\langle  \omega(t),[- a(v_i)^2]\omega(t)\rangle.
+\end{split}
+\]
+Detta $M=\sum_{i=1}^Nm_i$ la massa totale e $I=\sum_{i=1}^Nm_i[- a(v_i)^2]$ il {\em momento di inerzia}, possiamo finalmente esprimere l'energia cinetica del corpo come
+\[
+T=\frac M2 \|\dot z\|^2+\frac 12 \langle \omega, I\omega\rangle.
+\]
+\begin{pro} Si mostri che la matrice $I=(I_{i,j})$ che esprime il momento di inerzia  ha la forma
+\[
+I_{i,j}=\sum_{k=1}^Nm_k \left(\|v_k\|^2\delta_{ij}-(v_k)_i(v_k)_j\right).
+\]
+\end{pro}
+L'ultimo problema che ci rimane \`e: quali sono le coordinate Lagrangiane?  
+
+Dalla discussione precedente \`e ovvio che non ci sono coordinate veramente globali e naturali sebbene si possano trovare coordinate che hanno singolarit\`a solo su un piccolo insieme (come accade, per esempio, con le coordinate polari). Esistono varie scelte per tali coordinate la pi\`u popolare essendo i cosiddetti {\em angoli di Eulero}. Potete trovare i dettagli su qualunque libro.
+%\begin{thebibliography}{999}
+%\footnotesize
+
+%%BIBLIOGRAPHY
+
+%\end{thebibliography}
+\end{document}

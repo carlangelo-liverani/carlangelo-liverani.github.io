@@ -1,0 +1,8 @@
+                      Random Classical Fidelity       
+                             ABSTRACT
+
+We introduce a random perturbed version of the classical
+fidelity and we show that it converges with
+the same rate of decay of correlations, but not uniformly in the
+noise. This makes the classical fidelity unstable
+in the zero-noise limit.

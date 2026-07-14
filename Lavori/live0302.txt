@@ -1,0 +1,8 @@
+Birth of an elliptic island in a chaotic sea                 
+
+ABSTRACT
+
+I consider a one parameter family of area preserving smooth maps that
+cross a non-uniformly hyperbolic situation into an elliptic
+one. I prove that exponentially close to such a family there
+are maps with positive metric entropy.

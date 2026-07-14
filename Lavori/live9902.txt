@@ -1,0 +1,12 @@
+           STABILITY OF THE SPECTRUM FOR TRANSFER OPERATORS
+                                        
+                               by
+                               
+                Gerhard Keller  and Carlangelo Liverani
+                            
+                              
+ABSTRACT: 
+We prove stability of the isolated eigenvalues  of transfer operators 
+satisfying a Lasota-Yorke type inequality under a broad class of random 
+and non--random perturbations including Ulam-type discretizations. 
+The results are formulated in an abstract framework.

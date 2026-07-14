@@ -1,0 +1,158 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand{\vf}{\varphi}
+\pagestyle{empty}
+\begin{document}
+\hfuzz 12pt
+\large
+\centerline{\Huge \bf Analisi Matematica I}
+\vskip.2cm
+\centerline{\Huge Correzione Terzo Appello}
+
+\vskip1cm
+\begin{enumerate}
+\item $1000000^{200}=(10^6)^{200}=10^{1200}$; $(1000!)^2\leq
+(1000^{1000})^2 =10^{6000}$; $10!=3628800$, $2^4>10$ quindi
+$2^{10!}\geq 10^{907200}$. D'altro canto $(1000!)^2\geq
+(500^{500})^2\geq
+(20^2)^{1000}\geq 10^{2000}$. Dunque
+\[
+1000000^{200}<(1000!)^2<2^{10!}.
+\]
+\item 
+\[
+\frac{q+1}{q-1}=1+\frac {2}{q-1}.
+\]
+Dunque, il numero di cui sopra puo essere intero se e solo se
+$2(q-1)^{-1}\geq 1$ cio\`e $q\leq 3$. Da cui segue che gli unici
+numeri permessi sono 2 e 3.
+\item 
+\[
+\sum_{n=q+1}^\infty\frac 1{n!}\leq \frac 1{(q+1)!}\sum_{n=0}^\infty
+\frac 1{(q+1)^n}\leq \frac 1{(q+1)!}\frac{1}{1-\frac 1{q+1}}
+\leq \frac 1{q!q}.
+\]
+Veniamo alla seconda disuguaglianza.
+\[
+\frac pq-\sum_{n=0}^{q}\frac 1{n!}=\frac {p(q-1)!-\sum_{n=0}^{q}\frac
+{q!}{n!}}{q!}
+\]
+dunque la sola possibilit\`a per la disuguaglianza di essere falsa \`e
+se 
+\begin{equation}\label{eq:abs}
+p(q-1)!-\sum_{n=0}^{q}\frac
+{q!}{n!}=0,
+\end{equation}
+dividendo il tutto per $(q-1)$ si ottiene
+\[
+p(q-2)!-\sum_{n=0}^{q-2}\frac{(q-2)!q}{n!}=\frac q{q-1}+\frac 1{q-1}=
+\frac {q+1}{q-1}
+\]
+ma il menbro di sinistra \`e palesemente un numero intero mentre
+quello di destra non lo \`e mai (vedi esercizio 2) dunque abbiamo una
+contraddizione. Di consequenza \eqref{eq:abs} deve essere falsa,
+cio\`e la disuguaglianza voluta deve essere vera. 
+
+A questo punto si puo concludere: se $q>3$ da quanto visto segue che
+\[
+\left|e-\frac pq \right|\geq \left|\frac pq-\sum_{n=0}^q\frac
+1{n!}\right|-\left| \sum_{n=q+1}^\infty\frac 1{n!}\right|\geq
+\frac 1{q!}-\frac 1{q!q}>0
+\]
+Dunque $e$ non puo mai essere uguale ad un numero razionale a meno che
+il denominatore non sia inferiore a $3$, ma 
+\[
+|e-\frac 83|=|e- (1+1+\frac 12+\frac 16)|\leq \frac 1{3!3}=\frac 1{18}
+\]
+quindi $e$ non puo essere ne $3$ ne $8/3$ ne altro numero razionale
+con denominatore minore di $4$, e quindi non puo essere alcun numero
+razione, cio\`e $e$ \`e un numero irrazionale. (Meditate gente, meditate)
+\item Usando il criterio della radice si ha
+\[
+\lim_{n\to\infty}(1-1/n)^n=e^{-1}<1
+\]
+dunque la serie e' convergente.
+Razionalizzando si ottiene
+\[
+\lim_{n\to\infty}\frac{n}{\sqrt{n^2+1}+n}=\frac 12.
+\]
+\item Il dominio \`e $x\in[-2,2]$ poiche per questi valori la
+quantita' sotto ambedue le radici \`e positivo. Poi il grafico \`e
+simmetrico attorno ad $0$. In pi\`u in zero la funzione non \`e
+differenziabile. Per vederlo si espanda la prima radice usando Taylor
+al secondo ordine. Si ottiene
+\[
+\sqrt{2-(2+(x/2)^2+{\mathcal O}(x^4))}=\frac{|x|}2+{\mathcal
+O}(|x|^3).
+\] 
+Inoltre \`e facile vedere che per ogni $x> 0$ la derivata \`e
+positiva. Dunque la funzione ha un minimo in zero, ma in zero ha uno
+spigolo. 
+\item Prima di tutto, \`e facile vedere dal grafico dell'esercizio
+precedente che $f(x)\leq\sqrt2 x$, per $x>0$. Da questo segue
+\[
+\ell_{n}=f(\ell_{n-1})\leq(\sqrt 2)^{-1}\ell_{n-1}\leq (\sqrt 2)^{-n}\ell_0=
+2(\sqrt 2)^{-n} .
+\]
+Dunque $\lim_{n\to\infty}\ell_n=0$ (e questo, come ho detto durante lo
+scritto, assicurava gia almeno 4 punti).
+Tuttavia per rispondere alla domanda \`e necessaria una stima pi\`u
+precisa. Raffiniamo la stima gia visto nell'esercizio precedente: per
+$x>0$
+\[
+f(x)= \frac x2 +\frac {x^3}{32}+{\mathcal O}(x^5)
+\]
+dove abbiamo usato Taylor al terzo ordine per sviluppare la radice.
+A questo punto, se $x$ \`e sufficientemente piccolo, si ha
+\[
+f(x)\leq \frac x2(1+\frac {x^2}8)\leq \frac x2 e^{\frac{x^2}8}.
+\]
+Ora, poiche $\ell_n$ tende a zero, eriste un $n_0$ tale che per tutti
+gli $n>n_0$ $\ell_n$ \`e abbastanza piccolo nel senso di cui sopra.
+
+Usiamo ora questa disuguaglianza per iterare, come abbiamo fatto sopra,
+\[
+\begin{split}
+\ell_n=&f(\ell_{n-1})\leq \ell_{n-k}2^{-k}e^{\frac
+18\sum_{j=1}^k\ell_{n-j}^2}\leq \ell_{n_0}2^{-n+n_0}e^{\frac
+14\sum_{j=1}^{n-n_0}\ell_{n-j}^2}\\
+&\leq \ell_{n_0}2^{-n+n_0}e^{\frac
+18\sum_{j=1}^{\infty}\ell_{j}^2}.
+\end{split}
+\]
+Dunque, usando la stima gia ottenuta 
+\[
+\ell_n\leq \ell_{n_0}2^{-n+n_0}e^{\frac
+12\sum_{j=1}^{\infty}2^{-j}}\leq \ell_{n_0}2^{-n+n_0}e.
+\]
+Finalmente,
+\[
+2^n\ell_n\leq 2^{n_0}\ell_{n_0}e
+\]
+che non dipende da $n$ e dunque mostra che la succesione $a_n$ \`e
+limitata.
+
+Per i {\bf curiosi}, il {\sl segreto} di questo esercizio \`e il seguente.
+Un piccolo calcolo trigonomerico (o un semplice disegno) mostra che,
+per ogni$\vf\in[0,\pi/2]$,
+\[
+f(2\sin\vf)=2\sin\frac\vf 2.
+\]
+Allora se si pone $\vf_0=\pi$ e $\vf_{n+1}=\frac{\vf_n}2$ si ha
+$\ell_n=2\sin\vf_{n+1}$. Il semplice disegno a cui facevo riferimento
+sopra consiste nel realizzare che $\ell_n$ \`e il lato del poligono
+regolare con $2^{n+1}$ lati. Dunque $a_n$ non \`e altro che il
+semiperimentro di tale poligono. Poich\`e il perimetro dei poligoni
+inscritti dovrebbe convergere alla lunghezza della circoferenza
+(Archimede docet) si deve avere che
+\[
+\lim_{n\to\infty}a_n=\pi,
+\]
+dunque, non solo la succesione \`e limitata ma converge pure e a
+nientedimeno che al nostro
+amico $\pi$.
+\end{enumerate}
+\end{document}

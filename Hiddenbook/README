@@ -1,0 +1,4 @@
+N.B. Per creare un password file eseguire il seguente comando:
+/usr/local/apache/bin/htpasswd nome-file-password -c username
+per inserire un nuovo utente:
+/usr/local/apache/bin/htpasswd nome-file-password username

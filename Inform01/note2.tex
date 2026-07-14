@@ -1,0 +1,581 @@
+\documentclass[10pt, twoside]{article}
+\usepackage{amsfonts,amssymb,latexsym,xspace}
+\usepackage{amsmath,enumerate}
+\usepackage{pstcol}
+\numberwithin{equation}{section}
+
+%\usepackage{showkeys}
+
+\hfuzz 15pt
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{cor}{Corollary}[section]
+\newtheorem{sublem}{Sub-Lemma}[section]
+\newtheorem{prop}{Proposition}[section]
+\newtheorem{defin}{Definition}
+\newtheorem{cond}{Condition}
+\newtheorem{exmp}{Example}
+\newtheorem{rem}{Remark}[section]
+
+\newenvironment{proof}{{\sc Proof\ }}{\hfill $\Box$\vskip.6pt}
+\arraycolsep=.5\arraycolsep
+
+\newcommand\Cal[1]{{\mathcal #1}}
+
+\newcommand\B{{\Cal B}}
+\newcommand\Co{{\Cal C}}
+\newcommand\D{{\Cal D}}
+\newcommand\F{{\Cal F}}
+\newcommand\Lp{{\Cal L}}
+\newcommand\M{{[0,1]}}
+\newcommand\T{{\Cal T}}
+\newcommand\U{{\Cal U}}
+\newcommand\V{{\Cal V}}
+
+\newcommand\Ve{{\mathbb V}}
+\newcommand\N{\mathbb N}
+\newcommand\R{\mathbb R}
+\newcommand\Z{\mathbb Z}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\E{{\mathbb E}}
+\newcommand\Pe{{\mathbb P}}
+\newcommand\cp{{\Cal P}}
+
+\newcommand\BV{{\text{BV}}}
+\newcommand\vf{\varphi}
+\newcommand\nn{\nonumber}
+\newcommand\ve{\varepsilon}
+
+%%%%%   Figure-picture related definitions--beginning
+\newenvironment{myfigure}{\begin{figure}[ht]\
+\centering}{\end{figure}}
+
+\definecolor{lgray}{gray}{0.9}
+\definecolor{gray}{gray}{0.8}
+\definecolor{dgray}{gray}{0.7}
+\setlength{\unitlength}{1mm}
+%%%%%   Figure related definitions--end
+
+\pagestyle{myheadings}
+\markboth{\centerline{\sc Carlangelo Liverani}\hskip-12pt}
+{\centerline{\sc problemi concernenti i limiti }\hskip-12pt}
+
+\begin{document}
+\title{\bfseries Alcuni problemi non banali concernenti i limiti}
+\author{{\sc Carlangelo Liverani}\\
+Dipartimento di Matematica\\
+Universit\`{a} di Roma (Tor Vergata)\\
+Via della Ricerca Scientifica, 00133 Roma, Italy\\
+{\tt liverani@mat.uniroma2.it}}
+\date{Rome, Novembre 5, 2001}
+\maketitle
+
+
+\section{\sc \large Quanto spesso vi pagano gli interessi?}
+
+Supponiamo di avere un capitale  di $a>0$ euro e di metterlo in una
+banca che ci paga l'uno per cento annuo su base annua. Questo significa che, dopo un
+anno, il nostro capitale sar\`a $a+a/100=a(1+1/100)$. A questo punto riceviamo
+una pubblicit\`a di un'altra banca che di offre lo stesso tasso di
+interesse ma che lo paga su di una base semestrale. Ci\`o significa
+che dopo sei mesi paga mezzo punto, dunque dopo sei mesi il nostro
+capitale sar\`a $a+a/200$ e dopo altri sei mesi ci vene pagato
+l'interesse su questo capitale, dunque dopo un anno avremo
+\[
+\left(a+\frac a{200}\right)+\frac 1{200}\left(a+\frac a{200}\right)=
+a\left(1+\frac 1{200}\right)^2.
+\]
+Per esempio, se il nostro capitale iniziale \`e di $10000$ euro
+($a=10000$),
+allora nel primo caso dopo un anno abbiamo $10100$ euro, nel secondo
+$10100.25$ euro (arrontondato al centesimo). Insomma, non molto di
+pi\`u ma comunque di pi\`u. Stiamo per trasferire i nostri fondi in
+tale banca quando veniamo a sapere un'altra banca paga
+gli intreressi su base quadrimestrale, cio\`e tre volte all'anno. Un
+rapido calcolo ci fa vedere che in questo caso alla fine di un anno il
+nostro capitale sarebbe
+\[
+a\left(1+\frac 1{300}\right)^3.
+\]
+Dunqe, se $a=10000$ si ottiene$10100.33$ (arrotondato al centesimo),
+ancora un poco di pi\`u che nel caso presedente. Saputo ci\`o cadiamo
+vittima dell'avidit\`a e ci chiediamo che succederebbe se
+ci pagassero gli interessi $n$ volte all'anno. Chiaramente dopo un
+anno avremmo
+\begin{equation}\label{eq:standard}
+a\left(1+\frac 1{100 n}\right)^n.
+\end{equation}
+Che succede a questa successione, cresce arbitrariamente oppure,
+purtroppo, \`e limitata?
+
+Per capirlo vediamo un caso pi\`u semplice, ovvero dallo studio della
+successione\footnote{Si tratterebbe di una banca assurdamente generosa, che
+paga un interesse del 100\%.}
+\[
+a_n=\left(1+\frac 1{n}\right)^n.
+\]
+Ci serve un risultato ausiliario.
+\begin{lem}\label{lem:semindo}
+Per ogni $n\in\N$ ed ogni $0\leq k\leq n/2$ si ha
+\[
+\left(1+\frac 1{n}\right)^k\leq 1+\frac{2k}n.
+\]
+\end{lem}
+\begin{proof}
+Cominciamo col vedere che succede se $n=1$ e qundi $k=0$.
+\[
+(1+1)^0= 1\leq 1
+\]
+dunque in qusto caso il lemma \`e vero. Proviamo con $n=2$, chiaramente le sole
+possibilit\`a sono $k\in\{0,1\}$. Se $k=0$ si ha $1\leq 1$, se $k=1$
+\[
+(1+1/2)^1=3/2\leq 1+2/2=2,
+\]
+e nuovamente la cosa \`e vera. Ovviamente, poich\`e il numero dei casi
+da verificare \`e infinito non possiamo continuare in questo modo, \`e
+necessaria una strategia migliore, questa \`e fornita dal
+\emph{principio di induzione}.
+
+Consideriamo un $n$ arbitrario allora per $k=0$ abbiamo $1\leq 1$, per
+$k=1$
+\[
+(1+1/n)^1\leq 1+2/n
+\]
+che ancora \`e vero. Supponiamo ora di avere controllato la validit\`a
+della affermazione per tutti i $k$ pi\`u piccoli di un certo
+$k_*<n/2$. Consideriamo allora $k_*+1$. Se $k_*+1>n/2$ allora abbiamo
+finito, altrimenti
+\begin{equation}\label{eq:step}
+\begin{split}
+(1+1/n)^{k_*+1}=&(1+1/n)^{k_*}(1+1/n)\leq
+\left(1+\frac{2k_*}n\right)(1+1/n)\\
+=&1+\frac{2k_*+1}{n}+\frac{2k_*}{n^2}
+\leq1+\frac{2(k_*+1)}{n}.
+\end{split}
+\end{equation}
+Da cui segue che l'affermazione del Lemma deve essere valida anche per
+$k_*+1$. Ma allora, usando questo risultato, e poich\`e abbiamo gi\`a
+controllato il caso $k_*=1$, ne segue che l'affermazioen deve essere
+valida per $k_*+1=2$. Ma ora nulla ci impedisce di usare
+(\ref{eq:step}) con $k_*=2$ ottendo perci\`o la validit\`a del Lemma
+per $k=3$. Chiaramente continuando in questo modo dopo un numero
+finito di passi si sar\`a controllato la validit\`a del Lemma per
+tutti i $k\leq n/2$. Il Lemma segue allora dalla arbitrariet\`a di $n$.
+\end{proof}
+Usando il risultato precedente siamo in grado di vedere che la
+successione $a_n$  \`e limitata. Infatti se $n$ \`e pari ($n=2m$)
+possiamo scrivere
+\[
+\left(1+\frac 1{n}\right)^n=\left[\left(1+\frac
+1{n}\right)^m\right]^2\leq
+\left(1+\frac{2m}{n}\right)^2=4.
+\]
+Se invece $n$ \`e dispari ($n=2m+1$) allora
+\[
+\left(1+\frac 1{n}\right)^n=\left[\left(1+\frac
+1{n}\right)^m\right]^2\left(1+\frac 1{n}\right)\leq 4\left(1+\frac
+1{n}\right)\leq 8.
+\]
+
+A questo punto per vedere che esiste il limite basterebbe l'andamento
+che abbiamo visto all'inizio di 
+questa discussione, ossia che la successione \`e crescente. Per vedere
+ci\`o \`e necessario un altro risultato ausiliario.\footnote{Il
+seguente risultato \`e noto come \emph{disuguaglianza di Bernoulli}.}
+\begin{lem}\label{lem:bernu}
+Per ogni $b>-1$ ed ogni $n\in\N$ si ha
+\[
+(1+b)^n\geq 1+nb.
+\]
+\end{lem}
+\begin{proof}
+Se $n=1$ si ha una uguaglianza, dunque il Lemma \`e vero per $n=1$. A
+questo punto usiamo di nuovo il principio di
+induzione.\footnote{Questa volta si tratta di una cosa pi\`u seria
+visto che lo usiamo non sull'insieme finito $k\leq n/2$, bens\`\i\
+sull'insieme infinito $\N$.} Supponaimo il Lemma vero per un qualche
+$n\in\N$ allora
+\[
+(1+b)^{n+1}=(1+b)^n(1+b)\geq (1+nb)(1+b)=1+(n+1)b+nb^2\geq 1+(n+1)b.
+\]
+La prima disuguaglianza segue dall'ipotesi che $1+b>0$ e dall'ipotesi
+induttiva $(1+b)^n>1+nb$.
+Dunque, poich\`e \`e vero per uno, sar\`a vero per due, per tre e
+cos\`\i\ via.
+\end{proof}
+A questo punto per verificare che la successione \`e crescente
+dobbiamo dimostrare che per ogni $n$ vale $a_{n+1}\geq a_n$. 
+\[
+\begin{split}
+\frac {a_{n+1}}{a_n}=&\left(1+\frac 1{n+1}\right)\left[\frac {1+\frac
+1{n+1}}{1+\frac 1n}\right]^n=\left(1+\frac 1{n+1}\right)\left(1-\frac
+1{(n+1)^2}\right)^n \\
+\geq& \left(1+\frac 1{n+1}\right)\left(1-\frac n{(n+1)^2}\right)
+\geq 1
+\end{split}
+\]
+dove abbiamo usato Lemma \ref{lem:bernu} con $b=-n(n+1)^{-2}$.
+
+Dunque la successione (\ref{eq:standard}) \`e monotona crescente e
+limitata e quindi ammette limite, chiamiamo $e$ tale limite. Notare
+che, sebbene abbiamo stabilito la sua esistenza, non sappiamo un gran
+ch\`e sul numero $e$.
+A questo punto possiamo tornare alla nostra successione originaria
+\[
+\lim_{n\to\infty}\left(1+\frac{1}{100n}\right)^{n}=
+\lim_{n\to\infty}\left[\left(1+\frac{1}{100n}\right)^{100n}\right]^{\frac
+1{100}}=e^{\frac 1{100}}.
+\]
+
+\section{\sc \large L'area del cerchio}
+
+In questa sezione cercheremo di calcolare l'area del cerchio seguendo
+una vecchia idea di Archimede (III secolo avanti Cristo).
+
+Si consideri un cerchio di raggio $r$, chiaramente la sua area \`e
+pi\`u grande di quella di un qualunque poligono inscritto e pi\`u
+piccola di quella di un qualunque poligono circoscritto. Ispirandoci ad
+Archimede considereremo solo poligoni regolari con $n$ lati. Si
+veda in figura \ref{fig:pol} uno spicchio di poligono inscritto e
+circoscritto di angolo $2\alpha$, cio\`e con $\pi/\alpha$ lati
+(ovviamente supponendo $\pi/\alpha$ intero).
+\begin{myfigure}
+\put(-30,0){\line(1,0){60}}
+\put(0,-30){\line(0,1){60}}
+\pscircle(0,0){2}
+\put(0,0){\line(2,1){20}}
+\put(0,0){\line(2,-1){20}}
+\put(20,-10){\line(0,1){20}}
+\put(17.7,-8.8){\line(0,1){17.5}}
+\put(6,1){$\alpha$}
+\caption{Uno spicchio di poligono inscritto e di poligono
+circoscritto}\label{fig:pol} 
+\end{myfigure}
+Vediamo l'area del poligono inscritto. Se il poligono ha $n$ lati
+allora $\alpha=2\pi/n$. L'area del mezzo spicchio in figura \`e
+$r^2/2\cdot \sin\alpha\cos\alpha=r^2/4\cdot \sin2\alpha$. Chiamando
+$A_{i,n}$ l'area del poligono inscritto di $n$ lati abbiamo perci\`o
+\[
+A_{i,n}=r^2\frac n 2\sin\left(\frac {2\pi}n\right).
+\]
+Analogamente l'area del poligono circoscritto $A_{c,n}$ \`e data da
+\[
+A_{c,n}=r^2 n \tan\left(\frac\pi n\right).
+\]
+Chiaramente, per ogni $n\in\N$
+\begin{equation}\label{eq:conf}
+A_{i,n}\leq A_c\leq A_{c,n}
+\end{equation}
+dove $A_c$ \`e l'area della circonferenza.
+
+Studiamo cosa succede alle espressioni di cui sopra quando $n$ tende
+all'infinito. 
+Dalla figura \ref{fig:pol} \`e evidente che per ogni angolo $\alpha$
+si ha
+$\sin\alpha\leq \alpha\leq \tan\alpha$, poich\`e $r\alpha$ \`e la
+lunghezza dell'arco. Da questo segue $\alpha\cos\alpha\leq
+\sin\alpha\leq \alpha$ ovvero
+\begin{equation}\label{eq:basic}
+\cos\alpha\leq \frac{\sin\alpha}{\alpha}\leq 1.
+\end{equation}
+Ponendo $\alpha=\frac{2\pi}n$ in (\ref{eq:basic}) otteniamo
+\[
+\cos \frac {2\pi}n\leq\frac{\sin\left(\frac
+{2\pi}n\right)}{\frac {2\pi}n} \leq 1
+\]
+ovvero
+\[
+\pi r^2\cos \frac {2\pi}n\leq A_{i,n}\leq \pi r^2.
+\]
+Visto che chiaramente $\lim\limits_{n\to\infty}\cos \frac {2\pi}n=1$,
+ne segue, per il confronto, che $\lim\limits_{n\to\infty}A_{i,n}=\pi
+r^2$.
+
+Analogamente, da (\ref{eq:basic}),
+\[
+1\leq \frac{\tan\alpha}{\alpha}\leq \frac 1{\cos\alpha}
+\]
+e, allo stesso modo che sopra, $\lim\limits_{n\to\infty}A_{c,n}=\pi
+r^2$.
+
+Finalmente, prendendo il limite per $n$ che va all'infinito nella
+\ref{eq:conf} si ottiene la ben nota formula:
+\[
+A_c=\pi r^2.
+\]
+
+Notare che tutto si basa sul limite notevole
+\[
+\lim_{x\to 0}\frac {\sin x}{x}=1,
+\]
+la cui validit\`a \`e sopra dimostrata.
+
+\section{\sc \large Il logaritmo}
+
+L'utilit\`a del logaritmo nasce dalla sua caratteristica di
+trasformare prodotti in somme facilitando in tal modo calcoli
+complessi.\footnote{Con l'avvento dei calcolatori questo aspetto dei
+logaritmi ha perso di importanza ma non per questo l'utilit\`a dei
+logaritmi \`e venuta a cessare.}
+Vediamo come nasce una tale funzione.
+
+Supponiamo di cercare una funzione $\ell:\R\to\R$ che abbia la magica
+propriet\`a 
+\begin{equation}\label{eq:magic}
+\ell(ab)=\ell(a)+\ell(b),
+\end{equation}
+esiste una tale funzione e se si come \`e fatta?
+
+Prima di tutto notiamo che per ogni numero $a\in\R$, dovrebbe essere
+\[
+\ell(0)=\ell(0\cdot a)=\ell(0)+\ell(a) 
+\]
+ma questo implicherebbe $\ell(a)=0$ sempre, una funzione non molto
+interessante! Rassegnamoci dunque al fatto che una tale funzione non
+pu\`o essere definita in $0$. Limitamoci a cercare
+$\ell:\R^+\backslash\{0\}\to \R$ 
+con la propriet\`a (\ref{eq:magic}).
+\[
+\ell(1)=\ell(1\cdot 1)=2\ell(1)
+\]
+dunque deve essere $\ell(1)=0$. D'altro canto
+\[
+\ell(a^p)=p\ell(a)
+\]
+e
+\[
+0=\ell(1)=\ell(aa^{-1})=\ell(a)+\ell(a^{-1})
+\]
+dunque $\ell(a^{-1})=-\ell(a)$. Infine,
+\[
+\ell(a)=\ell(a^{\frac qq})=q\ell(a^{\frac 1q})
+\]
+cio\`e $\ell(a^{\frac 1q})=\frac 1q\ell(a)$.
+In conclusione abbiamo che, per ogni numero $b\in\Q$ si ha
+\begin{equation}\label{eq:mainraz}
+\ell(a^b)=b\ell(a).
+\end{equation}
+Questa propriet\`a \`e ovviamente molto conveniente per calcolare
+potenze e radici di numeri. se $\bar a\in\R^+$ \`e tale $\ell(\bar
+a)=1$ allora la (\ref{eq:mainraz}) diventa $\ell(a^b)=b$; cio\`e sui
+razionali $\ell$ \`e l'inverso della elevazione a potenza. 
+Inoltre \`e chiaro che se una funzione
+$\ell$ soddisfa (\ref{eq:magic}) allora anche la funzione $\lambda
+\ell$, per ogni $\lambda \in\R$ soddisfer\`a  (\ref{eq:magic}).
+
+Questo ci da una buona idea delle propriet\`a di $\ell$ ma la domanda
+rimane: esiste una tale funzione sui reali con la magica propriet\`a
+(\ref{eq:magic})?
+
+Per rispondere a questa ultima domanda \`e possibile ragionare in
+diversi modi. Il mod sotto riportato \`e interessante per il suo
+particolare sapore geometrico.
+
+Purtroppo \`e necessario iniziare con una piccola digressione.
+
+Per ogni $a\in\R^+$ si consideri la trasformazione del piano
+$T_a(x,y):=(a x, a^{-1}y)$. Se prendiamo il quadrato $Q=\{(x,y)\in
+\R^2\;|\; x\in [1,2],y\in[0,1]\}$ allora $T_aQ$ \`e il rettangolo $\{(x,y)\in
+\R^2\;|\; x\in [a,2a],y\in[0,a^{-1}]\}$, si veda la figura
+\ref{fig:transf} per un esempio della azione di $T_a$ nel caso $a=2$.
+
+\begin{myfigure}
+\put(0,33){\ }
+\psframe[fillstyle=solid, fillcolor=lgray](-4,0)(-1,3)
+\psframe[fillstyle=solid, fillcolor=gray](-1,0)(4,1.5)
+\put(-41,-4){$1$}
+\put(-11,-4){$2$}
+\put(39,-4){$4$}
+\put(-30,15){$A$}
+\put(20,6){$T_2A$}
+\caption{Azione di $T_{2}$.}\label{fig:transf}
+\end{myfigure}
+
+La cosa interessante delle trasformazioni $T_a$ \`e che l'immagine di
+un rettangolo \`e un rettangolo e che l'area del rettangolo immagine
+\`e uguale all'area del rettangolo originario (uno nell'esempio in figura).
+Sembra quindi naturale che questa propriet\`a di conservare le aree
+valga per qualunque (ragionevole) regione del piano. Assumiamolo e vediamo che
+ne segue.\footnote{Il problema chiaramente \`e che non abbiamo
+ancora definito l'area di una figura \emph{qualsiasi} e dunque non \`e
+ben chiaro come calcolarne algebricamente il valore,
+tuttavia il suo significato geometrico--intuitivo dovrebbe essere chiaro.}
+
+Si consideri la funzione $f(x)=\frac 1 x$ per $x>0$, si tratta di una
+iperbole. Si definisca la
+funzione $\ln:\R^+\to\R$ nel modo seguente: se $z\geq 1$ allora $\ln(z)$
+\`e uguale all'area della regione $P(z)=\{(x,y)\in\R^2\;|\; x\in[1,z];
+0\leq y\leq 1/x\}$. Per esempio l'area della regione grigio chiaro nella
+figura \ref{fig:inv} \`e il valore di $\ln(2)$. Se invece $z<1$ allora
+$\ln(z)$ \`e uguale all'area della regione
+$P(z)=\{(x,y)\in\R^2\;|\; x\in[z,1]; 0\leq y\leq 1/x\}$ presa col
+segno negativo. Chiaramente
+$\ln(z)$ \`e una funzione ben definita (almeno dal punto di vista
+geometrico). 
+
+
+\begin{myfigure}
+\put(-60,0){\line(1,0){120}}
+\put(-60,0){\line(0,1){60}}
+\pscurve(-4.5,6)(-4,4.5)(-3,3)(-2,2.25)(-1,1.8)(0,1.5)(1,1.2857)(2,1.125)%
+(3,1)(4,.9)(5,.8182)(6,.75)
+\put(-30,-5){$1$}
+\pscustom[fillstyle=solid,fillcolor=lgray]{%
+\psecurve(-4,4.5)(-3,3)(-2,2.25)(-1,1.8)(0,1.5)(1,1.2857)
+\psline[linestyle=dashed](0,1.5)(0,0)
+\psline[linewidth=.2pt, linestyle=dashed](-3,0)(-3,3)
+}
+\put(0,-5){$2$}
+\put(60,-5){$4$}
+\put(-60,-5){$0$}
+\pscustom[fillstyle=solid,fillcolor=dgray]{%
+\psecurve(-1,1.8)(0,1.5)(1,1.2857)(2,1.125)%
+(3,1)(4,.9)(5,.8182)(6,.75)(7,.6923)
+\psline[linestyle=dashed](6,.75)(6,0)
+\psline[linewidth=.2pt, linestyle=dashed](0,0)(0,1.5)
+}
+\caption{Grafico di $f(x)=1/x$}\label{fig:inv} 
+\end{myfigure}
+
+Vediamo che succede applicando la trasformazione $T_a$ alla regione
+$P(z)$. Se $y\geq 0$ allora $a^{-1}y\geq 0$ inoltre se $y\leq 1/x$ allora
+$a^{-1}y\leq a^{-1}/x=1/(ax)$. Ci\`o significa che se un punto
+appartine all'iperbole anche il punto immagine apparterr\`a
+all'iperbole, mentre se un punto si trova sotto l'iperbole allora
+anche il punto immagine giace sotto l'iperbole, 
+dunque $T_aP(z)=\{(x,y)\in\R^2\;|\;x\in[a,za]; 0\leq y\leq 1/x\}$. Nella
+figura \ref{fig:inv} si vede la regione $T_aP(z)$, nel caso speciale in
+cui $z=2$ ed $a=2$, obreggiata in grigio scuro.
+
+Da quanto detto segue che $P(a)\cup T_aP(b)=P(ab)$ (nel caso in figura
+$P(2)\cup T_2P(2)=P(4)$). Ma questo significa
+\[
+\ln(ab)=\ln(a)+\ln(b)
+\]
+cio\`e la funzione $\ln$ ha la propriet\`a (\ref{eq:magic})! Dunque tali
+funzioni esistono, ma siamo in grado di calcolarne i valori?
+
+
+Chiaramente $\ln$ \`e crescente ed illimitata, dunque \`e ragionevole
+assumere che esista un numero reale $e$ tale che $\ln(e)=1$, vediamone
+comunque una dimostrazione rigorosa basta su di un modo di ragionare
+che ci dovrebbe essere ormai familiare.
+\begin{lem}\label{eq:e}
+Existe un numero $e\in\R$ tale che $\ln(e)=1$.
+\end{lem}
+\begin{proof}
+Prima di tutto vediamo che esiste un munero $a_1$ tale che
+$\ln(a_1)>1$. Poich\`e dalla figura \ref{fig:inv} \`e ovvio $\ln 2>0$
+ne segue che $\ln 2^n=n\ln 2>1$ a patto che $n$ sia sufficientemente
+grande (pi\`u grande di $(\ln 2)^{-1}$ per la precisione). Abbiamo
+perci\`o che nell'intervallo $[1,a_1]$ la funzione $\ln$ cresce da
+$0$ ad un valore maggiore di $1$. Dividiamo l'intervallo a met\`a (sia
+$a_2$ il punto medio) se $\ln a_2=1$ abbiamo trovato il numero che
+cercavamo, se $\ln a_2<1$ allora consideriamo l'intevallo $[a_2,a_2]$;
+se invece $\ln a_2>1$ allora consideramo l'intervallo $[1,a_2]$. In
+entrambi i casi abbiamo un intervallo di lunghezza $(a_1-1)/2$ in cui
+$\ln$ vale meno di uno nell'estremo di sinistra e vale pi\`u di uno
+sull'estremo di destra (comme sull'intervallo orinario). Ora dividiamo
+nuovamente l'intervallo a met\`a, chiamiamo $a_3$ il punto medio, e
+ragionando come sopra otteniamo un nuovo intervallo, questa volta di
+lunghezza  $(a_1-1)/4$, tale che $\ln$ vale meno di uno nell'estremo
+di sinistra e vale pi\`u di uno sull'estremo di destra (a meno che
+$a_3$ non fosse il numero cercato).
+
+A questo punto possiamo iterare questa procedura quante volte vogliamo
+e, se non troviamo prima il numero voluto, otteniamo una successione
+$\{a_n\}$, chiaramente tale successione \`e di Cauchy, sia $e$ il suo
+limite. Per costruzione  
+\[
+|e-a_n|\leq \frac{a_1-1}{2^{n-1}}.
+\]
+Rimane da investigare che succede alla successione $\{\ln a_n\}$.
+Se $a>b>1$ allora $\ln a-\ln b\leq b^{-1}(a-b)$, questo perch\`e $\ln
+a-\ln b$ \`e semplicemente l'area sotto l'perbole nell'intervallo
+$[b,a]$ mentre $ b^{-1}(a-b)$ \`e l'area di un rettangolo di base
+$[b,a]$ e altezza $b^{-1}$ che ovviamente contiene l'area precedente
+(si veda la figura \ref{fig:rects0}).
+\begin{myfigure}
+\put(-30,0){\line(1,0){60}}
+\put(-30,0){\line(0,1){60}}
+\psframe[fillstyle=solid, fillcolor=white,linewidth=1pt](0,0)(1,3)
+\pscurve (-1.5,6)(-1,4.5)(0,3)(1,2.25)(2,1.8)(3,1.5)
+\pscustom[fillstyle=solid,fillcolor=gray]{%
+\psecurve(-1,4.5)(0,3)(1,2.25)(2,1.8)
+\psline[linestyle=dashed](1,2.25)(1,0)
+\psline[linewidth=.2pt, linestyle=dashed](0,0)(0,3)
+}
+\put(0,-5){$b$}
+\put(10,-5){$a$}
+\multiput(-30,30)(2,0){15}{\line(1,0){1}}
+\put(-36,29){$b^{-1}$}
+\caption{Come stimare l'area sotto l'iperbole}\label{fig:rects0}
+\end{myfigure}
+Dunque si ha $|\ln a_n-\ln e|\leq |e-a_m|\leq
+(a_1-1)2^{-n+1}$, perci\`o $\ln e=\lim\limits_{n\to\infty} a_n$. Ma 
+$\lim\limits_{n\to\infty} a_n= 1$ per costruzione e questo conclude il
+Lemma. Infatti, la successione $\{\ln a_n\}$ \`e l'unione di due 
+sottosuccessioni: quella degli $a_n$ che sono il limite sinistro di
+uno degli intervalli che abbiamo costruito iterativamente e quella
+degli $a_n$ che sono un limite destro. Queste due sottosuccessioni
+devono avere lo stesso limite della successione $\ln a_n$ ma una deve
+avere limite minore od uguale ad uno e l'altra maggiore o uguale a uno, per
+il modo con cui sono stati costruiti gli intervalli. Dunque l'unica
+possibilit\`a \`e che il limite sia uno.  
+
+\end{proof}
+Dunque il numero $e$ esiste, ma di che
+numero si tratta?
+
+Consideriamo $\ln(1+1/n)$, chiaramente
+\begin{equation}\label{eq:mainineq}
+\frac 1{1+\frac 1n}\frac 1n=\frac 1{n+1}\leq ln\left(1+\frac
+1n\right)\leq \frac 1n. 
+\end{equation}
+Infatti guradando alla figura \ref{fig:rects}, si vede che la prima
+quantit\`a \`e l'area del rettangolo grigio scuro, la seconda (in
+grigio) \`e l'area sotto l'iperbole (che definisce $\ln$)
+e la terza \`e l'area del rettango pi\`u alto (in grigio chiaro).
+\begin{myfigure}
+\put(-30,0){\line(1,0){60}}
+\put(-30,0){\line(0,1){60}}
+\psframe[fillstyle=solid, fillcolor=lgray,linewidth=1pt](0,0)(1,3)
+\pscurve (-1.5,6)(-1,4.5)(0,3)(1,2.25)(2,1.8)(3,1.5)
+\pscustom[fillstyle=solid,fillcolor=gray]{%
+\psecurve(-1,4.5)(0,3)(1,2.25)(2,1.8)
+\psline[linestyle=dashed](1,2.25)(1,0)
+\psline[linewidth=.2pt, linestyle=dashed](0,0)(0,3)
+}
+\psframe[fillstyle=solid, fillcolor=dgray,linewidth=1pt](0,0)(1,2.25)
+\put(0,-5){$1$}
+\put(8,-5){$1+\frac 1n$}
+\caption{Aree rilevanti per l'equazione (\ref{eq:mainineq})}\label{fig:rects}
+\end{myfigure}
+
+Dalla (\ref{eq:mainineq}) e dalle propriet\`a di $\ln$ segue che
+\begin{equation}\label{eq:este1}
+1\leq \ln\left(1+\frac
+1n\right)^{n+1}\quad \text{ e che }\quad \ln\left(1+\frac
+1n\right)^n\leq 1.
+\end{equation}
+Poich\`e la funzione $\ln$ \`e crescente
+\begin{equation}\label{eq:neper}
+\left(1+\frac 1n\right)^n\leq e\leq \left(1+\frac 1n\right)^{n+1}.
+\end{equation}
+Vediamo dunque che $e$ non era un nome casuale, si tratta infatti
+della nostra vecchia conoscenza (si veda la prima sezione di queste note).
+D'altro canto le (\ref{eq:este1}) implicano
+\[
+\left(1+\frac 1n\right)^{n+1}- \left(1+\frac 1n\right)^n\leq \frac en
+\]
+e da questo segue una dimostrazione alternativa del limite notevole
+\[
+\lim_{n\to\infty}\left(1+\frac 1n\right)^n=e.
+\]
+Per di pi\`u la (\ref{eq:mainineq}) ci permette una conoscenza pi\`u
+precisa del misterioso numero $e$, infatti prendento, ad esempio,
+$n=5$ si ottiene $2.48832\leq e\leq 2.985984$.\footnote{Il lettore che
+ha voglia di fare alcuni calcoli numerici pu\`o facilmente ottenere
+stime migliori scegliendo un $n$ pi\`u grande.}
+\end{document}
+

@@ -1,0 +1,234 @@
+<a name="balint">Peter Balint</a>
+<br>
+ Hyperbolic, ergodic and statistical properties of 
+certain soft billiards
+<br>
+The soft billiard dynamical system is obtained when a cofiguration of 
+disjoint circular (spherical) scatterers is given on the two (three) 
+dimensional flat torus, and the Hamiltonian motion of a point particle is 
+studied in a potential that vanishes identically outside the scatterers 
+and depends only from the distance of the scattering center inside each 
+of them. Studies of the two dimensional case date back to the works 
+of Sinai, Kubo and Donnay-Liverani who identified a large class of 
+hyperbolic and ergodic examples, while the presence of KAM islands has 
+been shown (Donnay, Rom-Kedar, Turaev) for other important families. In 
+this talk I would like to concentrate on the generalization of the
+hyperbolicity results to a higher dimensional setting when reporting
+on joint work with Imre Peter Toth, partially completed and partially in
+progress. I would also like to comment on the ergodic and statistical 
+properties and on comparisions with the analogous hard (usual) billiard 
+systems. 
+<p>
+<hr><p>
+<a name="bambusi">Dario Bambusi</a>
+<br>
+Birkhov normal form for tame Hamiltnian PDEs
+<br>
+I will present an abstract Birkhoff normal form theorem for
+Hamiltonian Partial Differential Equations. The theorem applies to 
+semilinear
+equations with nonlinearity belonging to a large class. As a corollary one 
+gets
+that any small amplitude solution remains very close to a torus for very 
+long
+times. Applications to some concrete models (NLW,NLS) will also be 
+presented.
+From the general theorem one also deduces a result of almost global 
+existence of solution.
+<br>
+Joint work with Benoit Grebert
+<p>
+<hr>
+<p>
+<a name="lionia">Leonid Bunimovich</a>
+<br>
+Some Billiard News
+<br>
+I'll describe some examples of billiards with divided phase space
+(containing integrable islands and chaotic components) in 2D and 3D.
+Other examples are concerned with convex chaotic billiards in 3D
+and with positive measure ergodic components consisting of rays
+propagating in one direction ("tracks").
+<p>
+<hr>
+<p> 
+<a NAME="celletti">Alessandra Celletti</a>
+<br>
+On the stability of a 3-body problem in Celestial Mechanics
+<br>
+KAM  theory is a powerful tool apt to prove perpetual stability
+in Hamiltonian systems, which are a perturbation of integrable ones.  The
+smallness requirements for its applicability are well known to be
+extremely stringent.  A long standing problem, in this context, is the
+application of KAM theory to "physical systems" for "observable" values
+of the perturbation parameters.
+In a joint work with L. Chierchia, we consider the Restricted, Circular,
+Planar, Three-Body Problem (RCPTBP). When the mass ratio of the two
+primary bodies is small, the RCPTBP is described by a nearly-integrable
+Hamiltonian system with two degrees of freedom. We consider the motion of
+the asteroid 12 Victoria, taking into account only the Sun-Jupiter
+gravitational attraction. For values of mass ratios up to 1/1000, we
+prove the existence of two-dimensional KAM tori on a fixed
+three-dimensional energy level.
+The proof is based on: 1) an iso-energetic KAM theory; 2) an algorithm
+for computing iso-energetic, approximate  Lindstedt series; 3) a
+computer-aided  application of 1)+2) to the Sun-Jupiter-Victoria system.
+<p>
+<hr>
+<p>
+<a NAME="ursula">Ursula Hamenstaedt</a>
+<br>
+Dynamical properties of the Teichmueller geodesic 
+flow
+<br>
+We show that the dynamical properties of the Teichmueller
+geodesic flow on moduli space 
+are very similar to the properties of
+the geodesic flow on a non-compact hyperbolic manifold
+of finite volume: The Lebesgue measure is mixing, and the
+set of initial directions of flow lines remaining in some
+compact subset of moduli space has full Hausdorff dimension.
+
+<p>
+<hr>
+<p>
+
+<a name="vadim">Vadim Kaloshin</a> 
+<br>
+Unbounded solutions of Planar Circular Restricted 3 Body 
+Problem
+<br>
+The planar circular restricted 3-body problem is the simplest 
+nonintegrable
+problem among N body 
+problems interacting by the Newton potential. However, the behaviour of 
+its
+trajectories is very 
+far from being understood. During the talk I will discuss applications of
+Mather's variational 
+method and Aubry-Mather theory to prove existence of a variety of
+fascinating motions. It includes 
+existence of motions bounded in the past and unbounded in the future. This
+is a joint work with 
+T. Nguyen and D. Pavlov. 
+<p>
+<hr>
+<p>
+<a name="khanin"> Konstantin Khanin</a>
+<br>
+Renormalizations, multi-dimensional continued fractions 
+and KAM theory
+<br>
+We use a new multi-dimensional continued fractions algorithm
+to prove several results of the KAM type. The proofs is very simple
+conceptually and based on renormalizations.
+<p>
+<hr>
+<p>
+<a name="gidea">Marian Gidea</a>
+<br>
+Topological methods in the instability problem of 
+Hamiltonian
+systems
+<br>
+We use topological methods to investigate some recently
+proposed mechanisms of instability (Arnol'd diffusion) in Hamiltonian
+systems.
+
+In these mechanisms, chains of heteroclinic connections between
+whiskered tori are constructed, based on the existence of a normally
+hyperbolic manifold $\Lambda$, so that: (a) the manifold $\Lambda$ is
+covered rather densely by transitive tori (possibly of different
+topology), (b) the manifolds $W^s_\Lambda$, $W^u_\Lambda$ intersect
+transversally, (c) the systems satisfies some explicit non-degeneracy
+assumptions, which hold generically.
+
+In this paper we use the method of correctly aligned windows to show
+that, under the assumptions (a), (b), (c), there are orbits that move a
+significant amount.
+
+As a matter of fact, the method presented here does not require that the
+tori are exactly invariant, only that they are approximately invariant.
+Hence, compared with the previous papers, we do not need to use KAM
+theory. This lowers the assumptions on differentiability.
+
+Also, the method presented here allows to produce concrete estimates on
+the time to move, which were not considered in the previous papers.
+<p> 
+<hr>
+<p>
+<name="livi">Roberto Livi</a>
+<br>
+Anomalous heat transport in low-dimensional systems
+<br>
+Statistical fluctuations are strongly dependent 
+on the space dimension and may yield ill-defined
+transport coefficients in stationary out--of--equilibrium
+conditions. Specifically, numerical simulations indicate
+that heat conductivity diverges as a power--law of the
+system size in several 1d models of coupled anharmonic 
+oscillators and hard--sphere gases. In this talk we
+aim at summarizing the recent theoretical developments
+providing an explanation of these anomalous hydrodynamic
+properties.
+
+<p>
+<hr>
+<p>
+<a name="robert">Robert MacKay</a>
+<br>
+Ergodic space-time implies Hubble's law
+<p>
+<hr>
+<p>
+
+<a name="renato">
+Renato Iturriaga</a>
+<br>On the Stochastic Aubry Mather
+<br>
+We prove the differentiability of the stochastic
+analogues of $\alpha $ and $\beta $ Mather's functions.
+  We also prove that  the solution to the viscous Hamilton Jacobi equation 
+associated to $\af$ is differentiable in the parameter.
+<p>
+<hr>
+<p> 
+<a name="posh">
+Harald Posch</a>
+<br>
+Tangent-space dynamics of many-body systems
+<br>
+We characterize the phase-space instability of many-body systems
+in terms of their sets of Lyapunov exponents.  Both soft and hard 
+interaction 
+potentials are considered. The computer simulations are also extended to 
+rough hard disks, which provides the possibility to consider 
+qualitatively-different degrees of freedom, translation and rotation.  
+We study the spatial localization of the perturbation vectors associated 
+with 
+the large exponents, and the delocalized Lyapunov modes connected with the 
+small (in the absolute sense) exponents. For rough hard disks, 
+translation-rotation coupling has a pronounced effect on the Lyapunov 
+spectrum. Corresponding spectra are compared to our previous results for 
+hard dumbbells.  The relaxation times for tangent-vector rotation is also 
+examined.
+
+<p>
+<hr>
+<p>
+<a name="doma">Szasz Domokos</a>
+<br>
+Slightly superdiffusive dynamical motion
+<br>
+
+<p>
+<hr>
+<p> 
+<a name="anton">Anton Zorich</a>
+<br>
+Closed trajectories on flat surfaces
+corresponding to quadratic differentials
+<br>
+(joint work with H.Masur)
+<br>
+

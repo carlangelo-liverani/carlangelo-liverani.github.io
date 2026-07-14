@@ -1,0 +1,54 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\ve{\varepsilon}
+\newcommand\Co{{\mathcal C}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 2 ore di tempo. Ogni esercizio
+vale dieci punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Appello 17-06-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si determini la soluzione di
+\[
+\begin{split}
+&xuu_x+u_y=1\\
+&u(1,y)=\frac y2
+\end{split}
+\]
+\item  Si consideri la soluzione dell'equazione
+\[
+\begin{split}
+&u_t-u_{xx}=f\quad x\in[0,\pi]\\
+&u(0,t)=u(\pi,t)=0\quad t>0\\
+&u(x,0)=h(x)\quad x\in[0,\pi].
+\end{split}
+\]
+Sia $v(x)=\lim_{t\to\infty}u(x,t)$. Come dipende $v$ da $h$. Si scriva
+una equazione differenziale di cui $v$ \`e soluzione.
+\item  Dati due vettori $v,w\in\R^2$, linearmente indipendenti, si
+classifichino tutte le funzioni armoniche $f:\R^2\to\R$ tali che, per
+ogni $\xi\in\R^2$,
+\[
+f(\xi+v)=f(\xi)=f(\xi+w).
+\]
+\item Si risolva l'equazione
+\[
+\begin{split}
+&u_{xx}+\sin x=u_{tt}\quad x>0,\;t>0\\
+&u(0,t)=0\quad t>0\\
+&u(x,0)=x;\; u_t(x,0)=0\quad x\geq 0 
+\end{split}
+\]
+\end{enumerate}
+\end{document}

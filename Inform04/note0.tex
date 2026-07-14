@@ -1,0 +1,456 @@
+\documentclass{amsart}
+
+%%%%%%%packages
+\usepackage{amssymb}
+\usepackage{enumerate}
+%\usepackage{showkeys}
+%\usepackage{draftcopy}
+\usepackage{xspace}
+\usepackage{hyperref}
+
+%%%%%%%%%Pagination
+\hfuzz=15pt
+
+%%%%%%%%%Theorems
+\newtheorem{thm}{Teorema}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollario} 
+\newtheorem{sublem}[thm]{Sub-lemma}
+\newtheorem{prop}[thm]{Proposizione}
+\newtheorem{conj}{Congettura}\renewcommand{\theconj}{}
+\newtheorem{defin}[thm]{Definitione}
+\newtheorem{cond}{Conditione}
+\newtheorem{exmp}[thm]{Esempio}
+\newtheorem{es}[thm]{Esercizio}
+\newtheorem{rem}[thm]{Commento}
+
+%%%%%%%%%%mathcal
+\newcommand\B{{\mathcal B}}
+\newcommand\Co{{\mathcal C}}
+\newcommand\D{{\mathcal D}}
+\newcommand\F{{\mathcal F}}
+\newcommand\Lp{{\mathcal L}}
+\newcommand\M{{\mathcal M}}
+\newcommand\Pa{{\mathcal P}}
+\newcommand\T{{\mathcal T}}
+
+%%%%%%%%%%%%mathbb
+\newcommand\A{{\mathbb A}}
+\newcommand\C{{\mathbb C}}
+\newcommand\E{{\mathbb E}}
+\newcommand\N{{\mathbb N}}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\To{{\mathbb T}}
+\newcommand\Z{{\mathbb Z}}
+
+%%%%%%%%%%%greek
+\newcommand\ve{\varepsilon}
+\newcommand\vf{\varphi}
+
+
+
+%%%%%   Figure-picture related definitions--beginning
+\newenvironment{myfigure}{\begin{figure}[tb]\
+\centering}{\end{figure}}
+
+%\definecolor{lgray}{gray}{0.9}
+%\definecolor{gray}{gray}{0.8}
+%\definecolor{dgray}{gray}{0.7}
+\setlength{\unitlength}{.8mm}
+%%%%%   Figure related definitions--end
+
+
+\pagestyle{myheadings}
+\markboth{\centerline{\sc Carlangelo Liverani}\hskip-12pt}
+{\centerline{\sc problemi concernenti i limiti }\hskip-12pt}
+
+\begin{document}
+\title{\bfseries Sul contare}
+\author{Carlangelo Liverani}
+\address{Dipartimento di Matematica\\
+Universit\`{a} di Roma (Tor Vergata)\\
+Via della Ricerca Scientifica, 00133 Roma, Italy\\
+{\tt liverani@mat.uniroma2.it}}
+\date{Rome, October 11, 2003}
+\maketitle
+
+
+\section{Un linguaggio}\label{sec:zero}
+Una parte della diffolt\`a della matematica risiede nel fatto che essa
+usa un linguaggio suo, in parte differente dal linguaggio naturale che
+usiamo ogni giorno. In particolare, pu\`o capitare che parole del
+linguaggio comune siano usate con una differente accezione in
+matematica. Tuttavia ogni parola in matematica \`e precisamente
+definita in termini di parole gi\`a note o dei termini {\em primitivi}
+della teoria. Quando si legge un testo di matematica bisogna sempre
+essere allerti alla possibilt\`a che una parola sia usata in senso
+{\em tecnico} e in tal caso \`e buona norma domandarsi: che cosa
+significa?
+
+
+In questo corso si utilizzeranno
+alcuni rudimenti del linguaggio logico  ed insiemistico. Poich\`e tale
+elementi del linguaggio matematico sono di
+uso abba\-stanza comune nelle scuole inferiori, essi saranno considerati
+noti. Tuttavia, forse \`e meglio ricapitolare il minimo che verr\`a
+usato nel corso. 
+
+Per \emph{insieme} intender\`o una collezione di oggetti (o elementi),
+poich\`e tutti gli 
+insiemi trattati nel corso saranno alquanto concreti ed esenti da
+problemi (tipicamente sottoinsiemi dei numeri reali) ignorer\`o
+tranquillamente la distinzione tra insiemi e classi necessaria per non incorrere in
+contraddizioni.\footnote{Essenzialmente le classi sono 
+collezioni di oggetti e gli insiemi classi che appartengono ad altre
+classi. Abbastanza sorprendentemente se si ammette che ogni classe pu\`o
+appartenere ad un'altra classe (e quindi ogni classe \`e un insieme)
+si incorre in una contraddizione.} 
+
+Con $x\in A$ si intende
+\emph{l'elemento $x$ appartiene all'insieme A}. Con $A\subset B$ si
+intende \emph{l'insieme $A$ \`e contenuto nell'insieme $B$}, pi\'u
+precisamente \emph{per ogni $x$ se $x\in A$ allora $x\in B$} o, pi\'u
+sinteticamente, $\forall x(x \in A \rightarrow x\in B)$. 
+
+\begin{exmp}
+Se $A=\{1,2,3\}$ e $B=\{1,2,3,5\}$ allora $1\in A$ e $A\subset
+B$. Attenzione per\`o: un insieme pu\`o anche essere un elemento di
+un'altro insieme. Per esempio se $C=\{1,2,3, 5,\{1,2,3\}\}$ allora
+$A\subset C$ ma anche $A\in C$ mentre $B\subset C$ ma $B\not\in C$,
+cio\`e \emph{$B$ non \`e un elemento di $C$}.
+\end{exmp}
+ 
+Due insiemi $A,B$ si dicono uguali se $A\subset B$ e $B\subset
+A$. Abbiamo poi l'unione di due insiemi $A\cup B=\{x: x\in A \text{
+oppure } x\in B\}$, ovvero \emph{l'insieme di tutti gli elementi $x$
+tali che $x$ appartiene ad $A$ oppure a $B$, o ad entrambi}, e
+l'intersezione $A\cap B=\{x: x\in A \text{ 
+e } x\in B\}$.\footnote{Si noti la possibilit\`a di definire un
+insieme specificando una propriet\`a a cui i suoi elementi debbono
+soddisfare. In realt\`a questo modo di definire un insieme pu\`o
+generare paradossi se usato indiscriminatamente, per ovviare a questo
+pericolo in generale occorrerebbe sviluppare una teoria assiomatica degli
+insiemi (approssimativamente, il punto \`e che una propriet\`a
+determina sempre una classe, che poi essa sia o meno un insieme \`e una cosa
+che va dimostrata) che per\`o esula dagli scopi del presente corso,
+anche perch\`e non veramente
+necessaria per il tipo di propriet\`a a cui saremo interessati.} 
+L'insieme vuoto $\emptyset$, cio\`e un buffo insieme che
+non contiene alcun elemento.\footnote{L'esistenza di tale insieme,
+come di altri che stiamo definendo, \`e in realt\`a un assioma nella
+teoria assiomatica degli insiemi il che significa che piace tanto ai
+matematici che non hanno alcuna intenzione di farne a meno.} Inoltre
+abbiamo l'insieme potenza $\Pa(A)=\{x:x\subset A\}$, cio\`e
+\emph{l'insieme di tutti i sottoinsiemi di $A$}.
+
+Un altro modo di costruire nuovi insiemi partendo da insiemi dati \`e
+il prodotto Cartesiano. Dati due insiemi $A$ e $B$ si dice loro
+prodotto, e si scrive $A\times B$, l'insieme $\{(a,b):a\in A,\, b\in
+B\}$. Per $(a,b)$ si intende la coppia ordinata $(a,b)$, cio\`e
+$(a,b)$ \`e, in generale, diverso da $(b,a)$. In particolare, $A\times
+B$ e $B\times A$ sono, in generali, diversi. Si noti che dati tre
+insiemi, $A,B,C$,  $(A\times B)\times C$ e $A\times (B\times C)$ sono
+naturalmente {\em isomorfi}\footnote{Questo significa che possono
+essere posti in {\em corrispondenza biunivoca}, si veda pi\`u sotto per
+una definizione precisa.} dove l'isomorfismo \`e stabilito dalla
+corrispondenza $((a,b),c)\to (a,(b,c))$. \`E quindi naturale
+sopprimere le parentesi. Dato un insieme $A$ si pu`o dunque farne ``il
+quadrato'' cio\`e $A^2:=A\times A$ o, pi\'u in generale, l'ennesima
+potenza, cio\`e $A^n:=A\times
+\cdots \times A$, $n$ volte. Per ragioni che appariranno ovvie tra un
+secondo si usa anche scrivere $A^{\{1,\dots,n\}}$.
+
+Una funzione $F$ tra due insiemi $A$ e $B$ si scrive $F:A\to B$ ed \`e
+semplicemente una regola tale che ad ogni $x\in A$ associa un unico elemento di
+$B$ che viene appunto chiamato $F(x)\in B$. Una funzione si dice
+\emph{suriettiva} se per ogni $y\in B$ esiste $x\in A$ tale che $y=F(x)$
+(scritto brevemente $\forall y\in B \;\exists x\in A : y=F(x)$) cio\`e
+ogni elemento di $B$ \`e l'immagine, attraverso $F$, di un qualche
+elemento di $A$. Una funzione di dice \emph{iniettiva} se
+$F(x)=F(y)\rightarrow x=y$ cio\`e un elemento di $B$ non pu\`o essere
+l'immagine di due diversi elementi di $A$. L'insieme $A$ si dice
+\emph{dominio} della funzione $F$ e $F(A)=\{F(x): x\in A\}$ si dice
+\emph{codominio}. Finalmente, una funzione 
+suriettiva ed iniettiva si dice \emph{biunivoca}. Se la funzione
+$F:A\to B$ \`e biunivoca allora essa determina univocamente una
+funzione $F^{-1}:B\to A$ tale che $\forall a\in A \;\; F^{-1}(F(a))=a$ e
+$\forall b\in B \;\; F(F^{-1}(b))=b$. Tale funzione \`e detta
+\emph{funzione inversa} ed \`e chiaramente una funzione biunivoca tra
+$B$ ed $A$.
+
+Considereremo inoltre dato (e noto) l'insieme (infinito) dei numeri naturali
+$\N=\{0,1,2,\dots\}$.
+
+\begin{lem}\label{lem:prod}
+Per ogni insieme $A$ e $n\in\N$ gli insiemi $A^{\{1,\dots,n\}}$ e
+$\{f:\{1,\dots,n\}\to A\}$ possono essere messi in corrispondenza
+biunivoca. 
+\end{lem}
+\begin{proof}
+Dato un elemento $\bar a=(a_1, \dots,a_n)\in A^n$ possiamo definire la
+funzione $f_{\bar a}(i)=a_i$, $i\in\{1,\dots,n\}$. D'altro canto per ogni
+funzione $f:\{1,\dots,n\}\to A$ possiamo definire la $n$-nupla ordinata
+$a_f:=(f(1),\dots,f(n))$. Chiaramente, $a_{f_{\bar a}}=\bar
+a$. Possiamo dunque definire la corrispondenza 
+biunivoca $F:A^n\to \{f:\{1,\dots,n\}\to A\}$, $F(\bar a)=f_{\bar a}$.
+\end{proof}
+
+Tramite la funzione $F$ costruita nella dimostrazione del Lemma
+\ref{lem:prod} possiamo dunque identificare i due
+insiemi. Abbiamo cos\'\i\  una definizione alternativa di
+$A^{\{1,\dots,n\}}$. Il vantaggio di tale definizione \`e che ora
+$A^B$ \`e ben definito per ogni insieme $A$ e $B$, cio\`e
+$A^B=\{f:B\to A\}$.
+
+ 
+Gli insiemi possono essere finiti o infiniti, tuttavia per dare un
+significato preciso a questa affermazione occorre dire che si intende
+per \emph{finito} o \emph{infinito}. A questo scopo \`e utile chiarire
+che significa dire che due insiemi hanno \emph{lo stesso numero di elementi}.
+
+\begin{defin}\label{def:cont}
+Diremo che due insiemi $A$ e $B$ hanno lo stesso numero di elementi o
+che hanno \emph{la stessa cardinalit\`a} se esiste una funzione biunivoca
+$F:A\to B$.\footnote{Infatti, se ne esiste una, di solito ne esisteranno
+molte altre.}
+\end{defin}
+
+\section{uno due tre ...}\label{sec:uno}
+Cerchiamo di familiarizzarci con le conseguenze della definizione
+\ref{def:cont}.
+
+\begin{es}\label{es:uno}
+Si mostri che se $A$ e $B$ hanno la stesa cardinalit\`a e se $B$ e $C$
+hanno la stessa cardinalit\`a allora $A$ e $C$ hanno la stessa cardinalit\`a.
+\end{es}
+
+\begin{defin}\label{def:enum}
+Diremo che un insieme ha $n\in\N$ elementi se ha la medesima cardinalit\`a
+dell'insieme $\{1,2,\dots,n\}\subset\N$.\footnote{Ovviamente, diremo
+che l'insieme vuoto ha zero elementi.}
+\end{defin}
+Tale definizione \`e sensata, ma per
+accertarcene occorre fare il seguente esercizio che richiede un attimo
+di meditazione.
+\begin{es}\label{es:consi}
+Si mostri che un insieme non pu\`o avere sia $n$ che $m$ elementi, per
+$n\neq m$. (Suggerimento: per assurdo. Se non fosse vero esisterebbero
+$n,m\in\N$, $n>m$, tali che gli insiemi $\{1,2,\dots,n\}$ e
+$\{1,2,\dots,m\}$ sono in corrispondenza biunivoca. Da questo si deduca
+che lo stesso deve valere per $n-1$ e $m-1$. Per fare questo si mostri
+che se un insieme ha $n$ elementi e se ne toglie uno allora l'insieme
+rimanente ha $n-1$ elementi.\footnote{Pu\'o sembrare pazzesco che si
+debba dimostrare una cosa del genere, ma bisogna ricordare che, in
+questo contesto,
+\emph{avere $n$ elementi} non ha necessariamente nulla a che fare col
+solito significato intuitivo ma ha il preciso significato specificato
+nella definizione \ref{def:enum}. Che questo significato sia
+consistente col significato intuitivo che abbiamo di questo concetto
+\`e esattamente quello che stiamo verificando in questo momento.} 
+Iterando l'argomento ci
+si riduce a $n-m+1>1$ e $1$, cosa assurda.) 
+\end{es}
+Fino ad ora tutto sembra alquanto banale, anche se la spiegazione di
+che si intende per contare pu\`o sembrare piuttosto strana, tuttavia
+sembra coincidere con la nostra intuizione. Va comunque notato che si possono avere
+problemi un poco pi\'u interessanti di quello dell'esercizio \ref{es:uno}.
+\begin{lem}\label{lem:potfun}
+Per ogni insieme $A$, gli insiemi $\Pa(A)$ e $\{0,1\}^A$ hanno lo
+stesso numero di elementi.
+\end{lem}
+\begin{proof}
+Definiamo la funzione $F:\Pa(A)\to \{0,1\}^A$ nel modo seguente: per
+ogni $B\subset A$ sia $F(B)$ la funzione che vale $1$ in $B$ e zero
+fuori, cio\`e, per ogni $a\in A$,
+\[
+F(B)(a)=\left\{\begin{aligned}
+	       &1\quad\text{se }a\in B\\
+	       &0\quad\text{se }a\not\in B
+               \end{aligned}
+\right.
+\]
+A volte $F(B)$ \`e chiamata la \emph{funzione caratteristica} di
+$B$. Chiaramente $F$ \`e biunivoca e questo conclude la dimostrazione.
+\end{proof}
+
+Tra le altre cose il lemma precedente chiarisce perch\`e $\Pa(A)$ \`e
+chiamato l'insieme \emph{potenza}.
+
+Tuttavia, le vere sorprese giungono
+quando si cerca di applicare tali concetti agli insiemi infiniti (di
+cui al momento abbiamo una sola istanza: $\N$).
+\begin{exmp}\label{ex:2}
+Si consideri l'insieme $\N_*=\{1,2,\dots\}\subset\N$. Tale insieme ha
+un elemento in meno dei naturali (lo zero) e quindi ci si potrebbe
+aspettare che la sua cardinalit\`a sia inferiore. Invece se si
+considera $F:\N_*\to\N$ definita da $F(n)=n-1$ si ha chiaramente un
+funzione biunivoca tra $\N_*$ e $\N$. Dunque, per definizione, $\N_*$ e
+$\N$ hanno lo stesso numero di elementi! 
+\end{exmp}
+
+\begin{exmp}\label{ex:3}
+Si consideri l'insieme $\N_p=\{0,2,4,\dots, 2n,\dots\}$ dei numeri
+pari. Di nuovo si potrebbe pensare che contenga la met\`a degli
+elementi di $\N$, cio\`e che la sua cardinalit\`a sia
+inferiore. Eppure, applicando la definizione e considerando la funzione
+$F(n)=2n$ si ottiene che $\N_p$ e $\N$ hanno la stesa cardinalit\`a.
+\end{exmp}
+Queste stranezze hanno a lungo lasciato perplessi i matematici, fino a
+quando non ci si \`e rassegnati alla constatazione che l'infinito \`e
+un concetto controintuitivo e si sono usate le sue peculiarit\`a
+proprio per definirlo.
+
+\begin{defin}\label{def:infy}
+Un insieme $A$ si dice \emph{infinito}, se esiste un suo sottoinsieme
+proprio (cio\`e un $B\subset A$ ma $B\neq A$) con la stessa
+cardinalit\`a di $A$.
+\end{defin}
+Vediamo che una tale definizione non fa danni.
+\begin{es}\label{es:ff}
+Se $A$ \`e un insieme finito (cio\`e non \`e infinito) allora ogni suo
+sottoinsieme \`e finito. (Suggerimento: per assurdo. Si
+supponga che esistano $C\subset B\subset A$ tali che $C$ pu\`o essere messo in
+corrispondenza biunivoca con $B$ e si costruisca un sottoinsieme $C_1$
+che pu`o essere messo in corrispondenza con $A$.)
+\end{es}
+
+\begin{es}\label{es:finito}
+Per ogni $n\in\N$ l'insieme $A_n:=\{0,1,\dots,n\}$ \`e
+finito. (Suggerimento: per assurdo si supponga che esista $n\in \N$
+tale che $A_n$ \`e infinito. Sia $B\subset A_n$ in corrispondenza
+biunivoca con $A_n$ tramite la funzione $F$. Si tolga da $A$ il pi\'u
+grande elemento che non \`e contenuto in $B$, diciamo $k$, e si tolga
+da $B$ l'elemento $F^{-1}(k)$. Si mostri che in tal modo segue che anche
+$A_{n-1}$ \`e infinito. Continuando in tale modo si ottiene che $A_0$
+\`e in corrispondenza biunivoca con un suo sottoinsieme proprio,
+insensato visto che l'unico sottoinsieme proprio \`e $\emptyset$.)
+\end{es}
+Dunque con la definizione \ref{def:infy} gli insiemi finiti sono
+quelli che ci aspettiamo mentre quelli infiniti godono delle strane
+patologie di cui agli esempi \ref{ex:2}, \ref{ex:3} 
+In realt\`a, patologie anche peggiori sono possibili.
+\begin{es}\label{es:raz} Si mostri che gli insiemi $\N$ ed $\N\times
+\N_*$ hanno lo stesso numero di elementi. (Suggerimento: si provi con la funzione
+$F:\N\times \N_*\to\N$ definita da
+$F((p,q))=p+1+\sum_{i=0}^{p+q}(i+1)$).\footnote{La funzione \`e
+ottenuta considerando gli insiemi $G_n=\{(p,q)\in\N\times \N_* :
+p+q=n\}$, chiaramente $\cup_{n\in\N}G_n=\N\times \N_*$. A questo punto si contano
+prima gli elementi in $G_0$, poi in $G_1$ e cosi via, in ogni $G_i$, invece,
+gli elementi sono contati secondo l'ordine di $p$ crescente.}
+\end{es}
+Si noti che l'insieme dei numeri razionali pu\`o essere considerato
+come contenuto in $\N\times \N_*$, infatti ad ogni $(p,q)\in\N\times
+\N_*$ si pu\`o associare il numero razionale $\frac pq$. Ovviamente
+tale funzione non \`e iniettiva ma questo significa solo che il numero
+degli elementi di $\N\times \N_*$ \`e maggiore od uguale a quello di
+$\Q$, ma poich\`e $\N\subset \Q$ \`e chiaro che $\N$ e $\Q$ hanno lo
+stesso numero di elementi.\footnote{Ovviamente, dire che un insieme
+$A$ ha una cardinalit\`a maggiore o uguale di un insieme $B$ significa
+semplicemente che esiste $C\subset A$ con la stessa cardinalit\`a di $B$.}
+
+A questo punto si potrebbe pensare che tutti gli insiemi infiniti hanno
+la stessa cardinalit\`a e dunque, in un qualche senso, esiste un solo
+tipo di infinito. Anche questo risulta essere falso.
+\begin{lem}\label{lem:poti}
+Per ogni insieme $A$ la cardinalit\`a di $\Pa(A)$ \`e sempre maggiore
+della cardinalit\`a di $A$.
+\end{lem}
+\begin{proof}
+Ragionando per assurdo, supponiamo che il lemma sia falso e che quindi
+esista una funzione 
+biunivoca $F:A\to\Pa(A)$. In tal caso definiamo l'insieme $B=\{x\in A:
+x\not\in F(x)\}$. Chiaramente $B\subset A$ e dunque
+$B\in\Pa(A)$. Esister\`a perci\'o un unico elemento $z\in A$ tale che
+$F(z)=B$. A questo punto possiamo ottenere una contraddizione
+chiedendoci se $z\in B$ oppure no. Infatti se $z\in B$ allora, per
+definizione di $B$, $z\not\in F(z)=B$. Dunque deve essere $z\not\in
+B$. Ma se $z\not\in B$ allora $z\not\in F(z)$ e, per la definizione di
+$B$, $z\in B$, assurdo.
+\end{proof}
+Ci\`o significa che il numero degli elementi di $\Pa(\N)$ \`e
+strettamente maggiore di quello di $\N$. Si noti che $\{0,1\}^\N$
+pu\`o essere interpretato come la collezione di stringhe infinite
+$(a_0,a_1,\dots, a_n,\dots)$, dove $a_i\in\{0,1\}$ per ogni $i\in\N$. 
+Ognuna di tali stringhe pu`o essere pensata come l'espansione binaria
+di un numero reale nell'intervallo $[0,1]$, tuttavia diverse stringhe
+possono corrispondere allo stesso numero (ad esempio $(1,0,0,\dots)$ e
+$(0,1,1,1,\dots)$ corrispondono entrambi al numero uno, come vedremo
+nel proseguo del corso). Si pu\`o comunque dimostrare che solo un
+numero numerabile di stringhe sono problematiche e dunque la
+cardinalit\`a di $[0,1]$  coincide con
+quella di $\Pa(\N)$.
+
+Per concludere vorrei mettere in guardia contro la possibile
+impressione che contare insiemi finiti sia una banalit\`a. In realt\`a
+contare pu\`o essere un problema assai difficile,\footnote{\`E il
+soggetto di una intera branca della matematica: la combinatorica.} di
+solito occorre una qualche idea molto astuta su come organizzare il conteggio per
+venirne a capo. Allo scopo di capire meglio il problema facciamoci una
+semplice domanda: per gli insiemi finiti quanto \`e grande l'insieme potenza?
+\begin{lem}\label{lem:potf}
+Per ogni insieme $A$ di cardinalit\`a $n$, l'insieme
+$\Pa(A)$ ha cardinalit\`a $2^n$.
+\end{lem}
+\begin{proof}
+Il lemma \`e banale per $A=\emptyset$. Per le altre posibilt\`a useremo
+il risultato del Lemma \ref{lem:potfun} e cercheremo di contare gli
+elementi dell'insieme $\{0,1\}^A$. Organizziamo il conteggio attraverso
+la seguente identit\`a algebrica: 
+per ogni due numeri $\alpha_0, \alpha_1$ si ha\footnote{Dimostrarla
+equivale a capire cosa si \`e scritto ed \`e un esercizio molto
+utile. La si dimostri prima per $A=\{1,2,\dots,n\}$ e poi per un
+generico insieme $A$ con $n$ elementi. Per la cronaca $\sum\limits_{i\in
+\{1,\dots,n\}}\beta_i:=\beta_1+\beta_2 +\cdots+\beta_n$ e $\prod\limits_{i\in
+\{1,\dots,n\}}\beta_i:=\beta_1\beta_2 \cdots\beta_n$.}
+\begin{equation}\label{eq:compl}
+(\alpha_0+\alpha_1)^n=\sum_{f\in\{0,1\}^A}\;\prod_{i\in A}
+\alpha_{f(i)}. 
+\end{equation}
+Utilizzando tale formula con $\alpha_0=\alpha_1=1$ si ottiene
+\[
+2^n=(1+1)^n=\sum_{f\in\{0,1\}^A}\;\prod_{i\in A} 1
+=\sum_{f\in\{0,1\}^A} 1. 
+\]
+Poich\`e l'ultima espressione \`e semplicemente la somma di uno per
+ogni elemento di $\{0,1\}^A$ \`e chiaro che la somma da esattamente la
+cardinalit\`a di $\{0,1\}^A$ e dunque di $\Pa(A)$.
+\end{proof}
+
+A qualcuno la formula \eqref{eq:compl} pu\`o sembrare assai complessa,
+ci si pu\`o chiedere se \`e possibile scriverla in maniera pi\'u
+semplice. La risposta \`e positiva ma richiede di risolvere un altro
+problema di conteggio.
+
+Sia $B_k=\{f\in\{0,1\}^A :\sum\limits_{i\in
+A}f(i)=k\}$,\footnote{Cio\`e $B_k$ \`e l'insieme di tutti i
+sottoinsiemi di $A$ con cardinalit\`a $k$.} chiaramente
+$\{0,1\}^A=\cup_{k=0}^n B_k$, dunque possiamo scrivere\footnote{Dato
+un insieme finito $A$, per $\# A$ si intende il numero di elementi di $A$.}
+\[
+(\alpha_0+\alpha_1)^n=\sum_{k=0}^n\sum_{f\in B_k}\;\prod_{i\in A}
+\alpha_{f(i)}=\sum_{k=0}^n\sum_{f\in B_k} \alpha_1^n\alpha_0^{n-k}
+=\sum_{k=0}^n\# B_k \alpha_1^n\alpha_0^{n-k}.
+\]
+\begin{es}[Binomio di Newton]
+Per ogni due numeri $a,b$ vale\footnote{Per $\binom nk$ si intende
+$\frac{n!}{k!(n-k)!}$ mentre $k!=1\cdot 2\cdot 3\cdots n=\prod_{i=1}^n
+i$.}
+\[
+(a+b)^n=\sum_{k=0}^n\binom nk a^nb^{n-k}.
+\]
+(Suggerimento: per contare gli elementi di $B_k$  si devono contare
+tutti i possibili modi in cui si possono scegliere $k$ elementi tra
+$n$ (sono gli elementi su cui $f$ varr\'a uno). Per farlo, prima si sceglie
+chi \`e il primo elemento ($n$ possibilit\`a) poi chi \`e il secondo
+($n-1$ possibilit\`a, visto che un elemento \`e gi`a stato scelto e
+non si pu\`o scegliere nuovamente), e cos\'\i\  via. Questo da
+$n(n-1)\cdots (n-k+1)=\frac {n!}{(n-k)!}$ possibilt\`a. Per\`o,
+cos\`\i\  facendo, abbiamo scelto lo stesso insieme un mucchio di
+volte, infatti se lo stesso insieme viene scelto in un ordine diverso
+nulla cambia, mentre noi lo abbiamo contato di nuovo. Quante volte
+abbiamo contato lo stesso insieme? Ovviamente $k!$.)
+\end{es}
+
+\end{document}
+

@@ -1,0 +1,60 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\ve{\varepsilon}
+\newcommand\Co{{\mathcal C}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 2:30 ore di tempo. Ogni esercizio
+vale dieci punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Appello 06-10-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si determini una soluzione dell'equazione
+\[
+\begin{split}
+&yu_x-xu_y=u^2\\
+&u(x,0)=x^2\quad x\in\R
+\end{split}
+\]
+e se ne discuta dominio e unicit\`a.
+\item Si trovi una soluzione dell'equazione
+\[
+\begin{split}
+&\Delta u(x,y)=x^2y^2\quad \quad x\in(0,1)\,\;y\in(0,2),\\
+&u(x,y)=0\quad \quad\forall\; (x,y)\in\partial([0,1]\times[0,2]).
+\end{split}
+\]
+Se ne discuta unicit\`a e regolarit\`a.
+\item Si consideri l'equazione
+\[
+\begin{split}
+&u_{tt}=u_{xx} \quad (t,x)\in\R_+\times [0,2]\\
+&u(x,0)=x;\; \;\;u_t(x,0)=0\\
+&u(0,t)=0;\; \;\;u(2,t)=1.
+\end{split}
+\]
+Si determini la soluzione e si mostri che l'energia si conserva.
+\item Sia $u$ la soluzione dell'equazione del calore
+\[
+\begin{split}
+&u_t(x,t)=u_{xx}(x,t)\quad (x,t)\in\R\times\R_+\\
+&u(x,0)=\frac{x^2}{x^2+1}.
+\end{split}
+\]
+Si calcoli,
+\[
+\lim_{t\to\infty}u(x,t).
+\]
+
+\end{enumerate}
+\end{document}

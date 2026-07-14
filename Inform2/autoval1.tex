@@ -1,0 +1,52 @@
+\documentclass{report}
+\usepackage{amsfonts}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Analisi Matematica II}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 3 ore di tempo. Ogni esercizio
+vale sei punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Prima Prova di Autovalutazione}
+\vskip1cm
+\begin{enumerate}
+\item \label{es1} Si scriva la formula di Taylor per la funzione
+\[
+f(x)=\sqrt{1-x}.
+\]
+
+\item \label{es2} Si scriva la formula di Taylor per la funzione
+\[
+f(x)=\int_0^1e^{xt^2} dt.
+\]
+\item Si calcoli il raggio di convergenza per le serie di potenze
+trovate negli eserizi \ref{es1} e \ref{es2}.
+ 
+\item Si trovi una successione di numeri razionali la cui somma sia
+$\pi$ e la si usi per calcolare $\pi$ con una precisione superiore a
+$\frac 1{10}$.
+\item Si consideri una funzione $f:[0,1]\to[0,1]$ derivabile in ogni
+punto e tale che
+\[
+\frac 12\leq \frac{f'(x)}{f'(y)}\leq 2 \quad \forall
+x,y\in[0,1].
+\]
+Si dimostri che per ogni coppia di intervalli $I,J\subset [0,1]$
+\[
+\frac{|I|}{2|J|}\leq\frac{|f(I)|}{|f(J)|}\leq \frac{2|I|}{|J|}
+\]
+dove, per ogni intervallo $K$, $|K|$ indica la lunghezza di $K$.
+
+\item Si calcoli il limite
+\[
+\lim_{n\to\infty}\int_{-n}^{n}e^{-x^2}x\,dx
+\]
+\end{enumerate}
+\end{document}

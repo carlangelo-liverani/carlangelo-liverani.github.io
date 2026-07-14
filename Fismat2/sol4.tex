@@ -1,0 +1,91 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\Z{{\mathbb Z}}
+\newcommand\Or{{\mathcal O}}
+\newcommand\ve{\varepsilon}
+%\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Soluzioni appello 10-07-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si controlla immediatamente che la condizione iniziale non \`e
+una caratteristica. Ci si riconduce dunque al sistema
+\[
+\begin{split}
+&\dot x=y^2-z^2\\
+&\dot y=-xy\\
+&\dot z=xz\\
+&z(0)=s\\
+&y(0)=s\\
+&x(0)=s.
+\end{split}
+\]
+Si ottiene:
+\[
+\dot y y +\dot z z=x(z^2-y^2)=-\dot xx;\;\; \dot yxz=-\dot zxy.
+\]
+Da cui si ahnno i due integrali del moto
+\[
+x^2+y^2+z^2=3s^2;\;\; yz=s^2
+\]
+cio\`e
+\[
+u=\frac{3y-\sqrt{5y^2-4x^2}}{2}.
+\]
+\item Si calcola
+\[
+\int_Q|\nabla u|^2=\int_Q\text{div }u\nabla u-u\Delta u
+=\int_{\partial Q}u\frac {\partial u}{\partial n} +\int _Q\lambda u^2=
+\lambda\int _Q u^2
+\]
+Dunque $\lambda >0$. Nota inoltre che $u=\sin\pi x\;\sin \pi y$ risolve
+il probelma e quindi si puo avere $\lambda =2\pi^2$. In effetti questo
+il valore minimo possibile di $\lambda$. Pe verificarlo si noti che
+una soluzione deve essere infinitamente differenziabile e quindi si puo
+scrivere come una serie seno di Fourier
+\[
+u(x,y)=\sum_{n,m\geq 1}u_{nm}\sin n\pi x \sin m \pi y.
+\] 
+Sostituendo nell'equazione si ottine che esistono soluzioni solo se
+$\lambda=2(n^2+m^2)\pi^2$. 
+\item La soluzione \`e data da
+\[
+u_a(x,t)=\frac 1{\sqrt{4\pi ta}}\int_{\R}
+e^{-\frac{(x-y)^2}{4t}-\frac{x^2}a}dy.
+\]
+da cui $\lim_{a\to\infty}u_a(x,1)=0$.
+\item Si cerca una sol del tipo
+\[
+u(x,t)=\sum_{n=1}^\infty c_n(t)\sin n\pi x,
+\]
+che soddisfa le condizioni al contorno.
+Sostituendo si ottiene
+\[
+\begin{split}
+&c_n''(t)=-n^2c_n(t)+b_ne^{-t}\\
+&c_n(0)=0;\;\; c'_n(0)=0,
+\end{split}
+\]
+where $1=\sum_{n=1}^\infty b_n\sin n\pi x$. Cio\`e
+\[
+b_n=2\int_0^1x\sin n\pi x \, dx =\frac 2n [1-(-1)^n].
+\]
+La soluzione \`e dunque $c_n=0$ per $n$ pari e 
+\[
+c_n(t)=\frac{b_n}n\int_0^te^{-s}\sin n(t-s)\;ds.
+\]
+Finalmente,
+\[
+\frac d{dt} E(t)=e^{-t}\int_0^1u_t(x,t)dx.
+\]
+Dunque il limite richiesto \`e nullo.
+\end{enumerate}
+\end{document}

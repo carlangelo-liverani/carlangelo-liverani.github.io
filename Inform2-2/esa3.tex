@@ -1,0 +1,48 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Analisi Matematica II}
+\centerline{\large Corso di Laurea di Informatica}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 2.30 ore di tempo. Ogni esercizio
+vale nove punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Appello 8-09-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si scriva la serie di Taylor, in zero, della funzione
+\[
+f(x)=\sqrt{1-x}
+\]
+e se ne studi la convergenza.
+\item Si mostri che
+\[
+\sqrt{1-x^2}\leq 1-\frac 12x^2-\frac 18 x^4\quad \forall x\in [-1,1].
+\]
+Si usi tale fatto per dimostrare che $\pi\leq 3.24$. Sapreste fare di meglio?
+\item Per ogni $\gamma>2$ si risolva il problema di Cauchy
+\[
+\begin{split}
+&\ddot x=-\gamma\dot x-x\\
+&x(0)=1;\;\; \dot x(0)=0.
+\end{split}
+\]
+Detta $x_\gamma(t)$ la soluzione di tale problema si calcoli
+\[
+\lim_{\gamma\to\infty}x_\gamma(t).
+\]
+\item Si mostri che
+\[
+f(x)=\frac 12\int_{x-1}^{x+1}|y|dy
+\]
+\`e ovunque derivabile e se ne calcoli la derivata in zero.
+\end{enumerate}
+\end{document}

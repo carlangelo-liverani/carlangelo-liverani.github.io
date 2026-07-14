@@ -1,0 +1,372 @@
+\documentclass[10pt, a4paper, reqno]{amsart}
+
+\usepackage{amssymb}
+\usepackage{enumerate, xspace}
+\usepackage{dsfont}
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing,patterns}
+\usetikzlibrary{calc,patterns,decorations.markings}
+\usetikzlibrary{positioning,snakes}
+\usepackage{colortbl}
+\usepackage{eurosym}
+\usepackage[colorlinks=true,citecolor=violet]{hyperref}
+
+\usepackage{pdfsync}
+\usepackage[T1]{fontenc}
+%\usepackage{refcheck}
+
+
+%%%%%%%%%Pagination
+\hfuzz=0.4truecm
+\setlength{\textwidth}{16.5truecm}
+\setlength{\textheight}{25truecm}
+\setlength{\topmargin}{.3truecm}
+\setlength{\voffset}{-1.04truecm}
+\setlength{\hoffset}{-2.09truecm}
+\setlength{\marginparwidth}{4truecm}
+
+\newtheorem*{thm*}{Theorem}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{sublem}[thm]{Sub-lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{conj}{Conjecture}\renewcommand{\theconj}{}
+\newtheorem{defin}{Definition}
+\newtheorem{cond}{Condition}
+\newtheorem{hyp}{Hypotheses}
+\newtheorem{exmp}{Example}
+\newtheorem{rem}[thm]{Remark}
+
+%%%%%%%%%%mathcal
+\newcommand\cA{{\mathcal A}}
+\newcommand\cB{{\mathcal B}}
+\newcommand\cC{{\mathcal C}}
+\newcommand\cD{{\mathcal D}}
+\newcommand\cE{{\mathcal E}}
+\newcommand\cF{{\mathcal F}}
+\newcommand\cG{{\mathcal G}}
+\newcommand\cH{{\mathcal H}}
+\newcommand\cI{{\mathcal I}}
+\newcommand\cL{{\mathcal L}}
+\newcommand\cO{{\mathcal O}}
+\newcommand\cP{{\mathcal P}}
+\newcommand\cM{{\mathcal M}}
+\newcommand\cT{{\mathcal T}}
+\newcommand\cW{{\mathcal W}}
+
+%%%%%%%%%%%%mathbb
+\newcommand\bA{{\mathbb A}}
+\newcommand\bB{{\mathbb B}}
+\newcommand\bC{{\mathbb C}}
+\newcommand\bD{{\mathbb D}}
+\newcommand\bE{{\mathbb E}}
+\newcommand\bF{{\mathbb F}}
+\newcommand\bG{{\mathbb G}}
+\newcommand\bN{{\mathbb N}}
+\newcommand\bP{{\mathbb P}}
+\newcommand\bQ{{\mathbb Q}}
+\newcommand\bR{{\mathbb R}}
+\newcommand\bT{{\mathbb T}}
+\newcommand\bZ{{\mathbb Z}}
+
+%%%%%%%%%%%greek
+\newcommand\ve{\varepsilon}
+\newcommand\eps{\epsilon}
+\newcommand\vf{\varphi}
+
+
+%%Bold math
+\newcommand{\ii}{\text{\it\bfseries i}}
+\newcommand{\jj}{\text{\it\bfseries j}}
+\newcommand{\kk}{ \text{\it\bfseries k}}
+\newcommand{\xx}{\text{\it\bfseries x}}
+
+%%%%%%%%%%%%%%%various
+\newcommand\Id{{\mathds{1}}}
+\newcommand{\marginnote}[1]
+           {\mbox{}\marginpar{\raggedright\hspace{0pt}{$\blacktriangleright$ #1}}}
+\newcommand\nn{\nonumber}
+\newcommand{\bigtimes}{{\sf X}}
+\newcommand\bi{{\boldsymbol i}}
+\newcommand\bj{{\boldsymbol j}}
+\newcommand\bomega{{\boldsymbol \omega}}
+\newcommand\bw{{\boldsymbol w}}
+%%%%%%%%%%%%%%%%%%%%%%%Colors
+\definecolor{backColor}{rgb}{.9,.99,1}
+\definecolor{hyColor}{rgb}{.4,1,.4}
+\definecolor{ltColor}{rgb}{1,.6,.4}%{1,.7,.5}
+\definecolor{spColor}{rgb}{1,.6,.8}
+\definecolor{rwColor}{rgb}{.80,.80,1}
+\definecolor{gwColor}{rgb}{.55,.55,1}
+\definecolor{rsColor}{rgb}{1.0, 0.83, 0.0} %{.80,.80,.6}
+\definecolor{paraColor}{rgb}{0,.7,.5}
+
+
+
+\begin{document}
+{\huge
+\centerline{\bf Fondo Italiano per la Scienza 2021}
+\vskip.5cm
+\centerline{\bf Advanced Grant proposal }
+\vskip2cm
+
+\centerline{\bf \Huge Dynamics and Non-Equilibrium}
+\vskip1cm
+\centerline{\sc \huge DyaNE}
+\title[PI: Liverani \hskip 2cm {Proposal: DyaNE}\hskip2cm]{}
+\author[Liverani \hskip 2cm {DyaNE}\hskip2cm ]{}
+\vskip2cm
+\begin{itemize}
+\item PI: Carlangelo Liverani
+\item HI: Universit\`a di Roma {\sl Tor Vergata}
+\item Proposal duration: {\sc 60 months}
+\end{itemize}
+\maketitle
+\setcounter{page}{0}
+\thispagestyle{empty}
+}
+\newpage
+\section{ \textbf{\textsc{State-of-the-art and objectives}}}
+
+\subsection*{{\color{magenta}Global overview}}\label{sec:2over}
+
+The main motivation of this project come from Non-Equilibrium Statistical Mechanics (derivation of large scale dynamics starting from  microscopic dynamics), Smooth Ergodic Theory (statistical properties of partially hyperbolic systems, fast-slow systems, and open systems) and Probability (limit theorems, random walk in random environment). At center stage is the goal to study systems with many degrees of freedom and extended systems (essentially, this is {\em Hilbert sixth problem} even though, given the knowledge of the time, he could not articulate it in modern language).
+
+In Dynamical Systems little attention is devoted to large systems, one exception being the field of {\em coupled map lattice}. In particular, no results are available for (a partial exception being \cite{BK13b}):
+\begin{itemize}
+\item coupled piecewise smooth hyperbolic maps (e.g. billiard maps);
+\item coupled flows or, more generally, coupled partially hyperbolic systems;
+\item systems with locally conserved quantities.
+\end{itemize}
+The last item is distressing: locally conserved quantities are the bread and butter of Statistical Mechanics. 
+
+I intend to study the statistical properties of partially hyperbolic systems, with an emphasis on {\em fast-slow systems}. I believe this three topics that could jump-start the study of large scale physically relevant systems:
+\begin{enumerate}[(\bf 1)]
+\item refined limit theorems for fast-slow systems (long times and small scales);
+\item strong ergodic properties for partially hyperbolic systems;
+\item precise quantitative statistical properties of fast-slow partially hyperbolic systems.
+\end{enumerate}
+
+Given enough progresses in some of the above, it should be possible to combine them to obtain results for large scale systems, especially weakly coupled Hamiltonian systems.
+
+An alternative approach is the study of  the motion of a particle in a random environment, e.g. a particle moving in a periodic medium with random defects. This is realted to the enormous literature on random walks in random environment (see \cite{Ze04, Sz04, Ze06, DR14} for an overview).
+
+A far-reaching goal would be to prove a Central Limit Theorem. As this problem has resisted many previous efforts, it is advisable to start by studying simpler models. A good class of examples seem to be {\em deterministic walks in random environments} (DWRE) as put forward, e.g., by Lenci \cite{Le06b2}. In \cite{AL18b} I propose a new strategy to tackle this type of problems: separate the dynamical difficulties from the probabilistic ones by reducing the dynamical system to a purely probabilistic model. This leads to two parallel lines of enquiry:
+\begin{enumerate}[(\bf 1)]
+\setcounter{enumi}{3}
+\item reduction of deterministic models to purely probabilistic ones;
+\item study of the probabilistic models to which the deterministic systems can be reduced to.
+\end{enumerate}
+The second entails the extension of known results on persistent random walks in random environment. The first requires an extension of \cite{AL18b}.
+The techniques used in \cite{AL18b} are: 
+\begin{enumerate}[(a)]
+\item combinatorics for large holes (currently available only for expanding maps);
+\item Hilbert metric (now available also for some special classes of billiards, see \cite{DL21}).
+\end{enumerate}
+Hence  topic {\bf(4)} above splits naturally in two sub-tasks
+\begin{enumerate}[({\bf 4}-a)]
+\item  large holes combinatorics for Anosov maps and piecewise hyperbolic maps;
+\item Hilbert metric technology for billiard maps.
+\end{enumerate}
+The combination of these two results should allow the reduction of a large class of Lorentz gases to a purely probabilistic model.
+In section 1.{\bf n}, ${\bf n}\in\{{\bf 1},\dots,{\bf 5}\}$, I will detail the task (${\bf n}$) above.
+
+\subsection{Refined limit theorems for fast-slow systems}\label{sec:2limit}
+The simplest example to  consider is 
+\begin{equation}\label{eq:basic}
+F_\ve(x,z)=(f(x,z),z+\ve\omega(x,z))
+\end{equation}
+where $(x,z)\in\bT^2$ and $\inf \partial_x f(x,z)\geq \lambda>1$. Assume that the initial condition is random only in $x$: 
+
+Let $(x_n,z_n)=F_\ve^n(x,z)$.
+Introduce the macroscopic time $t=\ve n$ and
+\begin{equation}\label{eq:detp}
+z_\ve(t)=z_{\lfloor\ve^{-1} t\rfloor}+(\ve^{-1} t- \lfloor\ve^{-1} t\rfloor)(z_{\lfloor\ve^{-1} t\rfloor+1}-z_{\lfloor\ve^{-1} t\rfloor}),\quad t\in[0,T].
+\end{equation}
+Then $z_\ve$ is a random variable in $\cC^0([0,T],\bT)$. 
+Let $\tilde z_\ve$ be the solution of the SDE
+\begin{equation}\label{eq:fw}
+\begin{split}
+&d\tilde z_\ve=\overline\omega(\tilde z_\ve)dt+\sqrt{2\ve}\,\sigma(\tilde z_\ve) dB\\
+&\tilde z_\ve(0)=z_*
+\end{split}
+\end{equation}
+where $B$ is the standard Brownian motion and, setting $\hat\omega=\omega-\overline \omega$,
+\[
+\begin{split}
+&\overline \omega(z)=\int_{\bT} \omega(x,z) h_*(x,z) dx\\
+&\sigma(z)^2=\int_{\bT}\hat \omega(x,z)^2\, h_*(x,z)dx+2\sum_{m=1}^\infty \int_{\bT} \hat\omega\circ F_0^m(x,z)\, \hat\omega(x,z)\, h_*(x,z)dx.
+\end{split}
+\]
+where $h_*(\cdot,z)$ is the density of the $f(\cdot,z)$-unique absolutely continuous invariant measure.
+\begin{thm*}[\cite{DL18, DeLPVb}]
+There exists $\alpha\in (0,1)$, $c,C>0$ and a coupling $\bP_c$ : $\forall \;\ve>0, t\leq \ve^{-\alpha}$
+\begin{equation}\label{eq:sharp}
+\bP_c(|z_\ve(t)- \tilde z_\ve(t)|\geq c\ve)|\leq C\ve^{\alpha}.
+\end{equation}
+\end{thm*}
+\noindent
+When $\bar \omega$ has non degenerate zeroes, the solution of equation \eqref{eq:fw} converges exponentially fast to a finite dimensional subspace in which the motion is extremely slow, hence we have {\em metastable states}, see \cite{DeLPVb}.
+
+The natural direction in which to extend these results is twofold.\\
+Obtain some kind of Edgeworth expansion of which \eqref{eq:fw} is just the first term (a preliminary step is \cite{KL19}).
+Consider more general dynamics, e.g. $f$ in \eqref{eq:basic} to be an Anosov map. Next, consider
+\begin{equation}\label{eq:flow}
+\begin{split}
+&\dot x=V(x,z)\\
+&\dot z=\omega_0(z)+\ve\omega(x,z)
+\end{split}
+\end{equation}
+for $\ve$ small and where the vector fields $V(\cdot,z)$ give rise to a contact Anosov flow for each $z\in G$.
+
+Before studying \eqref{eq:flow}, it would be important to simplify and streamline the arguments in \cite{DL18}. For example, it should be possible to incorporate some ideas present in \cite{Bak1,Bak2}.
+
+Indeed, the model in \cite{DL11b}, an end game of this research program, corresponds to $\bar\omega\equiv 0$. In such a case it is necessary to look at the process rescaled at times $\ve^{-2}$, $z_\ve(t)\sim z_{\ve^{-2} t}$, which converges to a diffusion, \cite{Do4b}. Unfortunately, no information iexists on the rate of convergence or the convergence in increasing time intervals, e.g., $[0,\ve^{-\alpha}]$. Such results are essential to pursue my goals. Thus, the case $\bar\omega\equiv 0$ in \eqref{eq:basic} is also a starting point of this research program.
+
+Next, I will study interacting systems. The simplest model being an array of dynamics on the discrete torus of size $L$, $\Lambda_L=\bR^d/L\bZ^d$, with nearest neighbourhood interactions. This model has been studied in \cite{BK13b}, but under the unphysical hypothesis that the fast dynamics does not depend on the slow. Let $\cW=\{e\in\bZ^d\;:\; \|e\|=1\}$, $\Omega=(M\times \bR_{\geq})^{\Lambda_L}$, and
+\begin{equation}\label{eq:BK}
+F_\ve(\bar x,\bar z)_\bi=\left(f(x_\bi,z_\bi), z_\bi+\ve\sum_{e\in \cW}J_e(x_{\bi+e}, z_{\bi+e})-J_e(x_\bi,z_\bi)\right)
+\end{equation}
+where $\bi\in\Lambda_L$, $(\bar x,\bar z)=(x_\bi,z_\bi)$, $x_\bi\in M$, $z_\bi\in\bR$ and $f, J_e$ are smooth functions. The map $f$ is required to be uniformly hyperbolic, the simplest case being an expanding map. The physical interpretation is that $z_\bi$ is the conserved quantity at site $\bi$ (similarly to the energy).
+
+The first goal is to prove that, setting $(x_{\bi,n},z_{\bi,n})=F_\ve^n(\bar x, \bar z)_\bi$, the paths
+$z_{\bi,\ve}(t)\sim z_{\bi, \ve^{-2} t}$, converge to
+\begin{equation}\label{eq:mesoscopic}
+d\tilde z_\bi=\sum_{e\in \cW}\alpha(\tilde z_\bi,\tilde z_{\bi+e})dt+\sum_{e\in \cW}\beta(\tilde z_\bi,\tilde z_{\bi+e}) dB_{\bi,\bi+e}
+\end{equation}
+where $\alpha(z,w)=-\alpha(w,z)$, $\beta(z,w)=\beta(w,z)$ and $B_{\bi,\bj}$ are independent standard Brownian motions with the only constraint $B_{\bi,\bj}=-B_{\bj,\bi}$.
+It is expected that $\tilde z$ converges to its stationary state exponentially with rate $L^{-2}$. Proving this would be a big step toward deriving the heat equation in the hydrodynamic limit. That is: for  each $\vf\in \cC^\infty_0(\bR^d,\bR)$ the ``local energ''
+\[
+E_L(\vf,t)=L^{-d}\sum_{\bi\in\Lambda_L} \tilde z_\bi(L^2 t)\vf(L^{-1}\bi)
+\] 
+converges, as $L\to\infty$, to $\int_{\bT^d} u(y, t)\vf(y)$ where, for some diffusivity $\kappa$,
+\begin{equation}\label{eq:heat}
+\partial_t u=\operatorname{div}(\kappa \nabla u).
+\end{equation}
+Then, setting $L_\ve=\ve^{-\beta}$ for some $\beta$ small enough, it is conceivable to prove that, for $\ve\to 0$,
+\[
+\cE_\ve(\vf,t)=L_\ve^{-d}\sum_{\bi\in\Lambda_{L_\ve}} z_{\bi, \ve}(L_\ve^2 t)\vf(L_\ve^{-1}\bi)
+\] 
+converges to \eqref{eq:heat}, {\em yielding the first derivation of the heat equation from a fully coupled deterministic dynamics.}
+
+This would be a substantial contribution to the research program outlined by Hilbert in his sixth problem,
+and it would open the doors to obtaining similar results for the more realistic Hamiltonian of the type \cite{DL11b}:
+\begin{equation}\label{eq:dolgo-m}
+\cH_\ve(\overline q,\overline p)=\sum_{\bi\in \Lambda_L}H(q_\bi,p_\bi)+\ve\sum_{\|\bi-\bj\|=1}W(q_\bi,q_\bj).
+\end{equation}
+This is a {\em weakly coupled flow lattice}, it describes molecules that are pinned to a specific location.
+
+I plan to extend \cite{DL11b} by obtaining the anlogous of \eqref{eq:sharp}, possibly adapting ideas form \cite{Es17, TZ20}.
+
+The techniques developed to analyse such models should also be applicable to a weakly interacting gas provided the free motion is hyperbolic. Indeed, another very long term goal is to consider weakly interacting particles moving in a dispersing billiard.  An important ``warm up'' model consists of particles moving on a manifold of strictly negative curvature. Let $V$ the vector field defining the geodesic flow. Consider the particles $(q_i, p_i)\in M\times T^*M$, $i\in\{1,\dots,N_\ve\}$,  satisfying the ODE
+\begin{equation}\label{eq:gas}
+\begin{split}
+&\dot q_i=p_i\\
+&\dot p_i=V(q_i, p_i)+\ve\sum_{j=1}^{N_\ve} W_\ve(q_i,p_i,q_j,p_j),
+\end{split}
+\end{equation}
+where $N_\ve$ may grow and the support of $W_\ve$ may shrink with $\ve$.
+With respect to \eqref{eq:dolgo-m} here we have an extra difficulty: possible high density regions were the total interaction energy is no longer small with respect to the average kinetic energy. Large deviation estimates are needed to control of such an event.
+
+Let us recap the proposed research themes:
+\begin{enumerate}[\large \bf \color{ltColor} (a)]
+\item refined limit theorems (ideally an Edgeworth like expansion) for \eqref{eq:basic} when $\bar\omega=0$;
+\item refined limit theorems for \eqref{eq:basic} when the $f(\cdot,z)$ are Anosov maps;
+\item refined limit theorems first for \eqref{eq:flow} and then for \eqref{eq:dolgo-m};
+\item hydrodynamic limit for \eqref{eq:BK};
+\item hydrodynamic limit for \eqref{eq:dolgo-m};
+\item coupled geodesic flows (toward weakly interacting gases), as in \eqref{eq:gas} or perturbing the metric.
+\end{enumerate}
+Up to now we have considered the limit for vanishing $\ve$.  Even more astonishing would be to obtain a diffusion equation for a small, but {\em fixed} $\ve$. To this end substantially new ideas are necessary, hence the next section.
+
+\subsection{Ergodic properties}\label{sec:2funct}
+While the spectral properties of the transfer operator (Ruelle-Pollicott's resonances) for uniformly hyperbolic systems are well understood in the smooth \cite{GL06, BT07} and the piecewise smooth case \cite{DL08, DZ13}, the situation for partially hyperbolic systems is totally unsatisfactory. 
+
+To amend this situation I propose to start by studying
+\begin{equation}\label{eq:exone}
+F(x,z)=(f(x,z), \omega_0(z)+\omega(x,z))
+\end{equation}
+where $(x,z)\in M\times G$, $M$, here and in the following, is a compact Riemannian manifold, $G$ a group and $\omega$ is assumed small. My goals are as follows:
+\begin{enumerate}[\large \bf \color{hyColor} (a)]
+\item refine and extend \cite{CL21} to \eqref{eq:exone} when $f(\cdot,z)$ (the {\em base dynamics}) is a smooth expanding map for each $z\in G$. Starting with $\omega$ small and $G=\bT^d$;
+\item study \eqref{eq:exone} when $f(\cdot, z)$ is Anosov for each $z\in G$. This require new ideas inspired by \cite{GL06, BT07}; 
+\item extension to continuous time. This is more speculative. I'll start studying \eqref{eq:flow}.
+Next I'll consider weakly coupled geodesic flows in negative curvature. The latter is extremely relevant both physically, see \eqref{eq:dolgo-m}, and geometrically (since perturbations of the product of two manifolds with negative curvature is not necessarily a manifold with negative curvature).
+\end{enumerate}
+
+A success in tasks {\bf \color{hyColor} (a-c)} would not determine the exact number of the SRB measures nor provide quantitative information on the rate of mixing. To this end new ideas are needed, see next task.
+
+\subsection{Quantitative statistical properties}\label{sec:2stat}
+Results on the locations of Ruelle's resonances could simplify and generalise the arguments used in \cite{DL16, DL18,DeLPVb}, while limit theorems provide information on the location of the resonances. Hence, bootstrapping becomes possibile. 
+
+For \eqref{eq:basic} two important issues remain to be investigated:
+\begin{enumerate}[\large \bf \color{spColor} (a)]
+\item the case in which the central Lyapunov exponent is non-negative;
+\item the case in which $\bar \omega\equiv 0$.
+\end{enumerate}
+The next, much harder, challenges are
+\begin{enumerate}[\large \bf \color{spColor} (a)]
+\setcounter{enumi}{2}
+\item the fast dynamics is an Anosov map;
+\item the fast dynamics is an Anosov flow, with the end goal of treating \eqref{eq:dolgo-m} and \eqref{eq:gas}.
+\end{enumerate}
+
+\subsection*{{\color{magenta}Lorentz Gas, DWRE and Open systems, overview}}\label{sec:2open}
+The Lorentz gas consists of an array of convex obstacles and a particle moving linearly among them, colliding elastically with the obstacles.  Natural questions are: the system is recurrent or ergodic or if the rescaled position $L^{-1}x(L^2 t)$ converges or not to a Brownian motion. Two cases are understood: the case in which the obstacles are periodic \cite{BS91b} and the case in which the density of the obstacles is very low (Grad-Boltzmann limit) \cite{MS11, LT19b2}.
+Very few results exist for the high density non periodic case, e.g. \cite{DSV9,Le06b2,CLS0}. 
+
+I will consider random obstacles in a periodic structure. 
+The results in \cite{AL18b} show that certain DWRE can be reduced to a random walks in random environment with memory, albeit an exponentially decaying one. I call such models {\em Gibbs Walks in Random Environment} (GWRE) (see \cite{AL18b} for a precise definition). 
+
+\subsection{Deterministic Walks in Random Environment}\label{sec:2reduce}
+To reduce a DWRE to a GWRE it is necessary to study an open, non-Markov, sequential system with large holes, see \cite{AL18b}.
+In \cite{LM03, AL18b} is put forward the idea of using Hilbert metrics to attack this proble. In \cite{DL21} the Hilbert metric is applied to billiards with large hyperbolicity. Removing such an hypothesis would allow to 
+\begin{enumerate}[\large \bf \color{rwColor} (a)]
+\item Reduction to GWRE for Anosov and piecewise hyperbolic maps, large holes combinatorics;
+\item Fully develop the Hilbert metric technique for hard-core and soft-core (potential) billiards.
+\item Reduce the Lorentz Gas to a GWRE.
+\end{enumerate}
+
+\subsection{Gibbs Walks in Random Environment}\label{sec:2random}
+The GWRE are a generalisation of {\em persistent random walks} or random walks with memory.
+They are very general, but special cases are directly relevant to the Lorentz gas. Recall, that 
+\begin{enumerate}[\large \bf \color{gwColor} (i)]
+\item for the  Lorentz gases under consideration the invariant measure of the process as seen from the particle is exactly the law of the obstacles' distribution;
+\item the mechanical model is reversible and this induces reversibility in the probabilistic model.
+\end{enumerate}
+Other convenient simplifications to address are
+\begin{enumerate}[\large \bf \color{gwColor} (a)]
+\item the one dimensional case, to take advance of the simpler geometry as in \cite{CLS0}. Here ideas from \cite{DG13} should prove useful, especially if one could relax the ellipticity condition;
+\item systems with non-zero drift (hence with low probability of recollisions) in the spirit of \cite{DK20};
+\item the  high dimensional case (again: few recollisions);
+\item the perturbative regime, where the randomness is very small and the walk is close to a regular random walk. Here the ideas in \cite{BK91,SZ06} should be helpful.
+\end{enumerate}
+
+The above yield manifold models since different properties can be combined. Such models, together with the results envisaged in Section \ref{sec:2reduce}, provide a natural ladder toward:
+\begin{enumerate}[\large \bf \color{gwColor} (a)]
+\setcounter{enumi}{4}
+\item proving the CLT for some Lorentz gas. The simplest possibility being a gas in presence of a small electric field and a Gaussian thermostat for which one expects a drift, and hence few recollisions.
+\end{enumerate}
+
+\section{\textbf{\textsc{Methodology and work organisation}}}
+The ultimate goal is to develop general theories for partially hyperbolic dynamical systems, and deterministic walks in random environment. Beside the considerable mathematical relevance of such achievements (recognised by Hilbert in his sixth problem), they would have also momentous applications to old and fundament problems in Non-Equilibrium Statistical Mechanics. These are truly ambitious goals, the risk of getting lost is enormous. Hence, a detailed road map is of the utmost importance.\\
+I propose an examples driven strategy consisting of five interconnected lines of research. 
+
+Tasks ${\bf 1}$-$(a,b); {\bf 2}$-$(a); {\bf 3}$-$(a,b)$, and their spin-off, are suitable for Ph.D. students and Postdoc, since some new ideas I am developing, together with Butterley, should put them, barely, within the reach of current technology. 
+
+Tasks  ${\bf 1}$-$(c); {\bf 2}$-$(b); {\bf 3}$-$(c)$ are topics for (strong) Postdocs as they are well beyond the state of the art. On these topics I intend to collaborate with De Simoi as well.  
+
+For the task  ${\bf 4}$-$(b)$ I plan a collaboration with Demers to extend our previous work. I will involve a Postdoc, only if she/he already masters, at the very least, \cite{CM06}. 
+
+A full solution for task ${\bf 4}$-$(a)$ needs to handle large holes, a long-standing problem. Some form of entropy production estimate could be key. I plan to collaborate on this both with Aimino, Butterley and Demers. 
+
+Tasks ${\bf 5}$-$(i,ii)\times (a,b,c,d)$ are suitable, at least in part, for Postdocs involvement, provided they have a solid background in probability. I plan to have a collaboration on these topics with Aimino. 
+
+Tasks ${\bf 1}$-$(d, e,f); {\bf 2}$-$(c); {\bf 3}$-$(d); {\bf 5}$-$(e)$ are the most speculative, challenging and rewarding. The research program embodies many attack routes to these latter problems, hence I am confident that I will develop tools to make some progresses in several of them. However, I will start involving Postdocs only when there is some evidence that concrete progress is possible.
+
+
+In the sections {\bf\color{red} 1.n}, $1\leq n \leq 5$, I described the ideas, the tools and the methods I intend to use. Such a structure will both encourage and reward the interactions among the team members, thus fostering a good and productive research environment. This parallelisation of tasks will maximise the probability of progress even if a line of research is met with unexpected obstacles.
+
+\input{bibliography.tex}
+\end{document}

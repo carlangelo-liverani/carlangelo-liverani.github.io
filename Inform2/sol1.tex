@@ -1,0 +1,84 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand{\vf}{\varphi}
+\pagestyle{empty}
+\begin{document}
+\hfuzz 12pt
+\large
+\centerline{\Huge \bf Analisi Matematica II}
+\vskip.2cm
+\centerline{\Huge Correzione Primo Appello}
+
+\vskip1cm
+\begin{enumerate}
+\item Si calcoli il rapporto incrementale
+\[
+\lim_{h\to 0}\frac{f(x+h)-f(x)}h=\lim_{h\to
+0}\int_0^1\frac{e^{-hy}-1}he^{-xy}\sqrt{1-y^2}dy.
+\]
+Ora \`e facile controllare che la succesione di funzioni
+$\{\frac{e^{hy}-1}h\}$ converge uniformemente per $y\in[0,1]$, dunque
+si puo portare il limite sotto il segno di integrale ottenendo
+\[
+f'(x)=-\int_0^1ye^{-xy}\sqrt{1-y^2}dy.
+\]
+\item Cominciamo con lo scrivere
+\[
+\int_{-\frac\pi 2}^{\frac\pi 2}e^{\sin x} dx=\sum_{n=0}^\infty\frac
+1{n!}\int_{-\frac\pi 2}^{\frac\pi 2} (\sin x)^n dx
+\]
+dove abbiamo usato la uniforme convergenza della serie per portarla
+fuori dal segno di integrale. Ora si noti che l'integrale da zero per
+tutte le potenze dispari. Inoltre, per $n$ pari,
+\[
+\int_{-\frac\pi 2}^{\frac\pi 2} (\sin x)^n dx\leq \pi.
+\]
+Poich\`e
+\[
+\pi\sum_{n=4}^\infty \frac 1{n!}=\pi(e-2-\frac 12-\frac1 6)\leq .2
+\]
+segue che basta calcolare i primi tre termini della serie per avere un
+risultato con la precisione desiderata. Cosi facendo si ottiene
+\[
+\pi+\frac 12\int_{-\frac\pi 2}^{\frac\pi 2} (\sin x)^2 dx=\pi+\frac\pi 4.
+\]
+\item Usando il criterio integrale si ottiene
+\[
+\sum_{n=2}^\infty\frac1{n(\ln n)^2}\leq \frac 1{2(\ln
+2)^2}+\lim_{n\to\infty}\int_{2}^n \frac{1}{x(\ln x)^2} dx.
+\]
+Ora si operi la sostituzione $y=\ln x$, dunque
+\[
+\sum_{n=2}^\infty\frac1{n(\ln n)^2}\leq \frac 1{2(\ln
+2)^2}+\lim_{n\to\infty}\int_{\ln 2}^{\ln n} \frac{1}{y^2} dy\leq 
+\frac 1{2(\ln 2)^2}+\frac 1{\ln 2},
+\]
+dunque la serie convege.
+\item Si provi con una soluzione del tipo $x(t)=e^{\alpha t}$
+sostituendo si trova che la cosa funziona se $\alpha^2=2-\alpha$, cioe
+ci sono due soluzioni $\alpha_+=\frac{-1+\sqrt 5}{2}$ e
+$\alpha_-=\frac{-1-\sqrt 5}{2}$.
+La soluzione generale sara allora della forma
+$x(t)=ae^{\alpha_+t}+be^{\alpha_-t}$. Le costanti $a$ e $b$ devono
+essere determinate usando le condizioni iniziali: $x(0)=0$ implica
+$a=-b$, mentre $x'(0)=1$ implica $a=\frac 1{\sqrt 5}$.
+\item Questa siottine facilmente utilizzando la formula per la
+soluzione generale di queste equzioni. Oppure notando che 
+\[
+\frac{\sin t-\cos t}2
+\]
+\`e una soluzione della equazione differenziale. Questo significa che
+la soluzione generale ha la forma
+\[
+x(t)=ae^t+\frac{\sin t-\cos t}2
+\]
+e aggiustando $a$ in modo da soddisfare la condizione iniziale.
+\item Ovviamente per $|x|>1$ la serie non converge, visto
+che il termine $n$-esimo non converge a zero. Per $|x|<1$ invece la
+serie \`e maggiorata da una serie geometrica di ragione $|x|$ e dunque
+converge. Il raggio di convergenza \`e dunqe $1$.
+\end{enumerate}
+\end{document}

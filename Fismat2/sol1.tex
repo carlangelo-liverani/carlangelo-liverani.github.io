@@ -1,0 +1,86 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\Or{{\mathcal O}}
+\newcommand\ve{\varepsilon}
+%\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Soluzioni esonero 30-04-2003}
+\vskip1cm
+\begin{enumerate}
+\item La condizione iniziale non \`e una caratteristica. Dunque
+\[
+\begin{split}
+&\dot x=1\\
+&\dot y=1-y^2\\
+&\dot z=z\\
+&x=s ;\quad y=0;\quad z=s.
+\end{split}
+\]
+Dalla seconda segue che 
+\[
+\frac d{dt}\ln\sqrt{\frac{1+y}{1-y}}=1.
+\]
+Dunque si ha, per ogni $t\geq 0$,
+\[
+\begin{split}
+&\ln z- x=\ln s-s\\
+&\ln z-\ln\sqrt{\frac{1+y}{1-y}}=s.
+\end{split}
+\]
+Che implica
+\[
+u(x,y)=x\sqrt{\frac{1+y}{1-y}}-\sqrt{\frac{1+y}{1-y}} \ln
+\sqrt{\frac{1+y}{1-y}} .
+\]
+La soluzione \`e unica nel dominio $-1<y<1$.
+\item  Se la funzione \`e armonica allora $f''g+g''f=0$ e questo \`e
+possibile solo se esiste $\lambda\in\R$ tale che $f''=\lambda f$ e
+$g''=-\lambda g$. Le uniche soluzioni di tali equazioni sono
+\[
+f(x)=\left\{\begin{aligned}
+&e^{\sqrt\lambda}x,\; e^{-\sqrt\lambda}x \quad \quad \text{for }
+\lambda>0\\
+&1,\; x \quad \quad \text{for } \lambda=0\\
+&\cos\sqrt{-\lambda} x,\;\sin \sqrt{-\lambda} x\quad \quad \text{for }
+\lambda<0, 
+	    \end{aligned}\right.
+\]
+assieme alle analoghe espressioni per $g$. Moltiplicando si ottengo
+tutte le possibilit\`a.
+\item Il cambio di variabili $(\xi,\eta)=(2x,y)$ trasforma l'equazione
+in una equazione di Laplace in un anello. L'esistenza ed unicit\`a
+seguono dunque dai soliti argomenti.
+\item Sia $u$ una funzione armonica, si consideri $u\circ \Psi$. Un
+semplice calcolo mostra che
+\[
+\partial_{x_i x_i}(u\circ \Psi)=\sum_{k,j}(\partial_{x_k x_j} u)\circ\Psi
+A_{ki}A_{ji}.
+\]
+Dunque si vuole che, per ogni $u$ armonica,
+\[
+0=\Delta(u\circ\Psi)=\sum_{kj}(A A^*)_{jk}(\partial_{x_k
+x_j}u)\circ\Psi=\text{Tr }AA^*U,
+\]
+Dove $U_{kj}:=(\partial_{x_k x_j}u)\circ\Psi$. Nota che $\text{Tr
+}U=0$. 
+Ovviamente una possibile soluzione \`e
+$AA^*=\lambda\text{Id}$. D'altra parte $u=x_kx_j$, $k\neq j$, sono funzioni
+analitiche che implicano che deve essere
+\[
+0=\sum_{pq}(AA^*)_{pq}\delta_{pk}\delta_{qj}
+\]
+cio\`e $(AA^*)_{kj}=\lambda_k\delta_{kj}$. Considera ora le funzioni
+armoniche $u=x_k^2-x_j^2$. Usando queste si ottine
+$\lambda_k=\lambda_j$. Dunque $A^*A$ deve essere un multiplo
+dell'identit\`a. Ci\`o implica che $A$ \`e proporzionale ad una
+matrice unitaria od ona matrice unitaria per una riflessione.
+\end{enumerate}
+\end{document}

@@ -1,0 +1,8 @@
+                  Random Walk in Markovian Enviroment                             
+                              ABSTRACT
+
+We prove a quenched central limit theorem for random
+  walks with bounded increments in a randomly evolving environment on
+  $\Z^d$. We assume that the transition probabilities of the walk depend not
+  too strongly on the environment and that the evolution of the environment
+  is Markovian with strong spatial and temporal mixing properties.

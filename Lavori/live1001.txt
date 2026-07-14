@@ -1,0 +1,8 @@
+                              Carlangelo Liverani 
+
+ON THE WORK AND VISION OF DMITRY DOLGOPYAT.
+          
+  
+                           ABSTRACT
+                                           
+I will present some of the results and techniques due to Dolgopyat.The presentation will be non technical and centered on the basic ideas. Also, Iwill try to present Dolgopyat's work in the context of a research program aimedat enlightening the relations between Dynamical Systems and Non-EquilibriumStatistical Mechanics.

@@ -1,0 +1,49 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\ve{\varepsilon}
+\newcommand\Co{{\mathcal C}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 2 ore di tempo. Ogni esercizio
+vale dieci punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Prima Prova di Autovalutazione}
+\vskip1cm
+\begin{enumerate}
+\item Si risolva il seguente problema di Cauchy
+\[
+u^2u_x+u_y=0
+\]\[
+u(x,0)=x.
+\]
+\item Sia $j:\R_+\to\R_+$, $\operatorname{supp}j\subset [0,1]$ e, per
+ogni $x\in\R^n$
+\[
+j_\ve(x):=\frac{j(\ve^{-1}\|x\|)}{\ve^{n}\int_{\R^n}j(\|y\|)dy} .
+\]
+Si dimostri che, per ogni $f\in\Co^0(\R^n,\R)$
+\[
+\lim_{\ve\to 0}\int_{\R^n}j_\ve(x-y)f(y)f(y)dy=f(x).
+\]
+\item Si risolva il seguente problema di Dirichlet nel dominio
+$\Omega:=[-1,1]^2$ 
+\[
+\Delta u=0
+\]\[
+u(-1,y)=u(1,y)=0\quad \forall y\in[-1,1]
+\]\[
+u(x,-1)=u(x,1)=\sin(\pi x)\quad\forall x\in[-1,1].  
+\]
+\item Si calcoli il Laplaciano in coordinate polari in $\R^3$ e si
+trovino le equazioni per la parte radiale e angolare di funzioni armoniche.
+\end{enumerate}
+\end{document}

@@ -1,0 +1,63 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\ve{\varepsilon}
+\newcommand\Co{{\mathcal C}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 2:30 ore di tempo. Ogni esercizio
+vale dieci punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Appello 10-07-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si consideri la soluzione dell'equazione
+\[
+\begin{split}
+&(y^2-u^2)u_x-xyu_y=xu\\
+&u(s,s)=s\quad s>0.
+\end{split}
+\]
+\item  Sia $Q:=(0,1)^2\subset\R^2$ e sia $u:\bar Q\to\R$ una
+soluzione, non identicamente nulla, di
+\[
+\begin{split}
+&\Delta u=-\lambda u\\
+&u|_{\partial Q}=0.
+\end{split}
+\]
+Si dimostri che deve essere $\lambda >0$. Si cerchi di determinare il
+$\lambda$ minimo possibile.
+\item Per ogni $a>0$ sia $u_a:\R\times\R_+\to\R$ la soluzione di
+\[
+\begin{split}
+&\partial_t u_a=\Delta u_a\\
+&u_a(x,0)=a^{-\frac 12}e^{-\frac {x^2}a}.
+\end{split}
+\]
+Si calcoli
+\[
+\lim_{a\to 0} u_a(x,1).
+\]
+\item Si determini la soluzione dell'equazione
+\[
+\begin{split}
+&u_{tt}=u_{xx}+e^{-t} \quad\quad 0<x<1;\;t>0\\
+&u(x,0)=0;\; u_t(x,0)=0\quad  0<x<1\\
+&u(0,t)=u(1,t)=0\quad t>0.
+\end{split}
+\]
+Si calcoli inoltre $\lim_{t\to\infty} E(t)$ per
+\[
+E(t):=\frac 12\int_0^1 u_t^2+u_x^2\; dx.
+\]
+\end{enumerate}
+\end{document}

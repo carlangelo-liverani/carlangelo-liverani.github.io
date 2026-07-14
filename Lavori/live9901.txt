@@ -1,0 +1,10 @@
+                  A PROBABILISTIC APPROACH TO INTERMITTENCY
+                                  by
+           Carlangelo Liverani, Benoit Saussol and Sandro Vaienti
+           
+ABSTRACT:
+We present an original approach which allows to investigate the statistical
+properties of a non-uniform hyperbolic map of the interval. Based on a stochastic
+approximation of the deterministic map, this method gives essentially the optimal
+polynomial bound for the decay of correlations, the degree depending on the order of
+the tangency at the neutral fixed point.

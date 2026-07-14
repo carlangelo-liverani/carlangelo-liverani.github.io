@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Modulo di Prenotazione</title>
+</head>
+<body text="#000000" bgcolor="lightblue"> 
+<h1>
+Modulo di Prenotazione 
+</h1>
+<br>
+<h1>Analisi Matematica 1
+</h1>
+<br>
+<h1>
+Esonero del 29/11/04
+</h1>
+<br>
+<br>
+
+Si prega di immettere "Cognome" e "Nome" e di non iscriversi piu' di una volta. 
+Grazie!! <TABLE BORDER=0> 
+
+<FORM name=liverani METHOD="POST" ACTION="/cgi-bin/uncgi/cgi-doc/liverani-cgi.cgi"> 
+
+
+<TR ALIGN=LEFT VALIGN=MIDDLE>
+<TD>Cognome:&nbsp;</TD>
+<TD><INPUT TYPE="TEXT" NAME="cog" 
+MAXLENGTH=50 SIZE=20 ></TEXT></TD>
+</TR>
+<TR ALIGN=LEFT VALIGN=MIDDLE>
+<TD>Nome:&nbsp;</TD>
+<TD><INPUT TYPE="TEXT" NAME="nome" 
+MAXLENGTH=20 SIZE=20></TEXT></TD>
+</TR>
+<TR ALIGN=LEFT VALIGN=MIDDLE>
+<TD>Esonero:&nbsp;</TD>
+<TD><SELECT NAME="data">
+<OPTION VALUE="29-11-04">29-11-04</OPTION>
+</SELECT>
+</TD> 
+</TR>
+</table>
+<br><br>
+<INPUT TYPE="submit" VALUE="Invia prenotazione">
+<INPUT TYPE="HIDDEN" NAME="materia" VALUE="Analisi Matematica 1">
+<INPUT TYPE="HIDDEN" NAME="cod" VALUE="AM1">
+<INPUT TYPE="HIDDEN" NAME="tipo" VALUE="Esonero ">
+</form>
+
+</body>
+</html>

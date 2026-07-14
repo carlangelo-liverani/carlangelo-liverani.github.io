@@ -1,0 +1,8 @@
+                                                     Carlangelo Liverani
+                                                     
+                                                     
+                                                     
+                                                A footnote on Expanding maps
+                                                     
+
+ABSTRACT: I introduce Banach spaces on which it is possible to precisely characterize the spectrum of the transfer operator associated to a piecewise expanding map with H\"older weight. 

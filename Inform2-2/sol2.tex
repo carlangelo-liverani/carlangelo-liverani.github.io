@@ -1,0 +1,75 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\Or{{\mathcal O}}
+\newcommand\ve{\varepsilon}
+%\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Analisi Matematica II}
+\renewcommand{\thefootnote}{ } 
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Soluzioni esonero 09-06-2003}
+\vskip1cm
+\begin{enumerate}
+\item Nota che
+\[
+\begin{split}
+[e^{3n}+e^n]^{\frac 13}-e^n&=e^n\{[1+e^{-2n}]^{\frac 13}-1\}=
+e^n\{\frac 13 e^{-2n}+\Or(e^{-4n})\}\\
+&= \frac 13 e^{-n}+\Or (e^{-3n}).
+\end{split}
+\]
+Dunque
+\[
+\lim_{n\to\infty}\left\{[e^{3n}+e^n]^{\frac 13}-e^n\right\}^{\frac
+1n}=e^{-1}.
+\]
+Da cui segue che il raggio di convergenza \`e $e$.
+\item Poich\`e per ogni $-1<a<1$ si ha
+\[
+\frac 1{1-a}=\sum_{n=0}^\infty a^n
+\]
+segue che, per ogni $|x|\leq 2^{-\frac 12}$,
+\[
+f(x)=\sum_{n=0}^\infty (-2)^nx^{2n},
+\]
+che \`e chiaramente la serie di Taylor cercata.
+\item L'equazione si risolve per separazione di variabili:
+\[
+(x-ax^2)^{-1}x'=1
+\]
+che, integrata rispetto a $t$, da
+\[
+x_a(t)=\frac{e^t}{1-a+a e^t}.
+\]
+Dunque
+\[
+\lim_{t\to\infty} x_a(t)=\frac 1 a.
+\]
+\item Poich\`e $f$ \`e dispari tutti i coefficienti del coseno sono
+nulli.
+Inol\-tre
+\[
+\frac 1\pi\int_{-\pi}^\pi f(x)\sin nx \;dx=\frac
+1\pi\left\{-\int_{-\pi}^0\sin nx+\int_0^\pi\sin nx\right\}=\frac
+2{n\pi} (1-(-1)^n).
+\]
+Quindi,
+\[
+f(x)=\sum_{n=1}^\infty\frac {2(1-(-1)^n)}{n\pi}\sin nx
+\]
+e, ponendo $x=\frac \pi 2$, si ottiene
+\[
+1=\sum_{n=1}^\infty\frac {2(1-(-1)^n)}{n\pi}\sin
+\frac{n\pi}2=\sum_{n=0}^\infty\frac{4(-1)^n}{\pi(2n+1)} 
+\]
+da cui segue
+\[
+\sum_{n=0}^\infty\frac{(-1)^n}{2n+1}=\frac \pi 4.
+\]
+\end{enumerate}
+\end{document}

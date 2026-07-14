@@ -1,0 +1,8 @@
+                Dmitry Dolgopyat and Carlangelo Liverani
+ 
+        Non-perturbative approach to random walk in markovian environment
+
+                                           ABSTRACT
+                                           
+We prove an averaged CLT for a random walk in a dynamical  environment where the states of the 
+environment at different sites are independent Markov chains.

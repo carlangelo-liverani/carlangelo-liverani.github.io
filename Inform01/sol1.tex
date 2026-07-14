@@ -1,0 +1,52 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge \bf Analisi Matematica I}
+\vskip.2cm
+\centerline{\Huge Correzione Primo Appello}
+
+\vskip1cm
+\begin{enumerate}
+\item 
+\[
+-1-x<2x-1<1+x
+\]
+da cui $2>x>0$. 
+\item L'insieme $A$ \`e  l'interno della circonferenza di raggio uno
+centrata all'origine, $B$ invece la parte del piano che giace sopra la
+bisettrice del primo e terzo quadrante. Il punto appartiene a $C$.
+\item La funzione $f$ si chiama coseno iperbolico, su  qualunque libro
+trovate il grafico. Due soluzioni visto che la retta $1+x$ sta sopra
+il grafico di $f$ nel punto zero mentre cresce molto piu lentamente
+all'infinito. Basta disegnare il grafico di $f(x)-1-x$ per averne la
+controprova. 
+
+\item La lunghezza che si deve minimizzare \`e data da
+\[
+\ell(x)=\sqrt{1+x^2}+\sqrt{1+(2-x)^2}.
+\]
+Calcolando la derivata e ponendola eguale a zero si ottiene
+\[
+x\sqrt{1+(2-x)^2}+(x-2)\sqrt{1+x^2}=0
+\]
+cio\`e
+\[
+x\sqrt{1+(2-x)^2}=-(x-2)\sqrt{1+x^2}
+\]
+prendendo il quadrato di ambo i membri e semplificando si ha $x=1$.
+
+\item Poich\`e il numeratore \'e sempre minore di $n$ segue che il
+limite \`e zero.
+
+\item Si definisca $f$ nell'intervallo $[0,1]$ come $ax^3+bx^2+c x+d$.
+Ora per avere la continuit\`a occorre $f(0)=0$ e $f(1)=1$, mentre per
+avere la differenziabilit\`a occorre $f'(0)=0$ e $f'(1)=1$. da questo
+segue: $d=0$, $c=0$, $a+b=1$, $3a+2b=1$. Cio\`e $a=-1$ e $b=2$.
+
+\end{enumerate}
+\end{document}

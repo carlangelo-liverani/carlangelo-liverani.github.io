@@ -1,0 +1,56 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\Z{{\mathbb Z}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Analisi Matematica II}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 3 ore di tempo. Ogni esercizio
+vale sei punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Esonero 03-05-2002}
+\vskip1cm
+\begin{enumerate}
+\item Si consideri la funzione $g:\R\to\R$ definita da $g(x):=2x$.
+Per ogni funzione $f:\R\to\R$ periodica di periodo $2\pi$ (cio\`e
+$f(x+2\pi n)=f(x)$ per ogni $x\in\R$ e $n\in\Z$) si dimostri che $f\circ g$ \`e
+anche essa periodica di periodo $2\pi$. Si calcoli la serie di Fourier
+di $f\circ g$ in termini di quella di $f$. Dimostrare che esiste una
+sola funzione differenziabile tale che $f\circ g=f$ e $f(0)=2$.
+
+\item Si risolva il seguente problema di Cauchy
+\begin{align}\label{es1}
+       &y'(x)=xy(x)\\
+       &y(0)=1
+\end{align}
+\item Dimostrare che la soluzione di \eqref{es1} \`e differenziabile un
+numero infinito di volte e le sue derivate soddisfano le equazioni
+\[
+y^{(n+1)}(x)=xy^{(n)}(x)+ny^{(n-1)}(x)
+\]
+per ogni $n\in\N\cup\{0\}$. Usare tale informazione per scrivere la
+serie di Taylor di $y(x)$ nel punto $x=0$.
+
+\item Si calcoli il seguente integrale
+\[
+\int_0^1\frac{x+1}{4-x^2}dx.
+\]
+\item Si studi la convergenza della serie di funzioni
+\[
+\sum_{n=1}^\infty\left[ \sqrt{1+\frac{x}{n^2}}-1\right]
+\]
+per $x\in[0,1]$.
+\item
+Si calcoli la derivata della funzione
+\[
+F(x)=\int_0^{x^3}e^{-y^2} y^3 dy.
+\]
+\end{enumerate}
+\end{document}

@@ -1,0 +1,43 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Analisi Matematica II}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 2.30 ore di tempo. Ogni esercizio
+vale nove punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Esonero 23-04-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si trovi un $N\in\N$ tale che
+\[
+\sum_{n=1}^N\frac{1}{\sqrt{n}}\geq 1000.
+\]
+Se $\bar N$ \`e il pi\'u piccolo intero che soddisfa tale
+diseguaglianza, stimate $N-\bar N$ per l' $N$ che avete trovato.
+
+\item Si determini il raggio di convergenza della serie di potenze
+\[
+\sum_{n=0}^\infty e^{\sqrt n}x^n.
+\]
+\item Si consideri la funzione $f(x)= \cos\frac x2$, per $x\in
+[-\pi,\pi]$. Se ne calcoli la serie di Fourier
+associata e se ne discuta la convergenza. Sia $g:\R\to\R$ la
+funzione definita dalla serie di Fourier, si discuta la continuit\`a e
+la derivabilit\`a di $g$.
+
+\item Si calcoli l'integrale improprio
+\[
+\int_2^\infty \frac{1}{x^2-1}dx=:\lim_{L\to\infty}\int_2^L
+\frac{1}{x^2-1}dx.
+\]
+\end{enumerate}
+\end{document}

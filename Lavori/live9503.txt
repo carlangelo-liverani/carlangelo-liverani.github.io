@@ -1,0 +1,14 @@
+        DECAY OF CORRELATIONS FOR PIECEWISE EXPANDING MAPS
+                                by
+                          Carlangelo Liverani
+
+ABSTRACT:
+This paper investigates the decay of correlations in 
+a large class of non-Markov one-dimensional expanding maps. 
+The method employed is a special version of 
+a general approach recently proposed 
+by the author.  Explicit bounds on the rate of decay of correlations are 
+obtained.
+
+PUBLISHED IN:
+Journal of Statistical Physics, 78, 3/4, pp. 1111-1129, (1995).

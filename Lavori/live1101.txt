@@ -1,0 +1,10 @@
+                                                       VIVIANE BALADI and CARLANGELO LIVERANI
+                                                       
+                                                       
+                  EXPONENTIAL DECAY OF CORRELATIONS FOR PIECEWISE CONE HYPERBOLIC CONTACT FLOWS
+           
+                                                                      ABSTRACT
+                                                                                                                                
+ We prove exponential decay of correlations for a realistic model of piecewise hyperbolic  flows preserving a contact form, in dimension three. This is the first time exponential decay of correlations is proved for continuous-time dynamics with singularities on a manifold. Our proof combines the second author's version [28] of Dolgopyat's estimates for contact flows and the first author's work with Gouezel [5] on piecewise hyperbolic discrete-time dynamics.
+           
+            

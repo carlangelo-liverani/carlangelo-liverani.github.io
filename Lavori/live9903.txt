@@ -1,0 +1,13 @@
+           ERGODIC PROPERTIES FOR A QUANTUM NON LINEAR DYNAMICS
+                                 by
+                 Francesco Fidaleo and Carlangelo Liverani
+                
+
+ABSTRACT:
+We present a quantum system composed of infinitely many particles, 
+subject to a non quadratic Hamiltonian, for 
+which it is possible to investigate the long time behavior of the 
+dynamics and its ergodic properties. 
+We do so both for the KMS states and 
+for a large class of locally normal invariant states, whose very 
+existence is already of some interest.

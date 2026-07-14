@@ -1,0 +1,451 @@
+
+\documentclass[10pt, twoside]{article}
+\usepackage{amsfonts,amssymb,latexsym,xspace}
+\usepackage{amsmath,enumerate}
+\numberwithin{equation}{section}
+
+%\usepackage{showkeys}
+
+\hfuzz 15pt
+\newtheorem{thm}{Teorema}[section]
+\newtheorem{lem}{Lemma}[section]
+\newtheorem{cor}{Corollario}[section]
+\newtheorem{sublem}{Sub-Lemma}[section]
+\newtheorem{prop}{Proposizione}[section]
+\newtheorem{defin}{Definizione}
+\newtheorem{cond}{Condizione}
+\newtheorem{exmp}{Esempio}
+\newtheorem{rem}{Remark}[section]
+
+\newenvironment{proof}{{\sc Dimostrazione\ }}{\hfill $\Box$\vskip.6pt}
+\arraycolsep=.5\arraycolsep
+
+\newcommand\Cal[1]{{\mathcal #1}}
+
+\newcommand\B{{\Cal B}}
+\newcommand\Co{{\Cal C}}
+\newcommand\D{{\Cal D}}
+\newcommand\F{{\Cal F}}
+\newcommand\Lp{{\Cal L}}
+\newcommand\M{{[0,1]}}
+\newcommand\T{{\Cal T}}
+\newcommand\U{{\Cal U}}
+\newcommand\V{{\Cal V}}
+
+\newcommand\Ve{{\mathbb V}}
+\newcommand\N{\mathbb N}
+\newcommand\R{\mathbb R}
+\newcommand\Z{\mathbb Z}
+\newcommand\Q{\mathbb Q}
+\newcommand\C{{\mathbb C}}
+\newcommand\E{{\mathbb E}}
+\newcommand\Pe{{\mathbb P}}
+\newcommand\cp{{\Cal P}}
+
+\newcommand\BV{{\text{BV}}}
+\newcommand\vf{\varphi}
+\newcommand\nn{\nonumber}
+\newcommand\ve{\varepsilon}
+
+\pagestyle{myheadings}
+\markboth{\centerline{\sc Carlangelo Liverani}\hskip-12pt}
+{\centerline{\sc Numeri razionali e reali}\hskip-12pt}
+
+\begin{document}
+\title{\bfseries Numeri razionali e reali}
+\author{{\sc Carlangelo Liverani}\\
+Dipartimento di Matematica\\
+Universit\`{a} di Roma (Tor Vergata)\\
+Via della Ricerca Scientifica, 00133 Roma, Italy\\
+{\tt liverani@mat.uniroma2.it}}
+\date{Rome, Ottobre 23, 2001}
+\maketitle
+
+
+\section{\sc \normalsize Numeri Razionali}
+
+\begin{defin}
+Dati $p,q\in\N$ diciamo che \emph{$p$ \`e divisibile per $q$} e
+scriviamo $q|p$ se esiste $c\in \N$ tale che $p=cq$.
+\end{defin}
+
+\begin{lem}\label{lem:divisibility}
+Se $p\in\N$ \`e primo e se , dati due numeri $a,b\in\N$, $p|ab$ allora
+o $p|a$ oppure $p|b$.
+\end{lem}
+\begin{proof}
+Chiaramente \`e sempre possibile trovare $m,n,a_1,b_1\in\N$,
+$a_1,b_1<p$, tali che 
+\begin{equation}\label{eq:reduction}
+\begin{split}
+a&=pn+a_1\\
+b&=pm+b_1.
+\end{split}
+\end{equation}
+Il Lemma afferma che o $a_1$ oppure $b_1$ devono essere
+nulli, cio\`e $a_1b_1=0$. Per dimostrare che deve essere cos\`\i\ 
+ragioniamo per assurdo. Supponiamo che $a_1b_1\neq 0$,
+allora (\ref{eq:reduction}) implica $ab= p^2nm+pm aa_1+pnb_1+a_1b_1$,
+da cui segue che $p|a_1b_1$. Il Lemma \`e dunque equivalente a dire
+che per ogni $p$ primo non esistono $a,b<p$ tali che $p|ab$.
+
+Se $p=2$ il risultato \`e ovvio, dunque il Lemma \`e vero per alcuni
+numeri primi. Ragioniamo nuovamente per assurdo e supponiamo che esista qualche
+numero primo per cui il Lemma \`e falso. Sia $p'$ il pi\`u piccolo di
+tali numeri primi. Dunque esisteranno $a,b\in\N$, $a,b<p'$ tali che
+$p'|ab$. Ora sia $c\in \N$ tale che
+$ab=cp'$, chiaramente $c<p'$. Dunque $c|ab$ e qualunque numero primo
+che divida $c$ divider\`a anche $ab$. Ne segue che o $a$ oppure $b$
+\`e divisibile per tale numero primo (poich\`e esso \`e
+necessariamente pi\`u piccolo di $p'P$ e dunque \`e, per costruzione,
+uno dei numeri primi per cui il Lemma \`e noto essere vero). Otterremo
+perci\`o numeri $a_1,b_1, c_1$ tali che $a_1b_1=c_1p'$.
+Continuando in questa maniera possiamo dividere per un divisore primo
+di $c_1$ ottenendo $a_2,b_2,c_2$ per cui $a_2b_2=c_2 p'$ e cosi via
+fino a che otteniamo $a_nb_n=p'$ (cio\`e $c_n=1$). Ma questa ultima
+uguaglianza \`e impossibile poich\`e contraddice l'ipotesi che $p'$ \`e primo.
+\end{proof}
+
+\begin{lem}
+Ogni numero intero $a\in\N$ ha una unica espressione della forma
+$a=p_1^{k_1}\cdots p_n^{k_n}$ dove  $\{p_i\}$ sono numeri primi e
+$\{k_i\}$ sono interi. 
+\end{lem}
+\begin{proof}
+Supponiamo che esistano due tali decomposizioni $a=p_1^{k_1}\cdots
+p_n^{k_n}$ e $a=q_1^{j_1}\cdots q_n^{j_m}$. Supponiamo inoltre che
+esista $q_i\not\in\{p_1,\dots,p_n\}$, allora $q_i|p_1^{k_1}\cdots
+p_n^{k_n}$ ma se applichiamo il Lemma \ref{lem:divisibility}
+ripetutamente otteniamo che $q_i$ deve dividere uno dei $\{p_i\}$ cosa
+assurda perch\`e essi sono primi. Dunque $\{q_i\}=\{p_i\}$. La sola
+possibilit\`a che rimane \`e che $\{k_i\}\neq \{j_i\}$ ma dividendo
+opportunamente ci si riconduce immediatamente al caso precedente.
+\end{proof}
+\begin{lem}
+Ogni numero razionale ha una unica rappresentazione del tipo $\frac
+pq$ con $p$ e $q$ primi fra loro.
+\end{lem}
+\begin{proof}
+Supponiamo 
+\[
+\frac{p}{q}=\frac{p'}{q'}
+\]
+con $q<q'$. Sia $c$ un numero primo tale che $c|q'$. Allora
+$qp'=pq'$ dunque $c|qp'$ e, per il Lemma
+\ref{lem:divisibility} e ricordando che $q'$ e $p'$ sono primi tra
+loro, segue $c|q$. Dunque $q=cq_1$, $q'=q_1'c$ e quindi $q_1p'=pq'_1$,
+continuando a dividere per numeri primi si otterr\`a $p'=p$ da cui
+seque $q=q'$.
+\end{proof}
+\section{\sc \normalsize Algoritmo Euclideo e frazioni continue}
+
+Il problema aperto dalla sezione predente \`e quello di ridurre una
+frazione alla sua forma standard, ovvero \emph{trovare il massimo
+comun divisore tra due numeri dati}. Questo problema ha una elegante
+soluzione conosciuta come \emph{algoritmo Euclideo}.
+
+Siano $p,q\in\N$, $p>q$, allora esiste $a_1\in\N$ tale che
+\begin{equation}\label{eq:rapp}
+p=a_1q+p_1,\, \quad p_1<q
+\end{equation}
+e
+\[
+\frac pq= a_1+\frac 1{\frac {\textstyle q}{\textstyle p_1}}
+\]
+se $q$ e $p_1$ hanno un divisore comune (chiamiamolo $b$) allora anche
+$b|p$ (da (\ref{eq:rapp})) e quindi $b$ \`e divisore comune di $p,
+q$. D'altro canto se $b|p$ e $b|q$ allora $b|p_1$ (questa \`e ancora
+una volta conseguenza di (\ref{eq:rapp})). Dunque $p,q$ hanno
+gli stessi divisori comuni di $q,p_1$ e quindi lo stesso massimo comun
+divisore. Poich\`e 
+\[
+q=a_2p_1+q_1,\, \quad q_1<p_1
+\]
+possiamo scrivere
+\[
+\frac pq=a_1+\frac 1{a_2+\frac 1{\frac{\textstyle p_1}{\textstyle q_1}}}
+\]
+dove $q_1,p_1$ hanno gli stessi divisori comuni di $q,p_1$ e quindi
+anche di $p,q$. Questa
+procedura pu\`o essere iterata fino a che non si ottiene un resto
+nullo. Per esempio se $q_{n-1}=a_{2n}p_n$, cio\`e $q_n=0$, allora
+$q_{n-1}$ e $p_n$ sono entrambi divisibili per $p_n$ e quindi $p_n$
+(l'ultimo resto non nullo) \`e il massimo comun divisore.
+
+Per di pi\`u abbiamo ottenuto un'altra maniera univoca di scrivere una
+frazione chiamata \emph{frazione continua}:
+\[
+\frac pq= a_1+\frac 1{\textstyle a_2+{\ \atop\ddots {\
+\atop{\textstyle +\frac {\textstyle 1}{\textstyle a_{2n}}}}}} 
+\]
+
+\begin{exmp}
+Si trovi il massimo comun divisore tra $p=855$ e $q=266$.
+\[
+\begin{split}
+855=&3\cdot 266+57\\
+266=&4\cdot 57+38\\
+57=&1\cdot 38+19\\
+38=&2\cdot 19.
+\end{split}
+\]
+Dunque il massimo comun divisore \`e 19 e si ha la seguente
+rappresentazione in frazione continua.
+\[
+\frac{855}{266}=3+\frac {\textstyle 1}{\textstyle 4+\frac {\textstyle
+1}{\textstyle 1+\frac{\textstyle 1}{\textstyle 2}}}
+\]
+\end{exmp}
+
+\section{\sc \normalsize I Numeri Razionali non bastano}
+
+Allo stesso modo in cui i numeri razionali devono essere introdotti
+per attribuire un 
+risultato ad ogni divisione, i numeri irrazionali emergono
+naturalmente nello studio della operazione inversa della potenza:
+l'estrazione di radice. Il caso pi\`u semplice che si puo considerare
+\`e il seguente: esiste un numero $a$ tale che $a^2=2$? (Stiamo
+parlando di $\sqrt 2$.)
+
+\begin{lem}
+Non esiste alcun numero razionale tale che il suo quadrato sia 2.
+\end{lem}
+\begin{proof}
+Supponiamo che esistano $p,q\in \N$, primi tra loro, tali che 
+\[
+\left(\frac p q\right)^2=2.
+\]
+Allora $p^2=2q^2$, dunque per il Lemma \ref{lem:divisibility}
+$2|p$. Dunque, $p=2p_1$ e quindi $4p_1^2=2q^2$ che implica
+$q^2=2p_1^2$. Ma allora, sempre per il Lemma \ref{lem:divisibility},
+$2|q$ cosa che contraddice l'ipotesi che $p,q$ siano primi tra loro. 
+\end{proof}
+
+La cosa \`e seccante ma, come premio di consolazione, esistono numeri
+razionali molto vicini a quello voluto.
+\begin{lem}\label{lem:approx2}
+Per ogni $n\in\N$ esiste un numero razionale $a\in\Q$ tale che
+\[
+|a^2-2|\leq \frac 1{n}.
+\]
+\end{lem}
+\begin{proof}
+Sia $a_0=1$ e $a_1=2$, chiaramente $a_0^2<2$ e $a_1^2>2$. Consideriamo
+il punto intermedio $a_2=\frac{a_0+a_1}2=\frac 32$, risulta che
+$a_2^2>2$. Allora $2\in[a_0^2,a_2^2]$. Possiamo nuovamente considerare
+il punto intermedio $a_3=\frac{a_0+a_2}2$ e verificare se $a_3^2$ \`e
+maggiore o minore di due (accade che $a_3^2<2$). Possiamo dunque dire
+che $2$ \`e contenuto nell'intervallo pi\`u stretto
+$[a_3^2,a_2^2]$. Si pu\`o continuare nello stesso modo quante volte si
+vuole (diciamo $m$ volte) ottenedo cosi $2\in[a_k^2,a_j^2]$ con
+$|a_k^2-a_j^2|\leq 2^{-m+2}$. Basta dunque che $2^{m-2}>n$ per
+dimostrare il Lemma.\footnote{Se per esempio vogliamo conoscere un
+numero razionale $a$ tale che $|a^2-2|\leq 10^{-3}$ allora, poich\`e
+$2^{10}=1024$, baster\`a iterare la procedura descritta 12 volte.}
+\end{proof}
+
+Una cosa interessante della dimostrazione del Lemma precedente \`e che
+si tratta di una dimostrazione costruttiva, cio\`e viene specificata
+una procedura esplicita per costruire i numeri richiesti. Tuttavia la
+procedura specificata non \`e n\`e l'unica n\`e la pi\`u
+efficiente. Nuovamente ci troviamo davanti ad una
+ambiguit\`a. Ciononostante, se numeri diversi soddisfano alle ipotesi
+del Lemma \ref{lem:approx2} allora devono essere molto vicini tra
+loro.
+\begin{lem}
+Se $a,b \in \Q$ sono tali che $|a^2-2|\leq \frac 1n$ e $|b^2-2|\leq
+\frac 1n$, per qualche $n\in\N$, allora
+\[
+|a-b|\leq \frac 1n.
+\]
+\end{lem}
+\begin{proof}
+Si noti che
+\[
+|a^2-b^2|\leq |a^2-2|+|b^2-2|\leq \frac 2n.
+\]
+Per di pi\'u $a^2-2\geq -1/n\geq -1$ implica $a^2\geq 1$, cio\`e
+$a,b>1$. Dunque $|a^2-b^2|=(a+b)|a-b|\geq 2|a-b|$. Collezionando le
+precedenti disuguaglianze abbiamo $|a-b|\leq \frac 1n$.
+\end{proof}
+
+Per quanto detto prima \`e interessante vedere una dimostrazione
+alternativa del Lemma  \ref{lem:approx2}. Per costruire un'altra
+successione di numeri con la propriet\`a desiderata applichiamo
+formalmente l' algoritmo Euclideo al misterioso numero $\sqrt 2$.
+\begin{equation}\label{eq:magic}
+\sqrt 2=\frac{\sqrt 2}1= 1+\frac{\textstyle 1}{\textstyle
+\frac{\textstyle 1}{\textstyle \sqrt 2-1}}=1+\frac{\textstyle 1}{\textstyle
+\frac{\textstyle \sqrt 2+1}{\textstyle  2-1}}= 1+\frac{\textstyle
+1}{\textstyle 1+\sqrt 2}.
+\end{equation}
+Iterando la equazione (\ref{eq:magic}) si ottiene
+\[
+\sqrt 2=1+\frac{\textstyle 1}{\textstyle 2+\frac{\textstyle
+1}{\textstyle 1+\sqrt 2}}
+\]
+e, usando nuovamente (\ref{eq:magic}),
+\[
+\sqrt 2=1+\frac{\textstyle 1}{\textstyle 2+\frac{\textstyle
+1}{\textstyle 2+\frac{\textstyle
+1}{\textstyle 1+\sqrt 2}}}
+\]
+
+Le formule precedenti suggeriscono un nuovo modo di costruire una
+sequenza di numeri il cui quadrato si avvicini sempre pi\`u a $2$. Nel
+seguito renderemo rigorosa e chiarificheremo tale intuizione.
+
+La formula (\ref{eq:magic}) suggerisce di definite la funzione
+$f:\Q\to\Q$
+\begin{equation}\label{eq:frazdef}
+f(x):=1+\frac {1}{1+x}.
+\end{equation}
+Studiamo le propriet\`a della funzione $f$.
+
+Prima di tutto notiamo che 
+\[
+f(x)^2=1+\frac{3+2x}{1+2x+x^2}.
+\]
+Da questa formula segue immediatamente che se $x^2>2$ allora $f(x)^2<2$ e se
+$x^2<2$ allora $f(x)^2>2$. Inoltre
+\[
+\begin{split}
+f(1)=&\frac 32<2\\
+f(2)=&\frac 43>1.
+\end{split}
+\]
+Infine la funzione $f$ inverte l'ordine, cio\`e se $0<x<y$ allora
+\[
+f(x)=1+\frac 1{1+x}>1+\frac 1{1+y}=f(y).
+\]
+Tutto cio significa che $f([1,2])\subset [1,2]$ e che se noi prendiamo
+un qualunque numero $a\in[1,2]$ allora $f(a)$, $f^2(a)=f(f(a))$,
+$f^3(a)=f(f(f(a)))$ sono tutti numeri nell'intervallo $[1,2]$. Per di
+pi\`u continuano a saltare a destra ed a sinistra di $\sqrt 2$. La
+domanda che rimane \`e se questi numeri si avvicinano a $\sqrt 2$ oppure no.
+
+Siano $x,y\in[1,2]$ allora
+\[
+|f(x)-f(y)|=\left|\frac
+1{1+x}-\frac1{1+y}\right|=\frac{|x-y|}{(1+x)(1+y)}\leq \frac{|x-y|}4.
+\]
+Dunque $f^1([1,2])$ \`e un intervallo di lunghezza $1/4$; $f^2([1,2])$
+\`e un intervallo di lunghezza  $4^{-2}$ e $f^n([1,2])$
+\`e un intervallo di lunghezza  $4^{-n}$. D'altro canto se $a<b$ sono
+gli estremi dell'intervallo $f^n([1,2])$ allora deve essere $a^2<2$ e
+$b^2>2$. Questo dimostra che scegliendo, per esempio, $a_0=1$,
+$a_{n+1}=f(a_n)$ si ottiene un'altra successione del tipo richiesto
+dal Lemma \ref{lem:approx2}, solo questa volta la rapidit\`a con cui
+si raggiunge una data precisione \`e doppia.
+Per esempio
+\[
+\begin{split}
+a_1&=f(a_0)=f(1)=1+\frac 12=\frac 32\;;\quad
+a_2=f(a_1)=f(3/2)=1+\frac{\textstyle 1}{\textstyle 2+\frac{\textstyle
+1}{\textstyle 2}}=\frac 75\\
+a_3&=f(a_2)=f(7/5)=1+\frac{\textstyle 1}{\textstyle 2+\frac{\textstyle
+1}{\textstyle 2+\frac{\textstyle
+1}{\textstyle 2}}}=\frac {17}{12}
+\end{split}
+\]
+e cosi via.
+Concludendo tutta questa discussione, siamo arrivati alla comprensione
+del fatto che $\sqrt 2$ \`e un \emph{numero} ben definito, infatti si
+pu\`o parlare senza ambiguit\`a della sua $n$-esima cifra
+decimale. Tuttavia risulta che $\sqrt 2$ \`e definibile
+solo attraverso una procedura di approssimazione che ci permetta di calcolarne
+\emph{tante cifre quante vogliamo} (almeno in linea di
+principio). Queste procedure di 
+approssimazione non sono uniche (ne abbiamo viste due differenti ma ne
+esistono infinite altre) ma sono tutte equivalenti, nel senso che
+stabilita la precisione richiesta danno tutti numeri che differiscono
+tra di loro per un errore inferiore alla quantit\`a specificata.
+Queste procedure di approssimazione sono formalizzate nel concetto di
+\emph{limite} di cui discuteremo tra poco. L'insieme dei \emph{numeri}
+definibili attraverso tali procedure \`e detto \emph{insieme dei
+numeri reali} (in simboli $\R$) e i numeri reali ma non razionali
+($\{x\in\R\;|\; x\not\in \Q\}$) sono detti \emph{numeri irraziomali}.
+
+\section{\sc \normalsize Numeri Irrazionali}
+
+Nella sezione precedente abbiamo visto che $\sqrt 2$ pu\`o essere
+\emph{approssimato con precisone arbitraria}. Questo concetto \`e
+formalizzato in maniera precisa nella seguente definizione di limite.
+\begin{defin}
+Data una successione $\{a_n\}_{n\in\N}$, si dice che il limite di
+$\{a_n\}_{n\in\N}$ \`e $b$, e si scrive $\lim_{n\to\infty}a_n=b$, se
+per ogni $\varepsilon>0$ esiste $\bar n\in N$ tale che
+\[
+|a_n-b|\leq \varepsilon\quad \text{per ogni }n\geq \bar n.
+\]
+\end{defin}
+
+Per esempio \`e facile verificare che $\lim_{n\to\infty}\frac
+1n=0$. La cosa seccante della definizione precedente \`e che richiede
+l'esistenza del numero $b$ e quindi non si pu\`o applicare alla nostra
+precedente discussione, sebbene da essa siamo convinti che $\sqrt 2$
+\`e un numero ben definito. Come abbiamo gi\`a detto questa
+convinzione deriva dal fatto che possiamo calcolarne quante cifre
+vogliamo. Anche questa propriet\`a pu\`o essere formalizzata
+rigorosamente nel concetto di \emph{successioni di Cauchy}.
+\begin{defin}
+Si dice che una successione $\{a_n\}_{n\in\N}$ \`e di Cauchy se
+per ogni $\varepsilon>0$ esiste $\bar n\in N$ tale che
+\[
+|a_n-a_m|\leq \varepsilon\quad \text{per ogni }n,m\geq \bar n.
+\]
+\end{defin}
+Chiaramente le successioni che abbiamo trovato in relazione a $\sqrt
+2$ sono Cauchy.
+
+\`E facile verificare che se una successione di numeri razionali ha
+limite allora \`e di Cauchy mentre, come abbiamo visto, il contrario
+non \`e necessariamente vero. 
+
+A questo punto possiamo aggiungere tutte le radici quadrate ai numeri razionali
+ed ottenere un insieme di numeri in cui si pu\`o sempre fare
+l'operazione di radice quadrata. Ma che dire delle radici cubiche? Il
+processo di allargamento dei numeri sembra non avere fine e
+apparentemente ci servono sempre pi\`u numeri man mano che
+consideriamo nuove operazioni, la situazione \`e alquanto
+intollerabile. D'altro canto la nostra discussione di $\sqrt 2$ ci ha
+insegnato che si puo aggiungere un numdero solo se questo \`e
+conoscibile con precisione arbitraria, altrimenti non si sa di che si
+sta parlando.  Ci\`o significa che la soluzione del problema
+dell'allargamento dei numeri deve risiedere nella richiesta che
+\emph{ogni successione di Cauchy abbia limite}. Il modo ovvio di fare
+ci\`o \`e di dire che i numeri sono appunto tali successioni di
+Cauchy. Ovviamente diverse successioni di Cauchy possono dare luogo
+allo stesso numero (lo abbiamo visto per $\sqrt 2$) ma questo non ci
+pu\`o spaventare pi\`u di tanto visto che \`e una situazione che si
+\`e gi\`a presentata con i numneri razionali rappresentati come
+frazioni. Tuttavia questa ambiguit\`a per i numeri razionali ha dato
+luogo a parecchie riflessioni per convincersi che era
+innoqua. Non pu\`o dunque sorprendere che per rendere precisa l'idea di
+completamento di cui sopra siano necessarie parecchie riflessioni che
+tuttavia esulano dallo scopo del presente corso in cui ci
+accontenteremo della precedente idea intuiva di \emph{numero reale}.
+
+Si noti comunque che le varie propriet\`a dei limiti (e.g. il limite
+della somma \`e la somma dei limiti, lo stesso per il prodotto,
+sottrazione, etc.) ci dicono esattamente che la nostra estensione dei
+numeri \`e consistente: poich\`e i numeri reali sono essenzialmente
+definiti come limiti, il fatto che 
+le operazioni sui limiti siano quelle
+ovvie ci dice che i numeri reali si sommano, moltiplicano, dividono
+etc. rispettando le propriet\`a gi\`a note per i numeri razionali.
+
+\subsection{Esercizi}
+\begin{enumerate}
+\item Sia $a_0=1$, $a_1=1,3$, $a_2=1,33$, $a_3=1,333$, $a_4=1,3333$,
+$a_5=1,33333$ e cos\`\i\ via. Si dimostri che 
+\[
+\lim_{n\to\infty}a_n=\frac 13.
+\]
+\item  Sia $a_0=0$, $a_1=0,9$, $a_2=0,99$, $a_3=0,999$, $a_4=0,9999$,
+e cos\`\i\ via. Si dimostri che  
+\[
+\lim_{n\to\infty}a_n=1.
+\]
+\end{enumerate}
+\end{document}

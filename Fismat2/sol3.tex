@@ -1,0 +1,108 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\Z{{\mathbb Z}}
+\newcommand\Or{{\mathcal O}}
+\newcommand\ve{\varepsilon}
+%\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Soluzioni appello 17-06-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si controlla immediatamente che la condizione iniziale non \`e
+una caratteristica. Ci si riconduce dunque al sistema
+\[
+\begin{split}
+&\dot x=xz\\
+&\dot y=1\\
+&\dot z=1\\
+&z(0)=\frac s2\\
+&y(0)=s\\
+&x(0)=1.
+\end{split}
+\]
+Si ottengono facilmente i seguenti integrali del moto:
+\[
+z-y=c_1\;\quad \ln x-\frac {z^2}2=c_2.
+\]
+Il secondo si ottine integrando $\dot x=xz\dot z$, per separazione di
+variabili.
+Sostituendo le condizioni iniziali si ottine $c_1=-\frac s2$,
+$c_2=\frac{s^2}8$. Dunque
+\[
+-\ln x+\frac {z^2}2=\frac {s^2}8=\frac 12(z-y)^2
+\]
+da cui segue
+\[
+z=\frac {2\ln x+y^2}{2y}.
+\]
+\item Si cerca una soluzione del tipo 
+\[
+u(x,t)=\sum_{k=1}^\infty c_k(t)\sin kx
+\]
+che soddisfa le condizioni al contorno. Sostituendo nell'equazione si
+trova
+\[
+\dot c_k+k^2c_k=f_k\;\quad c_k(0)=h_k
+\]
+dove $f_k$ e $h_k$ sono i coefficienti della serie dei seni di
+Fourier.
+La soluzione \`e
+\[
+c_k(t)=(h_k-\frac {f_k}{k^2})e^{-k^2 t}+\frac{f_k}{k^2}.
+\]
+Si noti che se $f\in L^\infty$ allora gli $f_k$ sono limitati e la
+serie con coefficienti $c_k$ converge uniformemente per ogni $t\geq
+t_0>0$. Dunque si puo prendere il limite per $t\to\infty$ ottenendo
+\[
+v(x,t)=\sum_{k=1}^\infty\frac{f_k}{k^2}\sin kx.
+\]
+Chiaramente
+\[
+v_{xx}=-f(x)
+\]
+cio\`e $v$ \`e una soluzione stazionaria (non dipendente dal tempo)
+della equazione originaria.
+\item Se si introduce la relazione di equivalenza, in $\R^2$,
+$(x,y)\sim(z,t)$ se e solo se
+$(x,y)-(z,t)=nv+mw$ con $n,m\in\Z$ si ottine un toro
+bidimensionale e la funzione $f$ \`e ben definita su di esso. In altre
+parole $f$ \`e periodica sul reticolo formato dai vettori $v$, $w$
+(che, per le persone prone alla geometria, pu\`o essere visto come il
+ricoprimento universale del toro di cui sopra). Ad ogni modo ci\`o
+significa che la funzione $f$ \`e limitata su $\R^2$ e dunque costante
+per il teorema di Liuouville.
+\item Prima di tutto si noti che ponendo $v(x,t)=u(x,t)-\sin x$, si ha
+\[
+\begin{split}
+&v_{xx}=v_{tt}\\
+&v(0,t)=0 \quad t>0\\
+&v(x,0)=x-\sin x;\;v_t(x,0)=0 \quad x\geq 0.
+\end{split}
+\]
+Secondo, si consideri il problema
+\[
+\begin{split}
+&\tilde v_{xx}=\tilde v_{tt}\\
+&\tilde v(x,0)=x-\sin x;\;\tilde v_t(x,0)=0 \quad x\in\R.
+\end{split}
+\]
+Chiaramente ogni soluzione dispari di tale problema \`e una solu\-zione del
+problema originario.
+D'altro canto la soluzione dell'ulti\-mo problema \`e (formula di d'Alembert)
+\[
+\tilde v(x,t)=\frac 12\{ 2x-\sin (x+t)-\sin(x-t)\}=x-\sin x\cos t.
+\]
+che \`e chiaramente dispari.  Quindi
+\[
+u(x,t)=x+\sin x-\sin x\cos t.
+\]
+\end{enumerate}
+\end{document}

@@ -1,0 +1,10 @@
+                FLOWS, RANDOM PERTURBATIONS AND RATE OF MIXING
+                                  by
+                          Carlangelo Liverani
+
+ABSTRACT:
+A new approach to the study of the rate of mixing in Anosov flows, recently
+proposed by N. Chernov, is simplified and generalized to the higher dimensional case.
+
+PUBLISHED IN:
+Ergodic Theory and Dynamical Systems, 18}, 6, pp. 1421--1446 (1998).

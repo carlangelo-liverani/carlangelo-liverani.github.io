@@ -1,0 +1,19 @@
+                ANOSOV DIFFEOMORPHISM AND COUPLING
+                             by
+             Xavier Bressaud and Carlangelo Liverani
+
+                            ABSTRACT
+
+We prove the existence of an SRB measure and the exponential decay of
+correlations for smooth 
+observables for mixing Anosov $C^{1+\alpha}$ diffeormorphisms  
+on a $d$-dimens\-ional ($d \geq 2$) Riemannian manifold. 
+The novelty lies in the very simple method of proof.  
+We construct explicitly  a coupling between two initial densities so
+that under the 
+action of the diffeomorphism, both components get closer and closer. The
+speed of this 
+convergence can be explicitly estimated and is directly related to 
+the speed of decay of correlations. The existence of the SRB measure 
+and its properties readily follow.
+

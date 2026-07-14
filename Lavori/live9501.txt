@@ -1,0 +1,12 @@
+                ERGODICITY IN HAMILTONIAN SYSTEMS
+                              by
+ 
+            Carlangelo Liverani and Maciej Wojtkowski
+
+ABSTRACT:
+We discuss the Sinai method of proving ergodicity of a discontinuous
+Hamiltonian system with (non-uniform) hyperbolic behavior.
+
+PUBLISHED IN:
+Dynamics Reported, 4, C.K.R.T.Jones, U.Kirchgraber, H.O.Walther edts.,
+Springer-Verlag, Berling, Heidelgerg, New York, pp. 130-202, (1995).

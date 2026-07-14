@@ -1,0 +1,11 @@
+Coupled Map Lattices without cluster expansion
+
+G.Keller and C.Liverani
+
+ABSTRACT
+
+We present an approach to the investigation of the statistical
+properties of weakly coupled map lattices
+that avoids completely cluster expansion techniques. Although here it
+is implemented on a simple case we expect similar strategies to be
+applicable in a much larger class of situations.

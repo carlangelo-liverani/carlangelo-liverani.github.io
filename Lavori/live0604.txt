@@ -1,0 +1,8 @@
+        Smooth Anosov flows: correlation spectra and stability
+       
+                             ABSTRACT
+
+By introducing appropriate Banach spaces one can study the spectral
+properties of the generator of the semigroup defined by an Anosov
+flow. Consequently, it is possible to easily obtain sharp results on the
+Ruelle resonances and the differentiability of the SRB measure.

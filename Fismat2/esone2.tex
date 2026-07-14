@@ -1,0 +1,59 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\ve{\varepsilon}
+\newcommand\Co{{\mathcal C}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 2 ore di tempo. Ogni esercizio
+vale dieci punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Esonero 09-06-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si determini la soluzione $u(x,t)$ di
+\[
+\begin{split}
+&u_{xx}-u=u_t\quad x\in(0,1);\; t>0\\
+&u(x,0)=1\quad x\in(0,1)\\
+&u(1,t)=e^{-t};\; u_x(0,t)=e^{-t}\quad t>0.
+\end{split}
+\]
+\item   Si determini la soluzione $u(x,t)$ di
+\[
+\begin{split}
+&u_{tt}=u_{xx}+x\quad x\in(0,1);\;t>0\\
+&u(x,0)=0;\; u_x(x,0)=0\quad x\in(0,1)\\
+&u(0,t)=0;\; u(1,t)=0\quad \;t>0.
+\end{split}
+\]
+\item  Date le funzioni $f_\alpha(x)=\sqrt{\frac \pi 2} e^{-|x|\alpha}$,
+$\alpha>0$,  siano
+$\hat f_\alpha$ le loro trasformate di Fourier. Si calcoli
+\[
+\lim_{\alpha\to 0}\int_\R \hat f_\alpha(\xi) g(\xi) d\xi
+\]
+per ogni $g\in L^\infty(\R)\cap \Co^0(\R)$. 
+\item Si consideri l'equazione
+\[
+\begin{split}
+&u_{tt}-u_{xx}=0 \quad x\in\R;\;t>0\\
+&u(x,0)=g(x);\; u_x(x,0)=0,
+\end{split}
+\]
+con supp$\,g\subset [-1,1]$. Si definisca l'energia $e(t)$ contenuta
+nell'intervallo $[-1,1]$ al tempo $t$
+\[
+e(t):=\int_{-1}^1 u_t(y,t)^2+u_x(y,t)^2 \;dy.
+\]
+Si dimostri che $e(t)\leq e(0)$ per ogni $t\geq 0$.
+\end{enumerate}
+\end{document}

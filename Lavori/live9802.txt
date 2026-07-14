@@ -1,0 +1,18 @@
+          CONFORMAL MEASURE AND DECAY OF CORRELATION FOR COVERING
+                             WEIGHTED SYSTEMS
+                                 by
+         Carlangelo Liverani, Benoit Saussol and Sandro Vaienti
+         
+ABSTRACT:
+We show that for a large class of piecewise monotonic
+transformations on a totally ordered, compact set one can 
+ construct conformal measures and
+obtain exponential mixing rate for the associated equilibrium state.
+The method is based on the study of the Perron-Frobenius 
+operator. The conformal measure, the density of the 
+invariant measure and the rate of mixing are deduced by using an 
+appropriate Hilbert metric, without any compactness arguments,
+even in the case of a countable to one transformation.
+
+PUBLISHED IN:
+Ergodic Theory and Dynamical Systems, 18, 6, pp. 1399--1420 (1998).

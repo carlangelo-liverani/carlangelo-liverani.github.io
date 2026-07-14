@@ -1,0 +1,58 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+
+\newcommand\N{{\mathbb N}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\R{{\mathbb R}}
+\newcommand\Z{{\mathbb Z}}
+
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge \bf Analisi Matematica I}
+\vskip.2cm
+\centerline{\Huge  Terzo Appello (18-06-2002)}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 3 ore di tempo. Ogni esercizio
+vale sei punti. La sufficienza si ottiene con un punteggio $\geq$
+18. {\bf Solo le risposte chiaramente giustificate saranno prese in
+considerazione.} {\scshape Elaborati illeggibili o confusi verranno ignorati.}
+{\sffamily La
+sintesi sar\`a particolarmente apprezzata.}}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+
+\vskip1cm
+\begin{enumerate}
+\item Dire quale dei seguenti numeri \`e il maggiore
+\[
+2^{10!}\;;\quad 1000000^{200}\;;\quad (1000!)^2.
+\]
+\item Dire per quali $q\in\N$ si ha che
+\[
+\frac{q+1}{q-1}\in\Z.
+\]
+\item Mostrare che, per ogni $q\in\N$, si ha che
+\[
+\sum_{n=q+1}^\infty\frac 1{n!}\leq \frac1{q!q},
+\]
+e che, se $q>3$, $p\in\N$,
+\[
+\left|\frac pq-\sum_{n=0}^q\frac 1{n!}\right|\geq \frac 1{q!}.
+\]
+Si usino queste due disuguaglianze per dimostrare che $e\not\in\Q$.
+
+\item Si studi la convergenza della serie e si calcoli il limite
+\[
+\sum_{n=1}^\infty \left(1-\frac 1n\right)^{n^2}\;;\quad
+\lim_{n\to\infty} n\left\{\sqrt{n^2+1}-n\right\}.
+\]
+\item \label{ex:5}Si determini il dominio e si disegni il grafico della funzione
+\[
+f(x)=\sqrt{2-\sqrt{4-x^2}}.
+\]
+\item Sia $\ell_0=2$ e si definisca, per ogni $n\geq 0$,
+$\ell_{n+1}=f(\ell_n)$ (dove $f$ \`e la funzione definita nella
+domanda \eqref{ex:5}). Si dimostri che la successione $a_n:=2^n\ell_n$
+\`e limitata.
+\end{enumerate}
+\end{document}

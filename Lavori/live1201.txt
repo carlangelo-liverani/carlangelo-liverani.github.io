@@ -1,0 +1,10 @@
+                                                     Paolo Giulietti, Carlangelo Liverani, Mark Pollicott
+                                                     
+                                                     
+                                                     
+                                                     Anosov Flows and Dynamical Zeta Functions
+                                                     
+
+ABSTRACT: We study the Ruelle and Selberg zeta functions for $\Cs^r$ Anosov flows, $r > 2$, on a compact smooth manifold.
+We prove several results, the most remarkable being: (a) for $\Cs^\infty$ flows the zeta function is meromorphic on the entire complex plane;
+(b) for contact flows satisfying a bunching condition (e.g. geodesic flows on manifolds of negative curvature $\frac 19$-pinched) the zeta function has a pole at the topological entropy and is analytic and non zero in a strip to its left; (c) under the same hypothesis as in (b) we obtain sharp results on the number of periodic orbits. Our arguments are based on the study of the spectral properties of the transfer operator acting on a suitable Banach spaces of anisotropic currents. 

@@ -1,0 +1,22 @@
+  
+
+
+LASOTA-YORKE MAPS WITH HOLES: CONDITIONALLY INVARIANT PROBABILITY
+MEASURES AND INVARIANT PROBABILITY MEASURES ON THE SURVIVOR SET 
+   
+                               By
+       Carlangelo Liverani and Ve'ronique Maume-Deschamps    
+
+
+			   ABSTRACT
+   
+
+Let $T~:~I~\longrightarrow~I$ be a Lasota-Yorke map on the interval $I$,   
+let $Y$ be a non trivial sub-interval of $I$ and  
+$g^0~:~I~\longrightarrow~\R^+$, be a strictly positive potential which  
+belongs to BV and admits a conformal    
+measure $m$. We give  constructive conditions on $Y$ ensuring the existence   
+of absolutely continuous (w.r.t. $m$) conditionally invariant probability   
+measures to non absorption in $Y$. These conditions imply also existence   
+of an invariant probability measure on the set $X_\infty$ of points which    
+never fall into $Y$. Our conditions allow rather ``large'' holes.    

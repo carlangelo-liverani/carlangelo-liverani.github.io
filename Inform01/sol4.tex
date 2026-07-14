@@ -1,0 +1,44 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand{\vf}{\varphi}
+\pagestyle{empty}
+\begin{document}
+\hfuzz 12pt
+\large
+\centerline{\Huge \bf Analisi Matematica I}
+\vskip.2cm
+\centerline{\Huge Correzione Quarto Appello}
+
+\vskip1cm
+\begin{enumerate}
+\item
+$\log_3 9=2$, $\log_25\geq \log_2 4=2$.
+\item 
+Si applichi l'algoritmo euclideo. Poiche l'ultimo divisore \`e uno i
+due numeri sono primi tra loro.
+\item $f(x)\geq 1/2\, x-1/4\, x\geq 0$, $f(x)\leq 3/4$, la stima sulla
+derivata \`e banale. Ora sia $x_n=f^n(0.5)$, poiche $f(0)=0$ si ha (Lagrange)
+\[
+|x_{n+1}|=|f(x_n)-f(0)|\leq \frac 34 |x_n|.
+\]
+Iterando tale disuguaglianza si ottiene $x_n\leq (\frac 34)^n$.
+
+\item Basta dividere nel caso $x\leq 1$ per cui $f(x)=\ln(1)=0$ e il
+caso $x>1$ per cui $f(x)=\ln(2x-1)$. Il resto \`e la solita roba.
+\item Usando Lagrange ripetutamente si ha
+\[
+\ln\left(\sqrt{\frac{n^3+n}{n^3+1}}\right)=\frac 1{n^2}+{\mathcal O}(\frac
+1{n^3}).
+\]
+Da cui segue la convergenza della serie.
+\item {\sc Sol. informale}: Ovviamente si tratta dei triangoli
+isosceli. Visto che l'area \`e area per altezza diviso due, il massimo
+si ottiene per l'altezza massima (cio\`e uguale ad uno).\newline
+{\sc Sol. formale}: Sia $x$ l'altezza del triangolo, chiaramente $x\in
+[0,1]$. Allora l'area \`e data da $\frac 12 2 x=x$. Chiaramente ilk
+massimo si ha per $x=1$.
+\end{enumerate}
+\end{document}

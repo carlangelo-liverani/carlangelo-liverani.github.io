@@ -1,0 +1,15 @@
+   ERGODICITY IN INFINITE HAMILTONIAN SYSTEMS WITH CONSERVATIVE NOISE
+                                by
+              Carlangelo Liverani and Stefano Olla
+
+ABSTRACT:
+We study the stationary measures of an infinite Hamiltonian system of 
+interacting particles in $\RR^3$ subject to a stochastic local perturbation
+conserving energy and momentum. We prove that the translation invariant
+measures that are stationary for the deterministic Hamiltonian dynamics,
+reversible for the stochastic dynamics, and with finite entropy density, are convex
+combination of ``Gibbs'' states. This result implies
+hydrodynamic behavior for the systems under consideration.
+
+PUBLISHED IN:
+Probability Theory and RelateD Fields, 106, pp. 401--445, (1996).

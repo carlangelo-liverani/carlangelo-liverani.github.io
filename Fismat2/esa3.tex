@@ -1,0 +1,54 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand\ve{\varepsilon}
+\newcommand\Co{{\mathcal C}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Fisica Matematica II}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 2:30 ore di tempo. Ogni esercizio
+vale dieci punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Appello 04-09-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si determini una soluzione dell'equazione
+\[
+\begin{split}
+&yu_y+x^2\ln y\; u_x=1\\
+&u(s,e)=s\quad s\in\R
+\end{split}
+\]
+e se ne discuta dominio e unicit\`a.
+\item Si consideri l'equazione
+\[
+\Delta u(x)=f(x)\quad x\in\R^3,
+\]
+con $sup_{x\in\R^3} (|x|^4+1)|f(x)|<\infty$. Si mostri che $u\in L^\infty(\R^3)$.
+\item Si consideri l'equazione
+\[
+\begin{split}
+&u_{tt}-u_{xx}=\sin\lambda t \quad x\in[0,1]\\
+&u(x,0)=u_t(x,0)=0\\
+&u(0,t)=u(1,t)=0.
+\end{split}
+\]
+Per quali $\lambda$ esiste una costante $a_\lambda>0$ tale che
+$|u(x,t)|\leq a_\lambda$ per ogni $(x,t)\in[0,1]\times\R$ ?
+\item Si determini la soluzione del problema
+\[
+\begin{split}
+&u_{xx}+xe^{-t}=u_t\quad x\in[0,1],\;t>0\\
+&u(x,0)=x(1-x)\quad x\in[0,1]\\
+&u(t,0)=u(t,1)=0\quad t>0.
+\end{split}
+\]
+\end{enumerate}
+\end{document}

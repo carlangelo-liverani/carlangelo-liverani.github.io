@@ -1,0 +1,87 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath, mathabx}
+\newcommand\bR{{\mathbb R}}
+\newcommand\bQ{{\mathbb Q}}
+\newcommand\bN{{\mathbb N}}
+\newcommand\cC{{\mathcal C}}
+\newcommand\cO{{\mathcal O}}
+\newcommand\ve{{\varepsilon}}
+%\newcommand\0{\noindent}
+\newcommand\virg{\quad,\quad}
+
+\setlength{\marginparwidth}{8em} \setlength{\marginparsep}{1em}
+\setlength{\textwidth}{34.8pc} \setlength{\textheight}{51.8pc}
+\setlength{\oddsidemargin}{1truecm}
+\setlength{\topmargin}{-0.5truecm}
+\renewcommand{\thefootnote}{\relax}
+\newcommand\barra{\vrule height.5cm depth0pt width0pt}
+
+\begin{document}
+\section*{Compito per il 15/03/2024}\footnote{ I punteggi, nel discutibile stile americano, saranno A,B,C e E, dove $E$ significa che  la soluzione non è ritenuta sufficiente. Alla fine si avranno tre punti se si sono ottenuti, almeno nei due terzi dei compiti, A; 2 punti se si sono ottenuti,  almeno nei due terzi dei compiti, A o B; un punto se si sono ottenuti, almeno nei due terzi dei compiti, A, B o C.}
+\begin{enumerate}
+\item Dato un intervallo $I=(a,b)\subset \bR$ si consideri la funzione $d_I:I^2\to\bR_+$ definita da
+\[
+d_I(x,y)=\left|\ln\frac{ (b-x)(y-a)}{(b-y)(x-a)}\right|.
+\]
+\begin{enumerate}
+\item Si mostri che $d_I$ è una distanza.
+\item Si calcoli,  $\lim_{n\to\infty} d_I(a+1/n, (a+b)/2)$.
+\item Quale è il diametro di $I$ nella metrica $d_I$?
+\item Data la funzione $f(x)=\frac{x-a}{b-a}$, con dominio $I$, si dica quale è l'immagine $J=f(I)$ e si calcoli il rapporto $\frac{d_J(f(x),f(y))}{d_I(x,y)}$.
+\item Sia $I_n=(0,n)$, si calcoli $d_\infty(x,y)=\lim_{n\to\infty}d_{I_n}(x,y)$ e si mostri che è una metrica in $(0,\infty)$.
+\item Data la funzione $f(x)=\frac{x-a}{b-x}$, con dominio $I$, si dica quale è l'immagine $J=f(I)$ e si calcoli il rapporto $\frac{d_\infty(f(x),f(y))}{d_I(x,y)}$.
+\end{enumerate}
+\end{enumerate}
+\newpage
+
+\centerline{\huge\bf Soluzione}
+\begin{enumerate}
+\item Soluzione dell'esercizio 1:
+\begin{enumerate}
+\item L'unica cosa che non è immediatamente ovvia è la disuguaglianza triangolare
+\[
+\begin{split}
+&d_I(x,y)=\left|\ln\frac{ (b-x)(z-a)(b-z)(y-a)}{(x-a)(b-z)(z-a)(b-y)}\right|\\
+&=\left|\ln\frac{ (b-x)(z-a)}{(x-a)(b-z)}+\frac{(b-z)(y-a)}{(z-a)(b-y)}\right|
+\leq \left|\ln\frac{ (b-x)(z-a)}{(x-a)(b-z)}\right|+\left|\frac{(b-z)(y-a)}{(z-a)(b-y)}\right|\\
+&=d_I(x,z)+d_I(z,y).
+\end{split}
+\]
+\item Si noti che, se  $\frac 1n\leq b-a$, allora
+\[
+\begin{split}
+d_I(a+1/n, (a+b)/2)&=\left|\ln\frac{ (b-a-1/n)((a+b)/2-a)}{(1/n)(b-(a+b)/2)}\right|
+=\left|\ln (b-a-1/n)n\right|\\
+&=\ln [(b-a)n-1].
+\end{split}
+\]
+Quindi $\lim_{n\to\infty}d_I(a+1/n, (a+b)/2)=\infty$.
+\item Visto il punto precedente il diametro è chiaramente infinito.
+\item $J=(0,1)$, quindi
+\[
+\begin{split}
+d_J(f(x),f(y))&=\left|\ln\frac{ (1-f(x))f(y)}{f(x)(1-f(y))}\right|=
+\left|\ln\frac{ (1-\frac{x-a}{b-a})\frac{y-a}{b-a}}{\frac{x-a}{b-a}(1-\frac{y-a}{b-a})}\right|\\
+&=\left|\ln\frac{ (b-x)(y-a)}{(x-a)(b-y)}\right|=d_I(x,y)
+\end{split}
+\]
+ovvero, rispetto a queste metriche $f$ è una isometria.
+\item Per ogni $x,y\in(0,\infty)$, per ogni $n>\max\{x,y\}$ si ha
+\[
+d_{I_n}(x,y)=\left|\ln\frac{ (n-x)y}{(n-y)x}\right|=\left|\ln\frac{ (1-x/n)y}{(1-y/n)x}\right|.
+\]
+dunque
+\[
+d_\infty(x,y)=\left|\ln\frac{y}{x}\right|.
+\]
+Si può facilmente dimostrare che è una norma argomentando come nel punto (a).
+\item $J=(0,\infty)$, quindi
+\[
+\begin{split}
+d_\infty(f(x),f(y))&=\left|\ln\frac{ f(x)}{f(y)}\right|=d_I(x,y).
+\end{split}
+\]
+Un'altra isometria!
+\end{enumerate}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,31 @@
+<body bgcolor=#E0FFFF>
+<font face="Arial Narrow">
+<TITLE>Advanced Grant Proposal for the Fondo Fondo italiano per la Scienza</TITLE>
+<body>
+<center><H1> <font color="blue">
+Infos concerning my Advanced Grant Proposal for the Fondo Fondo italiano per la Scienza (FIS)<br>
+</font></H1></center>
+<p>
+<p>
+<font size=+2>
+Due to a technical problem outside my control, I have been asked to resubmit
+the research proposal. Unfortunately,
+<li> contrary to the original rules I was not allowed to upload a pdf, but only a plain text file
+<li> contrary to the original rules the bibliography was counted by the system toward the length limit of the project
+<li> the online editing system did not allow to introduce formulae or figures
+<li> I pointed out the above problems to the staff of FIS and I was told to read the manual and the
+FAQ. When I pointed out that I had already done so and no information was present on my queries,
+I was given another address to write to. Despite countless e-mails sent to such an address nobody ever
+answered
+<p>
+Not knowing what to do when it became clear that nobody would ever answer my queries, I uploaded the Latex file, without the preamble 
+(note that this forced me to shorten the proposal the very last week-end before the deadline, as the LaTex control characters were counted against 
+the proposal length by the system).
+
+<li> For your use, here is the proposal, including the preamble. You can check that is is exactly the one I submitted, but this can be typesetted.
+ <a href="FIS_latex.tex">Latex file with preamble</a>
+<li> Here is the file with the reference, that the system did not let me upload. <a href="FIS_bibliography.tex">Bibliography</a>
+<li> Here is the complete PDF, if you do not want to waste time compiling the files yourself. <a href="FIS_are_incompetent.pdf">PDF file</a>
+
+<p><p>
+Sorry for this gigantic mess of which I bear no responsibility.

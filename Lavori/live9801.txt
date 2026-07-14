@@ -1,0 +1,14 @@
+    CONFORMALLY SYMPLECTIC DYNAMICS and SYMMETRY OF THE LYAPUNOV SPECTRUM 
+                                  by
+               Maciej P. Wojtkowski and Carlangelo Liverani
+               
+ABSTRACT:
+A generalization of the Hamiltonian formalism is studied
+and the symmetry of the Lyapunov spectrum established
+for the resulting systems.
+The formalism is applied to the Gausssian isokinetic 
+dynamics of 
+interacting particles with hard core collisions and other systems.  
+
+PUBLISHED IN:
+Communication in Mathematical Physics, 194,1, pp. 47--60 (1998).

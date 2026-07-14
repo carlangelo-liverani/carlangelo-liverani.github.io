@@ -1,0 +1,10 @@
+Ergodic properties of a model related to disordered 
+quantum anharmonic crystals.
+
+                               By
+
+                      F.Fidaleo and C.Liverani
+
+We introduce a model to mimic the long--time behavior of a
+disordered anharmonic quantum crystal. We investigate in detail
+the ergodic properties exhibited by such a model.

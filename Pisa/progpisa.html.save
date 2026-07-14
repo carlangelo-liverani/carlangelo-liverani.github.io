@@ -1,0 +1,396 @@
+<html dir=ltr>
+<head>
+<title>Schedule</title>
+<meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+
+<body bgcolor="#fffff" background="images/watermark.jpg">
+
+<table width="650" bgcolor="#cdcd9b" border="0" cellspacing="0" cellpadding="0">
+<tr>
+	<td width="5" bgcolor="#e4e8da"> </td>
+	<td width="5" bgcolor="#cdcd9b"> </td>
+	<td width="5" bgcolor="#e4e8da"> </td>
+<center>DINAMICA IN ITALIA </center>
+<center>AULA MANCINI, SCUOLA NORMALE SUPERIORE, PISA 25-26-27 GIUGNO</center>
+	<td width="5" bgcolor="#e4e8da"> </td>
+	<td width="5" bgcolor="#cdcd9b"> </td></tr>
+</table>
+<table width="650" bgcolor="#cdcd9b" border="0" cellspacing=0" cellpadding="0">
+<tr>
+
+
+	<td width="230" bgcolor="#cdcd9b"><b><i><font color="#777777" face="Helvetica, Arial" size="2">
+	<script LANGUAGE="JavaScript">
+</head>
+
+    <!-- Begin
+    d = new Array(
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+    );
+    m = new Array(
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+    ); 
+    today = new Date();
+    day = today.getDate();
+    year = today.getYear();    
+    if (year < 2000)    // Y2K Fix
+    year = year + 1900;     
+    zero = " ";
+    if (day==1 || day==2 || day==3 || day==4 || day==5 || day==6 || day==7 || day==8 || day==9)
+    zero=" 0"  
+    document.write("<center>");
+    document.write(d[today.getDay()]+", "+m[today.getMonth()]+" ");
+    document.write(zero + day+", " + year);
+    document.write("</center>");
+	// End -->
+	</script>
+	</font></i></b></td>
+	<td width="5" bgcolor="#cdcd9b"> </td></tr>
+</table>
+<!--------------------- Schedule ----------------->
+<table width="650" bgcolor="#cdcd9b" border="0" cellspacing="0" cellpadding="0">
+<tr><td></td></tr>
+<tr>
+	<td width="5" bgcolor="#cdcd9b"> </td>
+
+	<!--------------------- Schedule ----------------->
+	<td width="620" bgcolor="#ffffff" background="images/watermark.jpg">
+	<p><font color="#777777" size="3" face="Helvetica, Arial">
+	<b><center>PROGRAMMA</center></b></font><br>
+	<font color="#777777" size="2" face="Helvetica, Arial">
+
+<ul type=square>
+
+<li><font size=3 color="#2a7d05"><b>Mercoledi, Giugno 25</b></font><br>
+<table cellspacing=1 cellpadding=2 border=0>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">12:30-14:00</td>
+<td width=135><font color="#ba4578" size="2" face="Helvetica,
+Arial">Pranzo (mensa SNS)</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial"> </tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica, 
+Arial">2:00-3:00</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Marco Abate</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">
+Dinamica olomorfa locale</td>
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica, 
+Arial">3:00-3:30</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Filippo Bracci</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">
+Dinamica di germi di diffeomorfismi olomorfi quasi-parabolici</td> 
+</tr>
+<tr bgcolor="#e4e8da">
+
+<td width=60><font color="#777777" size="2" face="Helvetica, 
+Arial">3:30-4:00</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Francesca Tovena</td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial">Endomorfismi di superficie e punti fissi
+</td> 
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica, 
+Arial">4:00-4:30</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Chiara Frosini</td> 
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">Dinamica 
+olomorfa in domini limitati </td>
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">4:30-5.00</td> 
+<td width=135><font  color="#ba4578" size="2" face="Helvetica,
+Arial">Pausa (ristoro)</td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial"></td> 
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">5:00-6:00</td> 
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial"> Stefano Marmi</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">Primi 
+passi di una teoria KAM per superfici invarianti diverse
+dai tori</td> 
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">6:00-6:30</td> 
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Timoteo Carletti </td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial">A
+numerical proof of the Marmi--Moussa--Yoccoz Conjecture </td>  
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">6:30-7:00</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Giorgio Turchetti </td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial"> </td>
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">7:00--</td>
+<td width=135><font color="#ba4578" size="2" face="Helvetica,
+Arial">Cena in proprio </td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial"> </td>
+</tr>
+</table>
+</li><p>
+
+<li><font size=3 color="#2a7d05"><b>Giovedi, 26 Giugno</b></font><br>
+<table cellspacing=1 cellpadding=2 border=0>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica, 
+Arial">9:30-10:30</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Luigi Chierchia</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">Problemi 
+classici della meccanica </td>
+</tr>
+
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">10:30-11:00</td> 
+<td width=135><font color="#777777" size="2" face="Helvetica, Arial">
+Enrico Valdinoci</td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial">Moti (quasi)periodici per il problema dei tre corpi </td> 
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">11:00-11:30</td> 
+<td width=135><font color="#ba4578" size="2" face="Helvetica,
+Arial"> Pausa (caffe)</td> 
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">&nbsp;</td>
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica, 
+Arial">11:30-12:00</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Alberto Berretti</td> 
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial">Serie di Lindstedt, funzione di Brjuno, alberi, ecc. per la
+standard map e generalizzazioni </td>  
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">12:00-12:30</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Francesco degli Innocenti </td>
+<td width=400><font color="#777777" size="2" face="Helvetica, 
+Arial">Soluzioni  per equazioni differenziali olomorfe vicino a
+singolarit&agrave isolate  </td>
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica, 
+Arial">12:30-2:00</td>
+<td width=135><font color="#ba4578" size="2" face="Helvetica, Arial"> 
+Pausa Pranzo (mensa SNS)</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, 
+Arial">&nbsp; </td>
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica, 
+Arial">2:00-3:00</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Giovanni Gallavotti</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial"> </td>
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">3:00-3:30</td> 
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Stefano Isola</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, 
+Arial">Ricorrenza e informazione</td>
+</tr>
+
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica, 
+Arial">3:30-4:00</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Carlangelo Liverani</td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial">Nascita di un'isola ellittica in un mare caotico </td> 
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">4:00-4:30</td>
+<td width=135><font color="#ba4578" size="2" face="Helvetica,
+Arial">Pausa (ristoro)</td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial"> </td>
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">4:30-5:30</td> 
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Dario Bambusi</td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial">Sulla dinamica di equazioni a derivate parziali
+hamiltoniane</td> 
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">5:30--6:00</td> 
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Vieri Mastropietro</td> 
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">
+Costruzione di soluzioni periodiche per l'equazione delle onde
+non lineare con il metodo della serie di 
+Lindstedt</td>
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">6:00-6:30</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Antonio Siconolfi </td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">PDE aspects
+of Aubry-Mather theory for continuous convex
+Hamiltonian. </td>
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">6:30-7:00</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Marco Lenci </td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">
+Il gas di Lorentz aperiodico
+</td>
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">7:00--</td>
+<td width=135><font color="#ba4578" size="2" face="Helvetica,
+Arial">Cena in proprio </td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial"> </td>
+</tr>
+</table>
+</li>
+
+<p><li><font size=3 color="#2a7d05"><b>Venerdi, 27 Giugno</b></font><br>
+
+<table cellspacing=1 cellpadding=2 border=0>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">9:00-9:40</td> 
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Antonio Giorgilli</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">Alcuni 
+risultati numerici sul modello FPU  </td>
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">9:40-10:05</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Antonio Ponno </td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial">Approccio KdV al problema FPU nel limite termodinamico
+</td>
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">10:05-10:30</td>
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Simone Paleari
+</td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial">Tempi di equipartizione nel modello FPU
+</td>
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">10:30-11:00</td> 
+<td width=135><font color="#777777" size="2" face="Helvetica,
+Arial">Guido Gentile </td>
+<td width=400><font color="#777777" size="2" face="Helvetica,
+Arial">Quasi-periodic solutions for a generalized Riccati equation
+</td> 
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">11:00-11:30</td> 
+<td width=135><font font color="#ba4578" size="2" face="Helvetica, Arial">Pausa
+(caffe)</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">
+</font>
+</td>
+</tr>
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">11:30-12:00</td> 
+<td width=135><font color="#777777" size="2" face="Helvetica, 
+Arial">Paolo Perfetti</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">Un
+teorema KAM per sistemi dinamici discreti infinito-dimensionali </td>
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">12:00-12:30</td> 
+<td width=135><font color="#777777" size="2" face="Helvetica, 
+Arial">Massimiliano Guzzo </td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial"> </td>
+</tr>
+
+<tr>
+<td width=60><font color="#777777" size="2" face="Helvetica, 
+Arial">12:30-13:00</td>
+<td width=135><font color="#777777" size="2" face="Helvetica, Arial"> Pierpaolo
+Soravia</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial"> SSulle 
+equazioni di Hamilton-Jacobi a coefficienti discontinui</td>
+</tr>
+<tr bgcolor="#e4e8da">
+<td width=60><font color="#777777" size="2" face="Helvetica,
+Arial">13:00-14:00</td>
+<td width=135><font font color="#ba4578" size="2" face="Helvetica, Arial">Pausa
+Pranzo (mensa SNS)</td>
+<td width=400><font color="#777777" size="2" face="Helvetica, Arial">
+</table>
+</li>
+
+<font color="#777777" size="2" face="Helvetica, Arial">
+</font>
+</ol>
+</font>
+</td></tr>
+</font>
+</td>
+</tr>	
+</table>
+<p><br>
+Gli interventi saranno di 50 e 25 minuti, rispettivamente, per lasciare spazio 
+ad un poco di discussione.
+</body>
+</html>
+
+

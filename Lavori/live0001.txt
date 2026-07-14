@@ -1,0 +1,11 @@
+                         INTERACTING PARTICLES
+                                  by
+                         Carlangelo Liverani
+           
+ABSTRACT:
+We discuss a manifold of systems that generalize, 
+in various ways, the standard 
+billiards. To be able to present many of the results in a unified 
+fashion we start by summarizing a general theory of the statistical 
+properties of Hamiltonian systems with discontinuities. Then the 
+actual examples are presented.

@@ -1,0 +1,98 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\newcommand{\vf}{\varphi}
+\pagestyle{empty}
+\begin{document}
+\hfuzz 12pt
+\large
+\centerline{\Huge \bf Analisi Matematica II}
+\vskip.2cm
+\centerline{\Huge Correzione Terzo Appello}
+
+\vskip1cm
+\begin{enumerate}
+\item Sia $x(n)$ il capitale dopo $n$ bimestri, chiaramente
+$x(0)=x$. Sia inoltre $6\Delta$ il tasso annumale praticato, dunque
+ogni bimestre viene pagato il $\Delta$ per cento del capitale. Cio\`e
+\[
+x(n+1)=x(n)+\Delta x(n)=(1+\Delta)x(n)=(1+\Delta)^nx.
+\]
+Sei anni corrispondono a $n=36$ bimestri, dunque
+\[
+1.4 x=(1+\Delta)^{36} x.
+\]
+Passando ai logaritmi, 
+\[
+\ln (1+\Delta)=\frac {\ln 1.4}{36}.
+\]
+a questo punto se avete un calcolatore avete finito (e ottenete il 5.6
+per cento annuale, non male), altrimenti ricordate la serie di Taylor 
+\[
+\ln(1+a)=a-\frac 12 a^2+\frac 13 a^3- ...
+\]
+Usando tale formula al secondo ordine si ha $\ln 1.4\sim .32$  (invece
+di $.336...$). Usando poi la formula al primo ordine per $\ln
+(1+\Delta)$, visto che $\Delta$ \`e pi\`u piccolo, si ha
+$\Delta\sim 2/225$, dunqe l'interesse
+percentuale annuo sarebbe stimato da $600\Delta\sim 5.3$,
+che \`e essenzialmente giusto.
+\item Integrando per parti si ha
+\[
+\int_0^1f(x)\sin\lambda x
+dx=\frac{f(0)-f(1)\cos\lambda}{\lambda}+\frac
+1\lambda\int_0^1f'(x)\cos\lambda x dx
+\]
+poich\`e $f$ \`e due volte derivabile $f'$ \`e derivabile, dunque
+l'integrale \`e be definito. A questo punto, poich\`e $|\cos\lambda
+x|\leq 1$ il risultato \`e ovvio.
+
+\item Per l'argomento che si usa nel criterio integrale si ha
+\[
+\sum_{n=k}^\infty< \lim_{L\to\infty}\int_{k-1}^L\frac 1{x^2}
+dx=\frac 1{k-1}.
+\]
+Dunque $\sum_{n=11}^\infty \frac 1{n^2}< \frac 1{10}$. Basta quindi
+sommare i primi dieci termini per avere la risposta (per esempio $3$
+\`e una risposta corretta).
+\item Poich\`e in un intorno di zero $y$ non sar\`a zero si puo
+dividere ed ottenere
+\[
+\frac{y'(x)}{y(x)}=e^x
+\]
+integrando poi tra zero e $x$, e ricordano le condizioni iniziali, si ha
+\[
+\ln y(x)=e^x-e
+\]
+cio\`e $y(x)=e^{e^x-e}$.
+\item Poich\`e
+\[
+\int_0^1\frac {x+3}{x^2+1} dx=\frac
+12\int_0^1\frac{2x}{x^2+1}dx+3\int_0^1\frac 1{x^2+1}dx
+\]
+ora nel primo integrale applichiamo la sostituzione $z=x^2$, mentre il
+secondo \`e la primitiva di $\arctan$. Dunque
+\[
+\int_0^1\frac {x+3}{x^2+1} dx=\frac
+12\int_0^1\frac 1{1+z}dz+3\arctan 1=\frac 12\ln 2+3\arctan 1.
+\]
+\item Il generico polinomio di primo grado ha la forma $p(x)=ax+b$,
+dunque $A(p)=A(a,b)$. Supponiamo $a$ fissato e vediamo i punti criti
+rispetto a $b$
+\[
+\frac{dA(a,b)}{db}=2\int_{-\pi}^{\pi}(\sin x-ax-b)dx=-2\pi b,
+\]
+dunque $b=0$ \`e il solo punto critico e poich\`e $A$ \`e sempre maggiore di
+zero, deve essere di minimo. Si possono perci\`o considereare solo il
+polinomi del tipo $ax$. Vediamo dunque quali $a$ danno un punto
+critico
+\[
+\frac{dA(a,0)}{da}=2\int_{-\pi}^{\pi}(\sin x-ax)x dx=4\pi-\frac43\pi^3a
+\]
+(l'integrale di $x\sin x$ si fa
+istantaneamente per parti). Di nuovo c'e' un solo punto critico che
+quindi deve essere di minimo. Dunque $p(x)=3\pi^{-2}x$ rende  minimo $A$.
+\end{enumerate}
+\end{document}

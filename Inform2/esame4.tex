@@ -1,0 +1,61 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+
+\newcommand\N{{\mathbb N}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\R{{\mathbb R}}
+\newcommand\Z{{\mathbb Z}}
+
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge \bf Analisi Matematica II}
+\vskip.2cm
+\centerline{\Huge  Quarto Appello (28-01-2003)}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 3 ore di tempo. Ogni esercizio
+vale sei punti. La sufficienza si ottiene con un punteggio $\geq$
+18. {\bf Solo le risposte chiaramente giustificate saranno prese in
+considerazione.} {\scshape Elaborati illeggibili o confusi verranno ignorati.}
+{\sffamily La
+sintesi sar\`a particolarmente apprezzata.}}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+
+\vskip1cm
+\begin{enumerate}
+\item Si dimostri che, per ogni $k\in\N$,
+$0\leq \frac 1k-\int_k^{k+1}\frac 1\xi d\xi\leq \frac 1{k^2}.$
+
+Usando tale fatto si dimostri che  la successione 
+\[
+a_n:=\sum_{k=1}^{n}\frac 1k-\int_{1}^{n+1}\frac 1\xi d\xi
+\]
+ammette limite $\alpha:=\lim_{n\to\infty}a_n$. Infine si mostri
+che $\alpha\in(0,2)$.
+
+
+\item  Si calcoli il seguente integrale
+\[
+\int_{\frac\pi 4}^{\frac\pi 2}\frac 1{\sin x}dx
+\]
+\item  Si calcoli il seguente integrale
+\[
+\int_0^1\frac 1{1+e^t}dt. 
+\]
+\item Sia $f_n(x):=\sum_{k=1}^n\frac 1k \sin kx$. Si
+calcoli, per ogni $n,m\in \N$,
+\[
+\int_0^{2\pi}f_n(x)f_m(x) dx.
+\]
+
+\item Si risolva il seguente problema di Chauchy
+\[
+y'(x)=4x+xy^2\;;\quad
+y(0)=0
+\]
+\item Si calcoli il raggio di convergenza della serie
+\[
+\sum_{n=0}^\infty \frac {x^n}{(2n)!}.
+\]
+\end{enumerate}
+\end{document}

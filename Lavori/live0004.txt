@@ -1,0 +1,15 @@
+ 
+Return to equilibrium in classical and quantum systems
+                            By
+                    Carlangelo Liverani
+
+                       ABSTRACT
+
+
+I discuss return to equilibrium both in the classical and quantum setting. In
+the classical setting the emphasis is on several techniques that have been
+developed in the last years and that, hopefully, could inspire new approaches in
+the study of quantum systems. In the quantum setting a very simple, but far from
+trivial, model is discussed.
+
+

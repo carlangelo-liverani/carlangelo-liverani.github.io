@@ -1,0 +1,11 @@
+               DECAY OF CORRELATIONS IN HYPERBOLIC SYSTEMS
+                                by
+                          Carlangelo Liverani
+
+ABSTRACT:
+I illustrate a unified approach to the study of 
+the decay of correlations in hyperbolic dynamical systems.
+
+PUBLISHED IN:
+Proceedings of the International Conference on Dynamical Systems and 
+Chaos--Tokyo 94, World Scientific Publ. Co., Singapore, pp. 163-166 (1995).

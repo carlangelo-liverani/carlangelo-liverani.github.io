@@ -1,0 +1,24 @@
+             Ruelle-Perron-Frobenius spectrum for Anosov maps
+
+             Michael Blank,  Gerhard Keller, Carlangelo Liverani
+
+
+We extend a number of results from one dimensional dynamics based
+on spectral properties of the Ruelle-Perron-Frobenius transfer 
+operator to Anosov
+diffeomorphisms on compact manifolds. This allows to develop a
+direct operator approach to study ergodic properties of these
+maps. In particular, we show that it is possible to define 
+Banach spaces on which the transfer operator is quasicompact.
+(Information on the existence of an SRB measure, its smoothness
+properties and statistical properties readily follow from such a
+result.) In dimension $d=2$ we show that the transfer operator
+associated to smooth random perturbations of the map is close, in
+a proper sense, to the unperturbed transfer operator. This allows
+to obtain easily very strong spectral stability results, which in turn
+imply 
+spectral stability results for smooth deterministic perturbations as
+well. Finally, we are able to implement an 
+Ulam type finite rank approximation
+scheme thus reducing the study of the spectral properties of the
+transfer operator to a finite dimensional problem.

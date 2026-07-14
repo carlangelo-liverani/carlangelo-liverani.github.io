@@ -1,0 +1,51 @@
+\documentclass{report}
+\usepackage{amsfonts, amsmath}
+\newcommand\R{{\mathbb R}}
+\newcommand\Q{{\mathbb Q}}
+\newcommand\N{{\mathbb N}}
+\pagestyle{empty}
+\begin{document}
+\large
+\centerline{\Huge Analisi Matematica II}
+\centerline{\large Corso di Laurea di Informatica}
+\renewcommand{\thefootnote}{ } 
+\footnote{\sl Avete 2.30 ore di tempo. Ogni esercizio
+vale nove punti. La sufficienza si ottiene con un punteggio $\geq$
+18. Solo le risposte chiaramente giustificate saranno prese in
+considerazione.}
+\renewcommand{\thefootnote}{\arabic{footnote}} 
+\vskip.1cm
+\centerline{\Large Appello 9-06-2003}
+\vskip1cm
+\begin{enumerate}
+\item Si determini il raggio di convergenza della serie di potenze
+\[
+\sum_{n=0}^\infty\left\{[e^{3n}+e^n]^{\frac 13}-e^n\right\}x^n.
+\]
+\item Si scriva la serie di Taylor per la funzione $f(x)=(1+2x^2)^{-1}$. 
+\item Per ogni $a>0$ sia $x_a(t)$ la soluzione del problema di Cauchy
+\[
+x'=x-ax^2
+\]
+\[
+x(0)=1.
+\]
+Si verifichi che $x_a(t)$ \`e ben definito per tutti i $t>0$. Infine,
+si calcoli
+\[
+\lim_{t\to\infty}x_a(t).
+\]
+\item Sia $f:[-\pi,\pi]\to\R$ definita da
+\[
+f(x)=-1\quad \text{per }x\leq 0
+\]
+\[
+f(x)=  1\quad \text{per }x>0.
+\]
+Si calcoli la serie di Fourier di $f$ e si usi il risultato per
+calcolare la somma dei numeri dispari a segni alterni, ovvero della serie
+\[
+\sum_{n=0}^\infty\frac{(-1)^n}{2n+1}.
+\]
+\end{enumerate}
+\end{document}
